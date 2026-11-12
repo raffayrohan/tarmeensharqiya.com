@@ -1,149 +1,135 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <title>ترميم وتشطيب منازل بالدمام والخبر والقطيف | أصباغ وديكورات وشيبورد ومظلات الشرقية - 0530320587</title>
-  <meta name="description" content="مؤسسة ترميم وتشطيب منازل وأصباغ وديكورات الشرقية (0530320587). تنفيذ دهانات جوتن، شيبورد ومرايا مضيئة، جبس بورد، ورق جدران، بلاط بورسلان، مظلات وسواتر، جلسات شتوية، عوازل وبناء ملاحق في الدمام، الخبر، القطيف، الجبيل والأحساء." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مؤسسة مقاولات وديكورات المنطقة الشرقية | الدمام الخبر القطيف الجبيل الأحساء - 0530320587</title>
+  <meta name="description" content="مؤسسة مقاولات عامة وتشطيبات وديكورات بالمنطقة الشرقية (الدمام، الخبر، القطيف، الجبيل، الأحساء). متخصصون في الدهانات، ديكورات الشيبورد وبديل الخشب، ورق الجدران، المظلات والسواتر، وترميم الفلل. جوال: 0530320587" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Almarai & IBM Plex Sans Arabic: Ultra-clean, smooth Arabic fonts optimized for mobile screens -->
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#FAF8F5',
+            gold: {
+              DEFAULT: '#D97706',
+              dark: '#B45309',
+              light: '#FEF3C7'
+            },
+            teal: {
+              DEFAULT: '#0D9488',
+              dark: '#0F766E',
+              light: '#CCFBF1'
+            },
+            navy: '#0F172A'
+          },
+          fontFamily: {
+            arHeading: ['Almarai', 'IBM Plex Sans Arabic', 'sans-serif'],
+            arBody: ['IBM Plex Sans Arabic', 'Almarai', 'sans-serif'],
+            en: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
   <style>
     :root {
-      --bg-warm: #FAF8F5;
-      --gold-primary: #D97706;
-      --teal-primary: #0D9488;
-      --navy-dark: #0F172A;
-    }
-    html {
-      scroll-behavior: smooth;
-      -webkit-text-size-adjust: 100%;
-      -webkit-overflow-scrolling: touch;
+      --bg-ivory: #FAF8F5;
+      --card-white: #FFFFFF;
+      --accent-gold: #D97706;
+      --accent-teal: #0D9488;
+      --text-navy: #0F172A;
     }
     html[lang="ar"] body {
       font-family: 'IBM Plex Sans Arabic', 'Almarai', sans-serif;
-      line-height: 1.8;
-      word-spacing: 1px;
+      background-color: #FAF8F5;
+      color: #0F172A;
       -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
-    html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3 {
+    html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3, html[lang="ar"] h4, html[lang="ar"] .font-heading {
       font-family: 'Almarai', 'IBM Plex Sans Arabic', sans-serif;
-      line-height: 1.55;
       letter-spacing: 0;
     }
     html[lang="en"] body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      line-height: 1.65;
+      background-color: #FAF8F5;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
     }
-    body {
-      background-color: var(--bg-warm);
-      color: #1E293B;
-      overflow-x: hidden;
-    }
-
-    /* Smooth Navigation Underline Hover */
-    .nav-link-hover {
-      position: relative;
-      transition: color 0.2s ease;
-    }
-    .nav-link-hover::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      inset-inline-start: 50%;
-      width: 0%;
-      height: 2.5px;
-      background: linear-gradient(90deg, #D97706, #0D9488);
-      transition: width 0.25s ease, inset-inline-start 0.25s ease;
-      border-radius: 4px;
-    }
-    .nav-link-hover:hover { color: #D97706; }
-    .nav-link-hover:hover::after { width: 100%; inset-inline-start: 0%; }
-
-    /* Bright Luxury Cards (60fps GPU-accelerated, zero scroll lag) */
     .luxury-card {
       background: #FFFFFF;
-      border: 1px solid #E2E8F0;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
-      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      border: 1px solid rgba(217, 119, 6, 0.14);
+      box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.06);
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease;
     }
-    @media (hover: hover) {
-      .luxury-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 18px 34px -8px rgba(15, 23, 42, 0.1), 0 6px 16px -4px rgba(217, 119, 6, 0.16);
-        border-color: #F59E0B;
-      }
+    .luxury-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 38px -12px rgba(217, 119, 6, 0.16);
+      border-color: rgba(217, 119, 6, 0.42);
     }
-
-    /* High-Quality Image Hover Zoom */
-    .img-hover-wrap {
-      position: relative;
+    .gold-gradient-btn {
+      background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
+      color: #FFFFFF;
+      transition: all 0.25s ease;
+    }
+    .gold-gradient-btn:hover {
+      filter: brightness(1.07);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px -6px rgba(217, 119, 6, 0.45);
+    }
+    .teal-gradient-btn {
+      background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);
+      color: #FFFFFF;
+      transition: all 0.25s ease;
+    }
+    .teal-gradient-btn:hover {
+      filter: brightness(1.07);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px -6px rgba(13, 148, 136, 0.45);
+    }
+    .lightbox-stage {
       overflow: hidden;
-      background: #F1F5F9;
-    }
-    .img-hover-wrap img {
-      transition: transform 0.45s ease;
-      image-rendering: -webkit-optimize-contrast;
-    }
-    @media (hover: hover) {
-      .luxury-card:hover .img-hover-wrap img,
-      .img-hover-wrap:hover img {
-        transform: scale(1.06);
-      }
-    }
-
-    /* Shimmer Buttons */
-    .btn-shimmer {
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .btn-shimmer:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 22px -5px rgba(217, 119, 6, 0.38);
-    }
-
-    /* Active Language & Filter Pills */
-    .filter-pill, .lang-btn {
-      transition: all 0.2s ease;
-    }
-    .filter-pill.active-pill, .lang-btn.active-lang {
-      background: linear-gradient(135deg, #D97706, #B45309) !important;
-      color: #FFFFFF !important;
-      border-color: #B45309 !important;
-      font-weight: 700 !important;
-      box-shadow: 0 6px 14px -3px rgba(217, 119, 6, 0.38);
-    }
-
-    /* High-Resolution Lightbox Zoom Stage */
-    .zoom-stage {
-      overflow: hidden;
-      position: relative;
-      cursor: zoom-in;
-      user-select: none;
       touch-action: none;
+      user-select: none;
+      cursor: grab;
     }
-    .zoom-stage.is-zoomed { cursor: grab; }
-    .zoom-stage.is-dragging { cursor: grabbing; }
-    #lbImg {
-      transition: transform 0.18s ease-out;
+    .lightbox-stage:active {
+      cursor: grabbing;
+    }
+    #lightboxImg {
+      transition: transform 0.08s ease-out;
       transform-origin: center center;
       will-change: transform;
     }
-    .zoom-stage.is-dragging #lbImg { transition: none; }
+    /* Hide scrollbar for category pills on mobile */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
   </style>
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    "name": "ترميم تشطيب منازل - أصباغ وديكورات الشرقية",
+    "name": "مؤسسة مقاولات وديكورات المنطقة الشرقية - أمين غانم",
+    "alternateName": "Eastern Province Contracting & Luxury Decor",
     "telephone": "+966530320587",
-    "url": "https://wa.me/message/J6VX6II24NQUO1",
-    "areaServed": ["Dammam", "Khobar", "Qatif", "Jubail", "Al-Ahsa", "Safwa", "Ras Tanura", "Al-Faisaliyah", "Saihat", "Dhahran"],
+    "areaServed": ["Dammam", "Khobar", "Qatif", "Jubail", "Al-Ahsa"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Eastern Province",
+      "addressCountry": "SA"
+    },
     "sameAs": [
+      "https://wa.me/message/J6VX6II24NQUO1",
       "https://www.tiktok.com/@a0530320587a?_r=1&_t=ZS-9BKDvRd8iSi",
       "https://www.instagram.com/a_min736?rpxt=MnB2MWd0eHhtbm56&utm_source=qr",
       "https://snapchat.com/t/ZxB9o66T",
@@ -153,1062 +139,1145 @@
   }
   </script>
 </head>
-<body class="pb-20 md:pb-0">
+<body class="bg-[#FAF8F5] text-[#0F172A] min-h-screen pb-20 md:pb-0 selection:bg-amber-500 selection:text-white">
 
-  <!-- Clean Single-Line Top Bar (No Customize Button, Clean Mobile Layout) -->
-  <div class="bg-slate-900 text-white px-3 sm:px-6 py-2 text-xs">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
-      <p data-i18n="topBanner" class="text-slate-200 font-medium truncate"></p>
-      <div class="flex items-center gap-3 shrink-0">
-        <div class="hidden md:flex items-center gap-2.5 text-xs font-bold text-amber-400">
-          <a href="https://www.tiktok.com/@a0530320587a?_r=1&_t=ZS-9BKDvRd8iSi" target="_blank" rel="noopener" class="hover:underline">TikTok</a>
-          <span>•</span>
-          <a href="https://www.instagram.com/a_min736?rpxt=MnB2MWd0eHhtbm56&utm_source=qr" target="_blank" rel="noopener" class="hover:underline">Instagram</a>
-          <span>•</span>
-          <a href="https://snapchat.com/t/ZxB9o66T" target="_blank" rel="noopener" class="hover:underline">Snapchat</a>
-          <span>•</span>
-          <a href="https://pin.it/2dbc7wt4E" target="_blank" rel="noopener" class="hover:underline">Pinterest</a>
-          <span>•</span>
-          <a href="https://www.youtube.com/@%D8%A7%D9%85%D9%8A%D9%86%D8%BA%D8%A7%D9%86%D9%85-%D8%B59%D8%B7" target="_blank" rel="noopener" class="hover:underline">YouTube</a>
-        </div>
-        <div class="inline-flex items-center bg-slate-800 border border-slate-700 rounded-xl p-0.5 gap-1" role="group" aria-label="Language Switcher">
-          <button type="button" data-lang="ar" onclick="setLanguage('ar')" class="lang-btn px-2.5 py-1 rounded-lg text-xs font-bold text-slate-200">العربية</button>
-          <button type="button" data-lang="en" onclick="setLanguage('en')" class="lang-btn px-2.5 py-1 rounded-lg text-xs font-bold text-slate-200">EN</button>
-        </div>
+  <!-- TOP ANNOUNCEMENT BAR (Desktop & Tablet Only - Clean Mobile Experience) -->
+  <div class="hidden md:block bg-[#0F172A] text-white text-xs py-2 px-4 border-b border-amber-500/20">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <span class="inline-flex items-center gap-1.5 text-amber-400 font-semibold">
+          <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+          <span data-i18n="topBadge">نخدم جميع مدن المنطقة الشرقية:</span>
+        </span>
+        <span class="text-slate-200 font-medium" data-i18n="topCities">الدمام • الخبر • القطيف • الجبيل • الأحساء</span>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="tel:0530320587" class="hover:text-amber-400 transition flex items-center gap-1.5 font-semibold">
+          <span>📞</span>
+          <span dir="ltr">0530320587</span>
+        </a>
+        <a href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener noreferrer" class="hover:text-teal-300 transition flex items-center gap-1.5 font-semibold">
+          <span>💬</span>
+          <span data-i18n="topWhatsapp">استشارة ومعاينة مجانية عبر واتساب</span>
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- Sticky Responsive Header (Uncluttered on Mobile so Text Never Clips) -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 py-3 flex items-center justify-between gap-3">
-      <a href="#services" class="flex items-center gap-2.5 min-w-0">
-        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-700 text-white flex items-center justify-center font-bold text-lg shrink-0 shadow-sm">
-          🏗️
+  <!-- STICKY NAVIGATION HEADER (NO sticker logo, NO clipped phone on mobile, NO customizer button) -->
+  <header class="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-amber-900/10 shadow-sm">
+    <div class="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2">
+      
+      <!-- Clean Typographic Brand Identity (No Front Sticker Logo) -->
+      <a href="#hero" class="flex items-center gap-2.5 min-w-0 group focus:outline-none">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-[#D97706] to-[#B45309] flex items-center justify-center text-white font-extrabold text-lg shadow-md shadow-amber-600/20 shrink-0">
+          <span>ش</span>
         </div>
-        <div class="min-w-0">
-          <div data-i18n="brandName" class="font-extrabold text-base sm:text-lg text-slate-900 truncate"></div>
-          <div data-i18n="brandSub" class="text-xs text-teal-700 font-semibold truncate"></div>
+        <div class="truncate">
+          <div class="text-base sm:text-xl font-extrabold text-[#0F172A] tracking-tight leading-snug truncate font-heading" data-i18n="brandTitle">
+            مقاولات وديكورات الشرقية
+          </div>
+          <div class="text-[11px] sm:text-xs text-[#0D9488] font-semibold truncate" data-i18n="brandSub">
+            الدمام • الخبر • القطيف • الجبيل
+          </div>
         </div>
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-6 text-sm font-bold text-slate-700">
-        <a href="#services" data-i18n="navServices" class="nav-link-hover"></a>
-        <a href="#portfolio" data-i18n="navPortfolio" class="nav-link-hover text-amber-600"></a>
-        <a href="#calculator" data-i18n="navCalc" class="nav-link-hover"></a>
-        <a href="#cities" data-i18n="navCities" class="nav-link-hover"></a>
-        <a href="#seo-guides" data-i18n="navSeoGuides" class="nav-link-hover"></a>
-        <a href="#faq" data-i18n="navFaq" class="nav-link-hover"></a>
-        <a href="#contact" data-i18n="navContact" class="nav-link-hover"></a>
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-bold text-[#0F172A]">
+        <a href="#hero" class="hover:text-[#D97706] transition py-1" data-i18n="navHome">الرئيسية</a>
+        <a href="#services" class="hover:text-[#D97706] transition py-1" data-i18n="navServices">خدماتنا</a>
+        <a href="#gallery" class="hover:text-[#D97706] transition py-1" data-i18n="navGallery">معرض الأعمال (23)</a>
+        <a href="blog.html" onclick="handleBlogNav(event)" class="hover:text-[#D97706] transition py-1 flex items-center gap-1" data-i18n="navBlog">المدونة والمقالات</a>
+        <a href="#socials" class="hover:text-[#D97706] transition py-1" data-i18n="navSocials">حساباتنا الرسمية</a>
+        <a href="#contact" class="hover:text-[#D97706] transition py-1" data-i18n="navContact">اتصل بنا</a>
       </nav>
 
-      <!-- Desktop CTA + Mobile Hamburger (Phone/WhatsApp on Mobile are in Sticky Bottom Bar so Header Stays Clean) -->
+      <!-- Header Right Controls: Prominent Language Converter + Desktop CTA + Mobile Menu Button -->
       <div class="flex items-center gap-2 shrink-0">
-        <a href="tel:0530320587" class="hidden md:inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-900 border border-slate-300 px-3.5 py-2 rounded-xl text-xs font-bold transition">
+        <!-- Working Language Converter Button -->
+        <button id="langToggleBtn" type="button" onclick="toggleLanguage()" class="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-xl bg-white border-2 border-[#D97706] text-[#0F172A] hover:bg-amber-50 active:scale-95 transition font-bold text-xs sm:text-sm shadow-sm" aria-label="تغيير اللغة / Switch Language">
+          <span class="text-[#D97706] text-sm">🌐</span>
+          <span id="langBtnLabel">العربية | EN</span>
+        </button>
+
+        <!-- Desktop-Only Contact Buttons (Hidden on mobile to prevent clipping; mobile uses sticky bottom bar) -->
+        <a href="tel:0530320587" class="hidden md:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl gold-gradient-btn text-sm font-bold shadow-sm">
           <span>📞</span>
           <span dir="ltr">0530320587</span>
         </a>
-        <a href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener" class="btn-shimmer hidden sm:inline-flex items-center gap-1.5 bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-4 py-2 rounded-xl text-xs font-bold shadow">
+        <a href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener noreferrer" class="hidden xl:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl teal-gradient-btn text-sm font-bold shadow-sm">
           <span>💬</span>
-          <span data-i18n="whatsappNow"></span>
+          <span data-i18n="headerWhatsapp">واتساب مباشر</span>
         </a>
-        <button type="button" onclick="toggleMobileNav()" class="lg:hidden px-3 py-2 rounded-xl bg-amber-50 text-amber-900 border border-amber-300 font-bold text-sm" aria-label="Menu">
-          ☰
+
+        <!-- Mobile Hamburger Menu Toggle -->
+        <button id="mobileMenuBtn" type="button" onclick="toggleMobileMenu()" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white border border-slate-200 text-[#0F172A] hover:border-[#D97706] transition" aria-label="القائمة">
+          <svg id="menuIconOpen" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="menuIconClose" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Slide-Down Navigation Menu -->
-    <div id="mobileNavMenu" class="hidden lg:hidden bg-white border-t border-slate-200 px-4 py-4 space-y-3 shadow-xl">
-      <div class="grid grid-cols-2 gap-2 text-xs font-bold text-slate-800">
-        <a href="#services" onclick="toggleMobileNav()" data-i18n="navServices" class="p-2.5 rounded-xl bg-slate-50 border border-slate-200"></a>
-        <a href="#portfolio" onclick="toggleMobileNav()" data-i18n="navPortfolio" class="p-2.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-800"></a>
-        <a href="#calculator" onclick="toggleMobileNav()" data-i18n="navCalc" class="p-2.5 rounded-xl bg-slate-50 border border-slate-200"></a>
-        <a href="#cities" onclick="toggleMobileNav()" data-i18n="navCities" class="p-2.5 rounded-xl bg-slate-50 border border-slate-200"></a>
-        <a href="#seo-guides" onclick="toggleMobileNav()" data-i18n="navSeoGuides" class="p-2.5 rounded-xl bg-slate-50 border border-slate-200"></a>
-        <a href="#contact" onclick="toggleMobileNav()" data-i18n="navContact" class="p-2.5 rounded-xl bg-slate-50 border border-slate-200"></a>
-      </div>
-      <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-200 text-xs font-bold">
-        <a href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-emerald-600 text-white">WhatsApp</a>
-        <a href="https://www.tiktok.com/@a0530320587a?_r=1&_t=ZS-9BKDvRd8iSi" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-slate-900 text-white">TikTok</a>
-        <a href="https://www.instagram.com/a_min736?rpxt=MnB2MWd0eHhtbm56&utm_source=qr" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-pink-600 text-white">Instagram</a>
-        <a href="https://snapchat.com/t/ZxB9o66T" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-yellow-400 text-slate-950">Snapchat</a>
-        <a href="https://pin.it/2dbc7wt4E" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-red-600 text-white">Pinterest</a>
-        <a href="https://www.youtube.com/@%D8%A7%D9%85%D9%8A%D9%86%D8%BA%D8%A7%D9%86%D9%85-%D8%B59%D8%B7" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-red-700 text-white">YouTube</a>
+    <!-- Mobile Dropdown Drawer -->
+    <div id="mobileMenuDrawer" class="hidden lg:hidden bg-white border-b border-amber-900/15 px-4 pt-3 pb-5 shadow-xl">
+      <div class="grid grid-cols-2 gap-2 text-sm font-bold">
+        <a href="#hero" onclick="closeMobileMenu()" class="px-3.5 py-2.5 rounded-xl bg-[#FAF8F5] hover:bg-amber-50 text-[#0F172A]" data-i18n="navHome">الرئيسية</a>
+        <a href="#services" onclick="closeMobileMenu()" class="px-3.5 py-2.5 rounded-xl bg-[#FAF8F5] hover:bg-amber-50 text-[#0F172A]" data-i18n="navServices">خدماتنا</a>
+        <a href="#gallery" onclick="closeMobileMenu()" class="px-3.5 py-2.5 rounded-xl bg-[#FAF8F5] hover:bg-amber-50 text-[#0F172A]" data-i18n="navGallery">معرض الأعمال (23)</a>
+        <a href="blog.html" onclick="handleBlogNav(event); closeMobileMenu();" class="px-3.5 py-2.5 rounded-xl bg-[#FAF8F5] hover:bg-amber-50 text-[#0F172A]" data-i18n="navBlog">المدونة والمقالات</a>
+        <a href="#socials" onclick="closeMobileMenu()" class="px-3.5 py-2.5 rounded-xl bg-[#FAF8F5] hover:bg-amber-50 text-[#0F172A]" data-i18n="navSocials">حساباتنا الرسمية</a>
+        <a href="#contact" onclick="closeMobileMenu()" class="px-3.5 py-2.5 rounded-xl bg-[#FAF8F5] hover:bg-amber-50 text-[#0F172A]" data-i18n="navContact">اتصل بنا</a>
       </div>
     </div>
   </header>
 
-  <!-- Bright Sunlit Hero Section (Clean Typography, Balanced Mobile Sizing) -->
-  <section class="relative py-7 sm:py-12 lg:py-16 bg-gradient-to-br from-amber-50/90 via-white to-teal-50/70 border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-10 items-center">
-      <div class="lg:col-span-7 space-y-4">
-        <div class="inline-flex items-center gap-2 bg-amber-100/90 border border-amber-300 text-amber-900 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold">
-          <span data-i18n="heroBadge"></span>
-        </div>
+  <!-- HERO SECTION (Bright Luxury Palette) -->
+  <section id="hero" class="relative overflow-hidden py-8 sm:py-14 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+        
+        <!-- Hero Text Column -->
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/90 border border-amber-300 text-[#B45309] text-xs sm:text-sm font-bold">
+            <span>✨</span>
+            <span data-i18n="heroBadge">المقاول المعتمد للتشطيبات والديكورات الحديثة بالشرقية</span>
+          </div>
 
-        <h1 data-i18n="heroTitle" class="text-2xl sm:text-4xl lg:text-[42px] font-extrabold text-slate-900"></h1>
-        <p data-i18n="heroDesc" class="text-slate-700 text-sm sm:text-base lg:text-lg leading-relaxed"></p>
+          <h1 class="text-2xl sm:text-4xl lg:text-[42px] font-extrabold text-[#0F172A] leading-[1.3] sm:leading-[1.25] font-heading" data-i18n="heroTitle">
+            نُحول منزلك إلى تحفة معمارية فاخرة في <span class="text-[#D97706]">الدمام والخبر والقطيف والجبيل</span>
+          </h1>
 
-        <div class="grid grid-cols-1 sm:flex sm:flex-wrap gap-3 pt-1">
-          <a href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener" data-i18n="heroCtaPrimary" class="btn-shimmer text-center bg-gradient-to-r from-amber-600 to-amber-500 text-white font-bold px-6 py-3.5 rounded-2xl text-sm shadow-md"></a>
-          <a href="#portfolio" data-i18n="heroCtaSecondary" class="text-center bg-white hover:bg-slate-50 text-slate-900 border-2 border-slate-300 font-bold px-6 py-3.5 rounded-2xl text-sm transition"></a>
-        </div>
+          <p class="text-sm sm:text-base lg:text-lg text-slate-700 leading-relaxed font-normal" data-i18n="heroDesc">
+            نقدم خدمات متكاملة في تنفيذ الدهانات الداخلية والخارجية، ديكورات الشيبورد وبديل الخشب والمرايا المضيئة، ورق الجدران الثلاثي الأبعاد، المظلات والسواتر، وترميم واجهات الفلل بأعلى معايير الجودة الهندسية وبإشراف مباشر.
+          </p>
 
-        <!-- Stats Grid -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-3">
-          <div class="luxury-card p-3 rounded-2xl text-center">
-            <div data-i18n="stat1Val" class="text-lg sm:text-2xl font-extrabold text-amber-600"></div>
-            <div data-i18n="stat1Lbl" class="text-xs text-slate-600 font-semibold mt-0.5"></div>
-          </div>
-          <div class="luxury-card p-3 rounded-2xl text-center">
-            <div data-i18n="stat2Val" class="text-lg sm:text-2xl font-extrabold text-teal-600"></div>
-            <div data-i18n="stat2Lbl" class="text-xs text-slate-600 font-semibold mt-0.5"></div>
-          </div>
-          <div class="luxury-card p-3 rounded-2xl text-center">
-            <div data-i18n="stat3Val" class="text-lg sm:text-2xl font-extrabold text-amber-600"></div>
-            <div data-i18n="stat3Lbl" class="text-xs text-slate-600 font-semibold mt-0.5"></div>
-          </div>
-          <div class="luxury-card p-3 rounded-2xl text-center">
-            <div data-i18n="stat4Val" class="text-lg sm:text-2xl font-extrabold text-teal-600"></div>
-            <div data-i18n="stat4Lbl" class="text-xs text-slate-600 font-semibold mt-0.5"></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Featured Original-Quality Project Showcase -->
-      <div class="lg:col-span-5">
-        <div class="luxury-card rounded-3xl p-4 sm:p-5 shadow-xl space-y-3 border-2 border-amber-300/80">
-          <div class="flex items-center justify-between gap-2">
-            <span data-i18n="showcaseTag" class="bg-amber-600 text-white text-xs font-bold px-3 py-1 rounded-full"></span>
-            <span id="heroShowcaseCat" class="text-xs text-teal-700 font-bold"></span>
-          </div>
-          <div class="img-hover-wrap rounded-2xl overflow-hidden h-64 sm:h-80 relative cursor-pointer border border-slate-200">
-            <img id="heroShowcaseImg" src="" alt="Featured High Quality Project" fetchpriority="high" decoding="async" class="w-full h-full object-cover" />
-            <div class="absolute bottom-3 inset-x-3 bg-white/95 backdrop-blur-md border border-slate-200 rounded-xl p-2.5 sm:p-3 shadow-md">
-              <div id="heroShowcaseTitle" class="text-slate-900 font-bold text-xs sm:text-sm leading-snug"></div>
-              <div data-i18n="showcaseZoomHint" class="text-amber-700 text-[11px] font-semibold mt-0.5"></div>
+          <!-- Key Trust Badges -->
+          <div class="grid grid-cols-3 gap-2.5 sm:gap-4 pt-1">
+            <div class="luxury-card rounded-2xl p-3 sm:p-4 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-[#D97706]">+23</div>
+              <div class="text-[11px] sm:text-xs font-bold text-slate-700 mt-0.5" data-i18n="statProjects">مشروع موثق بالصور</div>
+            </div>
+            <div class="luxury-card rounded-2xl p-3 sm:p-4 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-[#0D9488]">100%</div>
+              <div class="text-[11px] sm:text-xs font-bold text-slate-700 mt-0.5" data-i18n="statMaterials">خامات أصلية مضمونة</div>
+            </div>
+            <div class="luxury-card rounded-2xl p-3 sm:p-4 text-center">
+              <div class="text-xl sm:text-2xl font-extrabold text-[#0F172A]">5</div>
+              <div class="text-[11px] sm:text-xs font-bold text-slate-700 mt-0.5" data-i18n="statCities">مدن رئيسية بالشرقية</div>
             </div>
           </div>
-          <div id="heroShowcaseThumbs" class="grid grid-cols-4 gap-2"></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- 1. Categorized Services Section -->
-  <section id="services" class="py-12 sm:py-16 bg-white border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-3xl mx-auto mb-9">
-        <span data-i18n="servicesTag" class="text-teal-800 bg-teal-50 border border-teal-200 px-3.5 py-1 rounded-full text-xs font-bold"></span>
-        <h2 data-i18n="servicesTitle" class="text-xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mt-3 mb-2"></h2>
-        <p data-i18n="servicesDesc" class="text-slate-600 text-sm sm:text-base"></p>
-      </div>
-      <div id="servicesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-    </div>
-  </section>
-
-  <!-- 2. Original High-Resolution Client Photos Gallery (23 Verified Photos Only - Videos Discarded) -->
-  <section id="portfolio" class="py-12 sm:py-16 bg-[#FAF8F5] border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-3xl mx-auto mb-7">
-        <span data-i18n="portfolioTag" class="text-amber-900 bg-amber-100 border border-amber-300 px-3.5 py-1 rounded-full text-xs font-bold"></span>
-        <h2 data-i18n="portfolioTitle" class="text-xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mt-3 mb-2"></h2>
-        <p data-i18n="portfolioDesc" class="text-slate-600 text-sm sm:text-base"></p>
-      </div>
-      <div id="portfolioFilters" class="flex flex-wrap items-center justify-center gap-2 mb-8"></div>
-      <div id="portfolioGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"></div>
-    </div>
-  </section>
-
-  <!-- 3. Interactive Cost Estimator Section -->
-  <section id="calculator" class="py-12 sm:py-16 bg-white border-b border-slate-200">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-3xl mx-auto mb-8">
-        <span data-i18n="calcTag" class="text-teal-800 bg-teal-50 border border-teal-200 px-3.5 py-1 rounded-full text-xs font-bold"></span>
-        <h2 data-i18n="calcTitle" class="text-xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mt-3 mb-2"></h2>
-        <p data-i18n="calcDesc" class="text-slate-600 text-sm sm:text-base"></p>
-      </div>
-
-      <div class="luxury-card rounded-3xl p-5 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center bg-gradient-to-br from-amber-50/50 via-white to-teal-50/40">
-        <div class="lg:col-span-7 space-y-4">
-          <div>
-            <label for="calcService" data-i18n="calcLblService" class="block text-xs sm:text-sm font-bold text-slate-800 mb-1.5"></label>
-            <select id="calcService" onchange="updateCalculation()" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 font-bold focus:border-amber-600 outline-none"></select>
+          <!-- Primary Hero CTAs -->
+          <div class="flex flex-wrap items-center gap-3 pt-2">
+            <a href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener noreferrer" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl teal-gradient-btn font-bold text-sm sm:text-base shadow-md">
+              <span>💬</span>
+              <span data-i18n="heroBtnWhatsapp">اطلب تسعيرة عبر واتساب</span>
+            </a>
+            <a href="tel:0530320587" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl gold-gradient-btn font-bold text-sm sm:text-base shadow-md">
+              <span>📞</span>
+              <span data-i18n="heroBtnCall">اتصال مباشر: 0530320587</span>
+            </a>
+            <a href="#gallery" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-white border border-slate-300 hover:border-[#D97706] text-[#0F172A] font-bold text-sm sm:text-base transition">
+              <span>🖼️</span>
+              <span data-i18n="heroBtnGallery">تصفح معرض الصور</span>
+            </a>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label for="calcCity" data-i18n="calcLblCity" class="block text-xs sm:text-sm font-bold text-slate-800 mb-1.5"></label>
-              <select id="calcCity" onchange="updateCalculation()" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 font-bold focus:border-amber-600 outline-none"></select>
+        </div>
+
+        <!-- Hero Interactive Featured Showcase (Populated from gallery.json) -->
+        <div class="lg:col-span-5">
+          <div class="luxury-card rounded-3xl p-3 sm:p-4 relative">
+            <div id="heroShowcaseCard" class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-100 cursor-pointer group" onclick="openLightboxByIndex(currentHeroIndex)">
+              <img id="heroShowcaseImg" src="" alt="مشروع مميز" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/85 via-[#0F172A]/20 to-transparent"></div>
+              
+              <div class="absolute top-3 right-3 left-3 flex items-center justify-between gap-2">
+                <span id="heroShowcaseCat" class="px-3 py-1 rounded-full bg-[#D97706] text-white text-xs font-bold shadow"></span>
+                <span class="px-3 py-1 rounded-full bg-white/95 text-[#0F172A] text-xs font-bold shadow flex items-center gap-1">
+                  <span>🔍</span>
+                  <span data-i18n="clickToZoom">اضغط للتكبير 350%</span>
+                </span>
+              </div>
+
+              <div class="absolute bottom-3 right-3 left-3 text-white">
+                <h3 id="heroShowcaseTitle" class="text-sm sm:text-base font-extrabold leading-snug line-clamp-1"></h3>
+                <p id="heroShowcaseDesc" class="text-xs text-slate-200 line-clamp-2 mt-1"></p>
+              </div>
             </div>
-            <div>
-              <label for="calcFinish" data-i18n="calcLblFinish" class="block text-xs sm:text-sm font-bold text-slate-800 mb-1.5"></label>
-              <select id="calcFinish" onchange="updateCalculation()" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 font-bold focus:border-amber-600 outline-none"></select>
+
+            <!-- Hero Thumbnail Strip Controls -->
+            <div class="flex items-center justify-between gap-2 mt-3 px-1">
+              <button type="button" onclick="stepHeroShowcase(-1)" class="px-3 py-1.5 rounded-xl bg-[#FAF8F5] hover:bg-amber-100 text-[#0F172A] font-bold text-xs border border-slate-200 transition" data-i18n="prevSlide">السابق</button>
+              <div id="heroDots" class="flex items-center gap-1.5"></div>
+              <button type="button" onclick="stepHeroShowcase(1)" class="px-3 py-1.5 rounded-xl bg-[#FAF8F5] hover:bg-amber-100 text-[#0F172A] font-bold text-xs border border-slate-200 transition" data-i18n="nextSlide">التالي</button>
             </div>
           </div>
-          <div>
-            <div class="flex justify-between text-xs sm:text-sm font-bold mb-2">
-              <label for="calcArea" data-i18n="calcLblArea" class="text-slate-800"></label>
-              <span id="calcAreaVal" class="text-amber-900 bg-amber-100 border border-amber-300 px-3 py-0.5 rounded-lg">45 m²</span>
-            </div>
-            <input id="calcArea" type="range" min="10" max="500" value="45" oninput="updateCalculation()" class="w-full accent-amber-600 cursor-pointer" />
-          </div>
         </div>
 
-        <div class="lg:col-span-5 bg-slate-900 text-white rounded-2xl p-6 text-center space-y-4 shadow-xl">
-          <div data-i18n="calcResTitle" class="text-xs font-bold text-amber-400 uppercase"></div>
-          <div id="calcPriceRange" class="text-2xl sm:text-3xl font-extrabold text-white"></div>
-          <p data-i18n="calcResNote" class="text-xs text-slate-300 leading-relaxed"></p>
-          <a id="calcWaLink" href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener" data-i18n="calcWaBtn"
-             class="btn-shimmer block w-full bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 font-bold py-3.5 px-4 rounded-xl text-xs sm:text-sm"></a>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. 10 Eastern Province Cities Section (Local SEO) -->
-  <section id="cities" class="py-12 sm:py-16 bg-[#FAF8F5] border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-3xl mx-auto mb-9">
-        <span data-i18n="citiesTag" class="text-amber-900 bg-amber-100 border border-amber-300 px-3.5 py-1 rounded-full text-xs font-bold"></span>
-        <h2 data-i18n="citiesTitle" class="text-xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mt-3 mb-2"></h2>
-        <p data-i18n="citiesDesc" class="text-slate-600 text-sm sm:text-base"></p>
-      </div>
-      <div id="citiesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"></div>
-    </div>
-  </section>
-
-  <!-- 5. Comprehensive SEO Content & Technical Guides Section -->
-  <section id="seo-guides" class="py-12 sm:py-16 bg-white border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-3xl mx-auto mb-9">
-        <span data-i18n="seoSectionTag" class="text-teal-800 bg-teal-50 border border-teal-200 px-3.5 py-1 rounded-full text-xs font-bold"></span>
-        <h2 data-i18n="seoSectionTitle" class="text-xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mt-3 mb-2"></h2>
-        <p data-i18n="seoSectionDesc" class="text-slate-600 text-sm sm:text-base"></p>
-      </div>
-      <div id="seoPillarsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-    </div>
-  </section>
-
-  <!-- 6. Official Social Media Channels & Reviews -->
-  <section id="social-hub" class="py-12 sm:py-16 bg-[#FAF8F5] border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-12">
-      <div class="text-center max-w-3xl mx-auto">
-        <span data-i18n="socialTag" class="text-amber-900 bg-amber-100 border border-amber-300 px-3.5 py-1 rounded-full text-xs font-bold"></span>
-        <h2 data-i18n="socialTitle" class="text-xl sm:text-3xl font-extrabold text-slate-900 mt-3 mb-6"></h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          <a href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener" class="luxury-card p-4 rounded-2xl text-center hover:border-emerald-500">
-            <div class="text-2xl mb-1">💬</div>
-            <div class="font-bold text-sm text-slate-900">WhatsApp</div>
-            <div class="text-[11px] text-emerald-600 font-bold" dir="ltr">0530320587</div>
-          </a>
-          <a href="https://www.tiktok.com/@a0530320587a?_r=1&_t=ZS-9BKDvRd8iSi" target="_blank" rel="noopener" class="luxury-card p-4 rounded-2xl text-center">
-            <div class="text-2xl mb-1">🎵</div>
-            <div class="font-bold text-sm text-slate-900">TikTok</div>
-            <div class="text-[11px] text-slate-500 font-bold" dir="ltr">@a0530320587a</div>
-          </a>
-          <a href="https://www.instagram.com/a_min736?rpxt=MnB2MWd0eHhtbm56&utm_source=qr" target="_blank" rel="noopener" class="luxury-card p-4 rounded-2xl text-center">
-            <div class="text-2xl mb-1">📸</div>
-            <div class="font-bold text-sm text-slate-900">Instagram</div>
-            <div class="text-[11px] text-pink-600 font-bold" dir="ltr">@a_min736</div>
-          </a>
-          <a href="https://snapchat.com/t/ZxB9o66T" target="_blank" rel="noopener" class="luxury-card p-4 rounded-2xl text-center">
-            <div class="text-2xl mb-1">👻</div>
-            <div class="font-bold text-sm text-slate-900">Snapchat</div>
-            <div class="text-[11px] text-amber-600 font-bold" dir="ltr">AA736186</div>
-          </a>
-          <a href="https://pin.it/2dbc7wt4E" target="_blank" rel="noopener" class="luxury-card p-4 rounded-2xl text-center">
-            <div class="text-2xl mb-1">📌</div>
-            <div class="font-bold text-sm text-slate-900">Pinterest</div>
-            <div class="text-[11px] text-red-600 font-bold">Gallery</div>
-          </a>
-          <a href="https://www.youtube.com/@%D8%A7%D9%85%D9%8A%D9%86%D8%BA%D8%A7%D9%86%D9%85-%D8%B59%D8%B7" target="_blank" rel="noopener" class="luxury-card p-4 rounded-2xl text-center">
-            <div class="text-2xl mb-1">▶️</div>
-            <div class="font-bold text-sm text-slate-900">YouTube</div>
-            <div class="text-[11px] text-red-700 font-bold">Channel</div>
-          </a>
-        </div>
+  <!-- CORE SERVICES SECTION (5 Specialized Categories Mapped to Gallery Filters) -->
+  <section id="services" class="py-10 sm:py-14 bg-white border-y border-amber-900/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+        <span class="text-xs sm:text-sm font-extrabold text-[#0D9488] uppercase tracking-wider" data-i18n="servicesEyebrow">تخصصاتنا الهندسية والجمالية</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0F172A] mt-1 font-heading" data-i18n="servicesHeading">خدمات المقاولات والديكور المتكاملة بالشرقية</h2>
+        <p class="text-sm sm:text-base text-slate-600 mt-2" data-i18n="servicesSub">اختر القسم المطلوب لاستعراض صور المشاريع المنفذة على أرض الواقع بدقة عالية</p>
       </div>
 
-      <div>
-        <div class="text-center max-w-3xl mx-auto mb-8">
-          <h3 data-i18n="reviewsTitle" class="text-xl sm:text-3xl font-extrabold text-slate-900"></h3>
-        </div>
-        <div id="reviewsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-5"></div>
+      <div id="servicesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5">
+        <!-- Populated dynamically via JS from gallery.json categories -->
       </div>
     </div>
   </section>
 
-  <!-- 7. FAQ Section -->
-  <section id="faq" class="py-12 sm:py-16 bg-white border-b border-slate-200">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-8">
-        <span data-i18n="faqTag" class="text-teal-800 bg-teal-50 border border-teal-200 px-3.5 py-1 rounded-full text-xs font-bold"></span>
-        <h2 data-i18n="faqTitle" class="text-xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mt-3"></h2>
-      </div>
-      <div id="faqList" class="space-y-3.5"></div>
-    </div>
-  </section>
-
-  <!-- 8. Contact Section -->
-  <section id="contact" class="py-12 sm:py-16 bg-[#FAF8F5]">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-2xl mx-auto mb-8">
-        <span data-i18n="contactTag" class="text-amber-900 bg-amber-100 border border-amber-300 px-3.5 py-1 rounded-full text-xs font-bold"></span>
-        <h2 data-i18n="contactTitle" class="text-xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mt-3 mb-2"></h2>
-        <p data-i18n="contactDesc" class="text-slate-600 text-sm"></p>
-      </div>
-
-      <form onsubmit="handleContactSubmit(event)" class="luxury-card rounded-3xl p-5 sm:p-8 space-y-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label for="formName" data-i18n="formNameLbl" class="block text-xs sm:text-sm font-bold text-slate-800 mb-1.5"></label>
-            <input id="formName" type="text" required data-i18n-placeholder="formNamePh" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 outline-none focus:border-amber-600" />
-          </div>
-          <div>
-            <label for="formPhone" data-i18n="formPhoneLbl" class="block text-xs sm:text-sm font-bold text-slate-800 mb-1.5"></label>
-            <input id="formPhone" type="tel" required data-i18n-placeholder="formPhonePh" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 outline-none focus:border-amber-600" />
-          </div>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label for="formCity" data-i18n="formCityLbl" class="block text-xs sm:text-sm font-bold text-slate-800 mb-1.5"></label>
-            <select id="formCity" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 outline-none focus:border-amber-600"></select>
-          </div>
-          <div>
-            <label for="formService" data-i18n="formServiceLbl" class="block text-xs sm:text-sm font-bold text-slate-800 mb-1.5"></label>
-            <select id="formService" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 outline-none focus:border-amber-600"></select>
-          </div>
-        </div>
+  <!-- 23-PHOTO FILTERABLE GALLERY SECTION -->
+  <section id="gallery" class="py-12 sm:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 sm:mb-8">
         <div>
-          <label for="formNotes" data-i18n="formNotesLbl" class="block text-xs sm:text-sm font-bold text-slate-800 mb-1.5"></label>
-          <textarea id="formNotes" rows="3" data-i18n-placeholder="formNotesPh" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 outline-none focus:border-amber-600"></textarea>
+          <div class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-extrabold text-[#D97706] mb-1">
+            <span>📸</span>
+            <span data-i18n="galleryEyebrow">توثيق واقعي من مواقع العمل (بدون صور تعبيرية)</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0F172A] font-heading" data-i18n="galleryHeading">
+            معرض أعمالنا المنفذة بالدمام والخبر والقطيف (23 مشروعاً)
+          </h2>
         </div>
-        <button type="submit" data-i18n="formSubmitBtn" class="btn-shimmer w-full bg-gradient-to-r from-amber-600 to-amber-500 text-white font-bold py-4 rounded-2xl text-sm shadow-lg"></button>
-      </form>
+
+        <!-- Search Input -->
+        <div class="w-full md:w-72">
+          <div class="relative">
+            <input id="gallerySearchInput" type="search" oninput="handleGallerySearch(this.value)" placeholder="ابحث في المشاريع (مثال: شيبورد، مظلات)..." class="w-full pl-4 pr-10 py-2.5 rounded-xl bg-white border border-slate-300 focus:border-[#D97706] focus:outline-none text-sm text-[#0F172A]" />
+            <span class="absolute top-2.5 right-3 text-slate-400">🔍</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Tabs Bar -->
+      <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-3 mb-6" id="galleryFilterTabs">
+        <button type="button" onclick="filterGallery('all')" data-cat="all" class="filter-pill px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition gold-gradient-btn shadow-sm">
+          <span data-i18n="catAll">الكل (23)</span>
+        </button>
+        <button type="button" onclick="filterGallery('renovation')" data-cat="renovation" class="filter-pill px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition bg-white border border-slate-200 text-[#0F172A] hover:border-[#D97706]">
+          <span data-i18n="catRenovation">ترميم وتطوير الفلل (2)</span>
+        </button>
+        <button type="button" onclick="filterGallery('chipboard')" data-cat="chipboard" class="filter-pill px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition bg-white border border-slate-200 text-[#0F172A] hover:border-[#D97706]">
+          <span data-i18n="catChipboard">شيبورد وبديل الخشب ومرايا (5)</span>
+        </button>
+        <button type="button" onclick="filterGallery('painting')" data-cat="painting" class="filter-pill px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition bg-white border border-slate-200 text-[#0F172A] hover:border-[#D97706]">
+          <span data-i18n="catPainting">الدهانات والجبس بورد (8)</span>
+        </button>
+        <button type="button" onclick="filterGallery('wallpaper')" data-cat="wallpaper" class="filter-pill px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition bg-white border border-slate-200 text-[#0F172A] hover:border-[#D97706]">
+          <span data-i18n="catWallpaper">ورق جدران 3D وكلاسيك (3)</span>
+        </button>
+        <button type="button" onclick="filterGallery('shades')" data-cat="shades" class="filter-pill px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition bg-white border border-slate-200 text-[#0F172A] hover:border-[#D97706]">
+          <span data-i18n="catShades">المظلات والسواتر (5)</span>
+        </button>
+      </div>
+
+      <!-- Gallery Count Status -->
+      <div class="flex items-center justify-between text-xs sm:text-sm text-slate-600 mb-4 px-1">
+        <span id="galleryCountStatus" class="font-semibold"></span>
+        <span class="text-[#0D9488] font-bold" data-i18n="galleryZoomHint">💡 اضغط على أي صورة لفتح المكبر التفاعلي (تكبير حتى 350%)</span>
+      </div>
+
+      <!-- 23-Photo Grid -->
+      <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        <!-- Populated from gallery.json -->
+      </div>
+
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-slate-900 text-slate-300 py-12 text-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-      <div>
-        <div class="flex items-center gap-2.5 mb-3">
-          <div class="w-9 h-9 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center font-bold">🏗️</div>
-          <span data-i18n="brandName" class="font-bold text-white text-sm"></span>
+  <!-- BLOG & SEO ARTICLES PREVIEW SECTION -->
+  <section id="blog" class="py-12 sm:py-16 bg-white border-t border-amber-900/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+        <div>
+          <span class="text-xs sm:text-sm font-extrabold text-[#0D9488]" data-i18n="blogEyebrow">المدونة الهندسية ودليل الأسعار والنصائح</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0F172A] mt-1 font-heading" data-i18n="blogHeading">
+            مقالات متخصصة في المقاولات والديكور بالمنطقة الشرقية
+          </h2>
         </div>
-        <p data-i18n="footerAbout" class="leading-relaxed text-slate-400"></p>
+        <a href="blog.html" onclick="handleBlogNav(event)" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl gold-gradient-btn text-xs sm:text-sm font-bold self-start sm:self-auto">
+          <span data-i18n="blogViewAllBtn">تصفح جميع المقالات (6 مقالات كاملة)</span>
+          <span>←</span>
+        </a>
       </div>
-      <div>
-        <h3 data-i18n="footerCitiesTitle" class="font-bold text-white text-sm mb-3"></h3>
-        <p class="leading-relaxed text-slate-400">الدمام • الخبر • القطيف • الجبيل • الأحساء • صفوى • رأس تنورة • الفيصلية • سيهات • الظهران</p>
-      </div>
-      <div>
-        <h3 data-i18n="footerContactTitle" class="font-bold text-white text-sm mb-3"></h3>
-        <ul class="space-y-2">
-          <li>📞 <a href="tel:0530320587" class="text-amber-400 font-bold" dir="ltr">0530320587</a></li>
-          <li>💬 <a href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener" class="text-emerald-400 font-bold hover:underline">WhatsApp Direct Link</a></li>
-          <li class="flex flex-wrap gap-2 pt-1">
-            <a href="https://www.tiktok.com/@a0530320587a?_r=1&_t=ZS-9BKDvRd8iSi" target="_blank" rel="noopener" class="text-white hover:text-amber-400 underline">TikTok</a>
-            <a href="https://www.instagram.com/a_min736?rpxt=MnB2MWd0eHhtbm56&utm_source=qr" target="_blank" rel="noopener" class="text-white hover:text-amber-400 underline">Instagram</a>
-            <a href="https://snapchat.com/t/ZxB9o66T" target="_blank" rel="noopener" class="text-white hover:text-amber-400 underline">Snapchat</a>
-            <a href="https://pin.it/2dbc7wt4E" target="_blank" rel="noopener" class="text-white hover:text-amber-400 underline">Pinterest</a>
-            <a href="https://www.youtube.com/@%D8%A7%D9%85%D9%8A%D9%86%D8%BA%D8%A7%D9%86%D9%85-%D8%B59%D8%B7" target="_blank" rel="noopener" class="text-white hover:text-amber-400 underline">YouTube</a>
-          </li>
-        </ul>
+
+      <div id="blogPreviewGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- 6 SEO Articles rendered via JS with interactive full-article reader modal -->
       </div>
     </div>
-    <div class="max-w-7xl mx-auto px-4 pt-6 border-t border-slate-800 text-center text-slate-400">
-      <p data-i18n="footerRights"></p>
+  </section>
+
+  <!-- ALL 6 OFFICIAL SOCIAL PLATFORMS & DIRECT CONTACT -->
+  <section id="socials" class="py-12 sm:py-16 bg-[#FAF8F5] border-t border-amber-900/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+        <span class="text-xs sm:text-sm font-extrabold text-[#D97706]" data-i18n="socialsEyebrow">تابع أحدث يومياتنا ومشاريعنا بالفيديو والصور</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#0F172A] mt-1 font-heading" data-i18n="socialsHeading">
+          الحسابات الرسمية لمؤسسة مقاولات وديكورات الشرقية
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 mt-2" data-i18n="socialsSub">
+          تواصل معنا مباشرة أو شاهد تغطيات العمل اليومية في الدمام والخبر والقطيف عبر منصاتنا الرسمية الموثقة
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener noreferrer" class="luxury-card rounded-2xl p-4 flex flex-col items-center text-center group">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition">💬</div>
+          <div class="font-extrabold text-sm text-[#0F172A] mt-3">WhatsApp</div>
+          <div class="text-xs text-emerald-700 font-bold mt-0.5" data-i18n="socWhatsappSub">محادثة فورية</div>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@a0530320587a?_r=1&_t=ZS-9BKDvRd8iSi" target="_blank" rel="noopener noreferrer" class="luxury-card rounded-2xl p-4 flex flex-col items-center text-center group">
+          <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center text-xl font-extrabold group-hover:scale-110 transition">🎵</div>
+          <div class="font-extrabold text-sm text-[#0F172A] mt-3">TikTok</div>
+          <div class="text-xs text-slate-500 font-semibold mt-0.5">@a0530320587a</div>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/a_min736?rpxt=MnB2MWd0eHhtbm56&utm_source=qr" target="_blank" rel="noopener noreferrer" class="luxury-card rounded-2xl p-4 flex flex-col items-center text-center group">
+          <div class="w-12 h-12 rounded-2xl bg-pink-100 text-pink-700 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition">📸</div>
+          <div class="font-extrabold text-sm text-[#0F172A] mt-3">Instagram</div>
+          <div class="text-xs text-pink-700 font-semibold mt-0.5">@a_min736</div>
+        </a>
+
+        <!-- Snapchat -->
+        <a href="https://snapchat.com/t/ZxB9o66T" target="_blank" rel="noopener noreferrer" class="luxury-card rounded-2xl p-4 flex flex-col items-center text-center group">
+          <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition">👻</div>
+          <div class="font-extrabold text-sm text-[#0F172A] mt-3">Snapchat</div>
+          <div class="text-xs text-amber-700 font-semibold mt-0.5" data-i18n="socSnapSub">تغطيات يومية</div>
+        </a>
+
+        <!-- Pinterest -->
+        <a href="https://pin.it/2dbc7wt4E" target="_blank" rel="noopener noreferrer" class="luxury-card rounded-2xl p-4 flex flex-col items-center text-center group">
+          <div class="w-12 h-12 rounded-2xl bg-red-100 text-red-700 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition">📌</div>
+          <div class="font-extrabold text-sm text-[#0F172A] mt-3">Pinterest</div>
+          <div class="text-xs text-red-700 font-semibold mt-0.5" data-i18n="socPinSub">كتالوج التصاميم</div>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/@%D8%A7%D9%85%D9%8A%D9%86%D8%BA%D8%A7%D9%86%D9%85-%D8%B59%D8%B7" target="_blank" rel="noopener noreferrer" class="luxury-card rounded-2xl p-4 flex flex-col items-center text-center group">
+          <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-700 flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition">▶️</div>
+          <div class="font-extrabold text-sm text-[#0F172A] mt-3">YouTube</div>
+          <div class="text-xs text-rose-700 font-semibold mt-0.5" data-i18n="socYtSub">قناة أمين غانم</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & INSTANT WHATSAPP QUOTE CALCULATOR -->
+  <section id="contact" class="py-12 sm:py-16 bg-white border-t border-amber-900/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Direct Contact Info Card -->
+        <div class="lg:col-span-5 luxury-card rounded-3xl p-6 sm:p-8 bg-[#FAF8F5]">
+          <span class="text-xs font-extrabold text-[#D97706] uppercase" data-i18n="contactEyebrow">تواصل مباشر على مدار الساعة</span>
+          <h3 class="text-xl sm:text-2xl font-extrabold text-[#0F172A] mt-1 font-heading" data-i18n="contactHeading">احجز موعد معاينة ورفع مقاسات مجاني</h3>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed" data-i18n="contactDesc">
+            فريقنا الهندسي والفني جاهز للوصول إليك في جميع أحياء الدمام، الخبر، الظهران، القطيف، سيهات، الجبيل، والأحساء لمعاينة الموقع وتقديم عرض سعر تفصيلي.
+          </p>
+
+          <div class="space-y-4 mt-6">
+            <a href="tel:0530320587" class="flex items-center gap-4 p-4 rounded-2xl bg-white border border-amber-200 hover:border-[#D97706] transition">
+              <div class="w-12 h-12 rounded-xl gold-gradient-btn flex items-center justify-center text-xl shrink-0">📞</div>
+              <div>
+                <div class="text-xs text-slate-500 font-semibold" data-i18n="lblDirectPhone">رقم الجوال المباشر</div>
+                <div class="text-lg font-extrabold text-[#0F172A]" dir="ltr">0530320587</div>
+              </div>
+            </a>
+
+            <a href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 rounded-2xl bg-white border border-teal-200 hover:border-[#0D9488] transition">
+              <div class="w-12 h-12 rounded-xl teal-gradient-btn flex items-center justify-center text-xl shrink-0">💬</div>
+              <div>
+                <div class="text-xs text-slate-500 font-semibold" data-i18n="lblWhatsappLink">الواتساب الرسمي</div>
+                <div class="text-sm sm:text-base font-extrabold text-[#0D9488]" data-i18n="lblWhatsappAction">اضغط لبدء المحادثة الفورية</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive WhatsApp Quote Request Form -->
+        <div class="lg:col-span-7 luxury-card rounded-3xl p-6 sm:p-8">
+          <h3 class="text-lg sm:text-xl font-extrabold text-[#0F172A] font-heading" data-i18n="formTitle">أرسل تفاصيل مشروعك مباشرة عبر واتساب</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1 mb-6" data-i18n="formSub">اختر نوع الخدمة والمدينة ليتم تجهيز رسالتك وتحويلك مباشرة إلى واتساب المؤسسة</p>
+
+          <form id="quoteForm" onsubmit="submitWhatsAppQuote(event)" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="clientName" class="block text-xs font-bold text-slate-700 mb-1.5" data-i18n="lblName">الاسم الكريم</label>
+                <input id="clientName" type="text" required placeholder="مثال: أبو محمد" class="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-slate-300 focus:border-[#D97706] focus:outline-none text-sm" />
+              </div>
+              <div>
+                <label for="clientCity" class="block text-xs font-bold text-slate-700 mb-1.5" data-i18n="lblCity">المدينة / الحي</label>
+                <select id="clientCity" class="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-slate-300 focus:border-[#D97706] focus:outline-none text-sm font-semibold">
+                  <option value="الدمام">الدمام (Dammam)</option>
+                  <option value="الخبر">الخبر (Khobar)</option>
+                  <option value="القطيف">القطيف (Qatif)</option>
+                  <option value="الجبيل">الجبيل (Jubail)</option>
+                  <option value="الأحساء">الأحساء (Al-Ahsa)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="clientService" class="block text-xs font-bold text-slate-700 mb-1.5" data-i18n="lblService">الخدمة المطلوبة</label>
+              <select id="clientService" class="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-slate-300 focus:border-[#D97706] focus:outline-none text-sm font-semibold">
+                <option value="دهانات داخلية وخارجية وجبس بورد">دهانات داخلية وخارجية وجبس بورد (Painting & Gypsum)</option>
+                <option value="ديكورات شيبورد وبديل خشب ومرايا مضيئة">ديكورات شيبورد وبديل خشب ومرايا مضيئة (Chipboard & LED Mirrors)</option>
+                <option value="تركيب ورق جدران 3D وكلاسيك">تركيب ورق جدران 3D وكلاسيك (3D & Luxury Wallpaper)</option>
+                <option value="تركيب مظلات سيارات وسواتر ليزر وشرائح">تركيب مظلات سيارات وسواتر ليزر وشرائح (Shades & Sawater)</option>
+                <option value="ترميم وتجديد واجهات ومداخل الفلل">ترميم وتجديد واجهات ومداخل الفلل (Villa Renovation)</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="clientNotes" class="block text-xs font-bold text-slate-700 mb-1.5" data-i18n="lblNotes">تفاصيل إضافية أو المساحة التقريبية (اختياري)</label>
+              <textarea id="clientNotes" rows="3" placeholder="اكتب أي تفاصيل إضافية عن المشروع..." class="w-full px-4 py-2.5 rounded-xl bg-[#FAF8F5] border border-slate-300 focus:border-[#D97706] focus:outline-none text-sm"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 rounded-xl teal-gradient-btn font-extrabold text-sm sm:text-base shadow-md flex items-center justify-center gap-2">
+              <span>💬</span>
+              <span data-i18n="btnSendWhatsapp">إرسال الطلب عبر واتساب الآن</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#0F172A] text-slate-300 py-10 border-t border-amber-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
+      <div class="text-center sm:text-start">
+        <div class="font-extrabold text-white text-base font-heading" data-i18n="footerBrand">مؤسسة مقاولات وديكورات المنطقة الشرقية - أمين غانم</div>
+        <div class="text-slate-400 mt-1" data-i18n="footerCopy">© 2026 جميع الحقوق محفوظة | الدمام • الخبر • القطيف • الجبيل • الأحساء | جوال: 0530320587</div>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#hero" class="hover:text-amber-400 transition" data-i18n="navHome">الرئيسية</a>
+        <a href="#gallery" class="hover:text-amber-400 transition" data-i18n="navGallery">المعرض</a>
+        <a href="blog.html" onclick="handleBlogNav(event)" class="hover:text-amber-400 transition" data-i18n="navBlog">المدونة</a>
+      </div>
     </div>
   </footer>
 
-  <!-- Mobile Sticky Bottom Call & WhatsApp Bar (Plenty of Space so Phone Number Never Clips) -->
-  <div class="fixed bottom-0 inset-x-0 z-40 md:hidden bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 flex items-center gap-2.5 shadow-2xl">
-    <a href="tel:0530320587" class="flex-1 bg-slate-900 text-white font-bold text-xs py-3 rounded-xl text-center flex items-center justify-center gap-1.5">
-      <span>📞</span>
-      <span dir="ltr">0530320587</span>
-    </a>
-    <a href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener" class="flex-1 bg-emerald-600 text-white font-bold text-xs py-3 rounded-xl text-center flex items-center justify-center gap-1.5">
-      <span>💬</span>
-      <span data-i18n="whatsappNow"></span>
-    </a>
+  <!-- FULL-WIDTH STICKY BOTTOM BAR ON MOBILE (Phone & WhatsApp cleanly accessible without header clipping) -->
+  <div class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-amber-900/15 p-2.5 shadow-2xl">
+    <div class="grid grid-cols-2 gap-2.5 max-w-md mx-auto">
+      <a href="tel:0530320587" class="flex items-center justify-center gap-2 py-3 rounded-xl gold-gradient-btn font-extrabold text-xs sm:text-sm shadow">
+        <span>📞</span>
+        <span data-i18n="mobileBarCall">اتصال: 0530320587</span>
+      </a>
+      <a href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-3 rounded-xl teal-gradient-btn font-extrabold text-xs sm:text-sm shadow">
+        <span>💬</span>
+        <span data-i18n="mobileBarWhatsapp">واتساب فوري</span>
+      </a>
+    </div>
   </div>
 
-  <!-- Original High-Resolution Interactive Zoom & Pan Lightbox Modal -->
-  <div id="lightboxModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/90 backdrop-blur-md p-2 sm:p-6">
-    <div class="bg-white border border-slate-200 rounded-3xl max-w-4xl w-full overflow-hidden shadow-2xl">
-      <div class="bg-slate-900 text-white px-4 py-3 flex flex-wrap items-center justify-between gap-2">
-        <span id="lbCat" class="bg-amber-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full"></span>
-        <div class="flex items-center gap-1.5">
-          <button type="button" onclick="changeZoom(-0.5)" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs px-2.5 py-1.5 rounded-lg">🔍 −</button>
-          <span id="lbZoomBadge" class="bg-slate-950 text-amber-400 font-mono text-xs font-bold px-2.5 py-1 rounded-lg">100%</span>
-          <button type="button" onclick="changeZoom(0.5)" class="bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs px-2.5 py-1.5 rounded-lg">🔍 +</button>
-          <button type="button" onclick="resetZoom()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs px-2.5 py-1.5 rounded-lg">1:1</button>
-          <button type="button" onclick="closeLightbox()" class="bg-red-600 hover:bg-red-500 text-white font-bold text-xs px-3 py-1.5 rounded-lg">✕</button>
+  <!-- HIGH-QUALITY INTERACTIVE ZOOM & PAN LIGHTBOX MODAL (100% to 350% - NO View on Drive button) -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-[#0F172A]/95 backdrop-blur-md flex flex-col justify-between p-3 sm:p-6">
+    <!-- Top Lightbox Bar -->
+    <div class="flex items-center justify-between gap-2 bg-white/10 rounded-2xl px-4 py-2.5 text-white border border-white/15">
+      <div class="flex items-center gap-2 min-w-0">
+        <span id="lightboxCatBadge" class="px-2.5 py-0.5 rounded-full bg-[#D97706] text-white text-xs font-bold shrink-0"></span>
+        <span id="lightboxCounter" class="text-xs text-amber-300 font-bold shrink-0" dir="ltr"></span>
+      </div>
+
+      <!-- Zoom Controls (100% to 350%) -->
+      <div class="flex items-center gap-1.5 sm:gap-2">
+        <button type="button" onclick="adjustLightboxZoom(-25)" class="w-8 h-8 rounded-lg bg-white/15 hover:bg-white/25 text-white font-bold text-sm flex items-center justify-center" title="تصغير / Zoom Out">−</button>
+        <input id="lightboxZoomSlider" type="range" min="100" max="350" step="10" value="100" oninput="setLightboxZoom(this.value)" class="w-20 sm:w-32 accent-[#D97706] cursor-pointer" />
+        <button type="button" onclick="adjustLightboxZoom(25)" class="w-8 h-8 rounded-lg bg-white/15 hover:bg-white/25 text-white font-bold text-sm flex items-center justify-center" title="تكبير / Zoom In">+</button>
+        <button type="button" onclick="resetLightboxZoom()" id="lightboxZoomReadout" class="px-2.5 py-1 rounded-lg bg-[#D97706] text-white font-bold text-xs min-w-[52px] text-center" dir="ltr">100%</button>
+      </div>
+
+      <button type="button" onclick="closeLightbox()" class="w-9 h-9 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-base flex items-center justify-center shrink-0" aria-label="إغلاق">✕</button>
+    </div>
+
+    <!-- Center Zoom & Pan Image Stage -->
+    <div id="lightboxStage" class="lightbox-stage relative flex-1 my-3 rounded-2xl bg-black/40 border border-white/10 flex items-center justify-center overflow-hidden">
+      <button type="button" onclick="stepLightbox(-1)" class="absolute right-3 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/90 hover:bg-white text-[#0F172A] font-extrabold text-lg shadow-lg flex items-center justify-center" aria-label="السابق">❮</button>
+      <img id="lightboxImg" src="" alt="" class="max-h-[68vh] max-w-[90vw] object-contain select-none" draggable="false" />
+      <button type="button" onclick="stepLightbox(1)" class="absolute left-3 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/90 hover:bg-white text-[#0F172A] font-extrabold text-lg shadow-lg flex items-center justify-center" aria-label="التالي">❯</button>
+    </div>
+
+    <!-- Bottom Caption & Direct Inquiry Bar (Strictly NO View on Drive Button) -->
+    <div class="bg-white rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-xl">
+      <div class="min-w-0">
+        <h4 id="lightboxTitle" class="text-sm sm:text-base font-extrabold text-[#0F172A] font-heading"></h4>
+        <p id="lightboxDesc" class="text-xs sm:text-sm text-slate-600 mt-0.5"></p>
+      </div>
+      <div class="flex items-center gap-2 shrink-0">
+        <a id="lightboxWhatsappBtn" href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl teal-gradient-btn text-xs sm:text-sm font-bold flex items-center gap-1.5">
+          <span>💬</span>
+          <span data-i18n="lightboxAskSimilar">اطلب تنفيذ تصميم مماثل</span>
+        </a>
+        <a href="tel:0530320587" class="px-4 py-2.5 rounded-xl gold-gradient-btn text-xs sm:text-sm font-bold flex items-center gap-1.5">
+          <span>📞</span>
+          <span dir="ltr">0530320587</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOG ARTICLE READER MODAL (Works seamlessly in both index.html and Canvas) -->
+  <div id="articleReaderModal" class="fixed inset-0 z-50 hidden bg-[#0F172A]/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] flex flex-col overflow-hidden shadow-2xl border border-amber-200">
+      <div class="flex items-center justify-between px-5 py-4 bg-[#FAF8F5] border-b border-slate-200">
+        <span id="readerModalCity" class="px-3 py-1 rounded-full bg-amber-100 text-[#B45309] text-xs font-extrabold"></span>
+        <button type="button" onclick="closeArticleModal()" class="w-9 h-9 rounded-xl bg-slate-200 hover:bg-rose-600 hover:text-white text-[#0F172A] font-bold transition">✕</button>
+      </div>
+      <div class="p-5 sm:p-8 overflow-y-auto space-y-4">
+        <img id="readerModalImg" src="" alt="" class="w-full h-56 sm:h-72 object-cover rounded-2xl" />
+        <div class="flex items-center gap-3 text-xs text-slate-500 font-semibold">
+          <span id="readerModalDate"></span>
+          <span>•</span>
+          <span id="readerModalReadTime"></span>
         </div>
+        <h3 id="readerModalTitle" class="text-xl sm:text-2xl font-extrabold text-[#0F172A] font-heading leading-snug"></h3>
+        <div id="readerModalBody" class="prose max-w-none text-sm sm:text-base text-slate-700 leading-relaxed space-y-3"></div>
       </div>
-
-      <div id="lbStage" class="zoom-stage bg-slate-950 flex items-center justify-center h-[52vh] sm:h-[62vh]">
-        <img id="lbImg" src="" alt="High Resolution Zoom View" class="max-h-full max-w-full object-contain select-none" draggable="false" />
-        <button type="button" onclick="stepLightbox(-1)" class="absolute inset-inline-start-3 z-10 bg-white/90 hover:bg-amber-500 text-slate-900 w-10 h-10 rounded-full font-bold shadow-lg">❮</button>
-        <button type="button" onclick="stepLightbox(1)" class="absolute inset-inline-end-3 z-10 bg-white/90 hover:bg-amber-500 text-slate-900 w-10 h-10 rounded-full font-bold shadow-lg">❯</button>
-      </div>
-
-      <div class="p-4 sm:p-5 space-y-2.5 bg-white">
-        <p data-i18n="zoomHelpText" class="text-xs text-amber-700 font-bold"></p>
-        <h3 id="lbTitle" class="text-base sm:text-lg font-extrabold text-slate-900"></h3>
-        <p id="lbDesc" class="text-slate-600 text-xs sm:text-sm leading-relaxed"></p>
-        <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-200">
-          <a id="lbWaLink" href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener" class="btn-shimmer flex-1 text-center bg-emerald-600 text-white font-bold text-xs sm:text-sm py-3 px-4 rounded-xl"></a>
-          <button type="button" onclick="closeLightbox()" data-i18n="modalClose" class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs sm:text-sm font-bold py-3 px-5 rounded-xl"></button>
+      <div class="px-5 py-3.5 bg-[#FAF8F5] border-t border-slate-200 flex items-center justify-between gap-3">
+        <span class="text-xs font-bold text-slate-600" data-i18n="readerCtaPrompt">هل ترغب في تنفيذ هذا العمل في منزلك؟</span>
+        <div class="flex items-center gap-2">
+          <a href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl teal-gradient-btn text-xs font-bold">💬 واتساب</a>
+          <a href="tel:0530320587" class="px-4 py-2 rounded-xl gold-gradient-btn text-xs font-bold" dir="ltr">📞 0530320587</a>
         </div>
       </div>
     </div>
   </div>
 
   <script>
-    const PHOTOS_DATA = [
-      { id: "p01", cat: "renovation", file: "01-renovation-villa-facade-artificial-grass-dammam.jpeg", driveId: "1OD4Cq5UOwmF4EurGPB9Zhuc6dv9E5hcu",
-        title: { ar: "ترميم وتشطيب واجهة فيلا خارجية وتنسيق الحوش بالعشب الصناعي - الدمام", en: "Exterior Villa Facade Renovation & Artificial Turf Landscaping - Dammam" },
-        desc: { ar: "مشروع ترميم متكامل لواجهة فيلا في المنطقة الشرقية يشمل معالجة الشروخ، دهان البروفايل الخارجي، وتنسيق الحديقة بالعشب الصناعي.", en: "Complete exterior villa renovation in the Eastern Province featuring crack repair, weather-resistant profile coating, and artificial turf landscaping." }
-      },
-      { id: "p02", cat: "renovation", file: "02-renovation-villa-entrance-porcelain-walkway-khobar.jpeg", driveId: "1ES6m8w-sunJO1-KxGq7NfDybtjm_Ome4",
-        title: { ar: "تشطيب مدخل فيلا خارجي مع تكسيات الأعمدة وبلاط البورسلان - الخبر", en: "Villa Entrance Remodeling with Column Cladding & Porcelain Walkway - Khobar" },
-        desc: { ar: "تحديث مدخل فيلا خارجي مع بناء درجات دائرية وتكسيات الأعمدة ودهانات خارجية وبلاط بورسلان مانع للانزلاق في الخبر.", en: "Upgrading a villa entrance with curved steps, decorative column cladding, weather-resistant exterior paint, and non-slip porcelain tiles." }
-      },
-      { id: "p05", cat: "chipboard", file: "05-chipboard-fluted-wood-oval-led-mirror-entrance.jpeg", driveId: "12plSeu1HYtGWq3LLuxaqxjyFXLmNGJys",
-        title: { ar: "ديكور مدخل شرائح بديل الخشب مع مرآة بيضاوية مضيئة وكونسول معلق", en: "Fluted Wood-Slat Entrance Wall with Backlit Oval LED Mirror & Floating Console" },
-        desc: { ar: "تصميم وتنفيذ مدخل فندقي فاخر يجمع بين شرائح بديل الخشب (WPC) وبراويز الفوم الكلاسيكية مع مرآة بيضاوية بإضاءة مخفية دافئة ورف كونسول معلق.", en: "Hotel-grade entryway feature wall combining vertical fluted WPC wood slats, classic foam wainscoting, a warm backlit oval mirror, and a floating console." }
-      },
-      { id: "p06", cat: "chipboard", file: "06-chipboard-modern-tv-media-wall-hidden-led.jpeg", driveId: "1RT2QFPaGWyP0RGCXqlX4k99ndOcNdzZx",
-        title: { ar: "ديكور شاشة تلفزيون مودرن (شيبورد) مع إضاءة مخفية وجبس بورد", en: "Modern Chipboard TV Media Wall with Hidden Linear LED & Gypsum Ceiling" },
-        desc: { ar: "تنفيذ خلفية شاشة تلفزيون عصرية من ألواح الشيبورد والجبس بورد مع طاولة معلقة خشبية وإضاءة مخفية دافئة للمجالس والصالات.", en: "Contemporary TV media unit featuring custom chipboard panels, recessed warm LED cove lighting, floating wooden media shelf, and spot-lit gypsum ceiling." }
-      },
-      { id: "p07", cat: "chipboard", file: "07-chipboard-wall-cladding-organic-led-mirror.jpeg", driveId: "1aibFIzRFEVAjTHvE2vkYrgO2ybuYErYu",
-        title: { ar: "ديكور شيبورد خشبي عصري مع مرآة غير منتظمة (Organic LED Mirror)", en: "Contemporary Chipboard Wall Cladding with Organic Backlit LED Mirror" },
-        desc: { ar: "تكسيات جدارية من الشيبورد بتقسيمات هندسية أنيقة مع تركيب مرآة حرة التصميم بإضاءة LED خلفية ورف كونسول أبيض.", en: "Geometric grooved chipboard wall paneling paired with a freeform organic backlit LED mirror and minimalist floating shelf." }
-      },
-      { id: "p08", cat: "chipboard", file: "08-chipboard-partition-backlit-mirror-vanity.jpeg", driveId: "1PtNZXyg6-RsRLh6IDjkoq_DQLRJX1XDd",
-        title: { ar: "تكسيات جدارية شيبورد وبديل خشب مع مرآة مضيئة ومغسلة رخامية", en: "Custom Chipboard & Wood-Accent Wall with Backlit Mirror & Marble Vanity" },
-        desc: { ar: "تنفيذ قاطع وديكور جداري كامل من الشيبورد البيج مع أطراف بديل الخشب ومرآة مضيئة بجوار مغسلة الضيوف الرخامية.", en: "Full-height beige chipboard decorative wall framed with dark wood-grain accents, organic LED mirror, and adjacent marble guest washbasin." }
-      },
-      { id: "p09", cat: "chipboard", file: "09-chipboard-luxury-entryway-wood-slats-oval-mirror.jpeg", driveId: "1KsHOgw2zPcPpgaUg60mgM6eY48QcuT-L",
-        title: { ar: "ديكور كونسول مدخل فاخر مع شرائح بديل الخشب ومرآة بيضاوية مضيئة", en: "Luxury Entryway Console with Dark Wood Slats & Backlit Oval Mirror" },
-        desc: { ar: "تصميم مدخل شقة مودرن يدمج شرائح بديل الخشب بالجدار البيج مع مرآة بيضاوية مضيئة تنعكس إضاءتها على أرضيات البورسلان اللامعة.", en: "Modern apartment entryway combining dark walnut vertical wood slats, cream wall paint, floating drawer console, and a warm halo-lit oval mirror." }
-      },
-      { id: "p10", cat: "painting", file: "10-painting-velvet-grey-decorative-paint-doors.jpeg", driveId: "1EA4UjL2VT_ifG2-a-npDPDSCzrLIeHdM",
-        title: { ar: "دهانات ديكورية رمادية (شمواه/تعتيق) مع تجديد الأبواب وبلاط الأرضيات", en: "Textured Velvet-Grey Decorative Paint with Door Refinishing & Floor Tiling" },
-        desc: { ar: "تنفيذ دهانات ديكورية بتأثير الشمواه الرمادي الفخم مع دهان الأبواب الخشبية (أبيض وبني) وتركيب سيراميك أرضيات رمادي متناسق.", en: "Rich suede/velvet grey decorative wall texture paired with white and walnut wood door refinishing and grey porcelain floor tiles." }
-      },
-      { id: "p11", cat: "painting", file: "11-painting-corridor-decorative-paint-white-doors.jpeg", driveId: "1iBqC_BrAarAn9T7cJrPEooI4sqkeHKBo",
-        title: { ar: "تشطيب مدخل وممر شقة بدهانات ديكورية وتجديد الأبواب باللون الأبيض", en: "Apartment Corridor Decorative Paint & White Lacquered Interior Doors" },
-        desc: { ar: "تجديد كامل لممر الشقة يشمل دهان الأبواب وحلوقها باللون الأبيض والبيج مع دهان جدران ديكوري وتركيب نعلة وبلاط أرضيات.", en: "Full corridor refurbishment featuring custom white/cream door lacquer, textured neutral wall paint, gypsum crown molding, and floor tiling." }
-      },
-      { id: "p12", cat: "painting", file: "12-painting-rose-pink-bedroom-gypsum-porcelain.jpeg", driveId: "14V5R9Rlx0oOm2LR9wTEsSoBywoa1zO7j",
-        title: { ar: "صبغ غرفة بلون وردي هادئ مع سقف جبس بورد وبلاط بورسلان رخامي", en: "Soft Rose Bedroom Painting with Gypsum Tray Ceiling & Marble-Look Porcelain" },
-        desc: { ar: "تشطيب غرفة نوم بدهانات جوتن/الجزيرة باللون الوردي الهادئ مع سقف جبس بورد منحني وإضاءة سبوت لايت وأرضية بورسلان أبيض معرق.", en: "Bedroom finishing using smooth rose-pink washable paint, custom curved gypsum ceiling with LED downlights, and glossy Carrara marble-look porcelain tiles." }
-      },
-      { id: "p13", cat: "painting", file: "13-painting-light-grey-room-gypsum-porcelain-floor.jpeg", driveId: "1BMMYVY8lcHd_HBazTuseFtVAd5TpSC5X",
-        title: { ar: "صبغ غرفة وصالة بلون رمادي فاتح مودرن مع جبس بورد وبورسلان أبيض", en: "Modern Light-Grey Room Painting with Multi-Level Gypsum & Porcelain Floor" },
-        desc: { ar: "تنفيذ صبغ رمادي فاتح عصري مع تأسيس معجون 3 أوجه وصنفرة بالليزر، وسقف جبس بورد هندسي وأرضيات بورسلان 60×60 لامع.", en: "Laser-leveled 3-coat putty preparation finished in modern light grey paint, geometric gypsum board ceiling, and high-gloss 60x60 porcelain flooring." }
-      },
-      { id: "p14", cat: "painting", file: "14-painting-off-white-apartment-gypsum-ceiling.jpeg", driveId: "13kaVU-cMM-9IB_kZoSFXP2fDWCbVuZjF",
-        title: { ar: "تشطيب صبغ أوف وايت ناعم مع سقف جبس بورد وبلاط بورسلان", en: "Smooth Off-White Apartment Painting with Recessed Gypsum & Porcelain Tiles" },
-        desc: { ar: "تشطيب شقة سكنية بلون أوف وايت مريح للعين يعطي اتساعاً للمكان، مع بيت نور جبس بورد وأرضيات بورسلان رخامي بالخبر.", en: "Spacious off-white interior apartment painting with recessed gypsum cove ceiling, spot lighting, and marble-veined porcelain floor tiles in Khobar." }
-      },
-      { id: "p15", cat: "painting", file: "15-painting-crisp-white-interior-modern-gypsum.jpeg", driveId: "1zb5ti69W_Ji3Z1jiQRV8E1I7iy5DMbuV",
-        title: { ar: "تشطيب دهانات بيضاء ناصعة للشقق مع جبس بورد مودرن وبورسلان", en: "Crisp White Interior Apartment Paint with Modern Gypsum & Glossy Porcelain" },
-        desc: { ar: "دهانات داخلية بيضاء مقاومة للغسيل والرطوبة مع تشطيب الحواف والزوايا بدقة عالية وتركيب بلاط بورسلان أبيض بعروق رمادية.", en: "Washable moisture-resistant pure white interior wall paint with razor-sharp ceiling trim and grey-veined white porcelain flooring." }
-      },
-      { id: "p16", cat: "painting", file: "16-painting-two-tone-charcoal-grey-hall-paint.jpeg", driveId: "1cBCs7O0zbNko3eomkLIdYwHpdqYCFeMo",
-        title: { ar: "دهانات رمادي غامق وفاتح (أنثراسايت مودرن) للمدخل والصالة", en: "Two-Tone Charcoal & Light Grey Modern Hall Painting with Porcelain Floor" },
-        desc: { ar: "تنسيق عصري يجمع بين الرمادي الغامق (أنثراسايت) والرمادي الفاتح مع سقف أبيض وإضاءة ليد غاطسة وأرضيات بورسلان لامعة.", en: "Bold architectural color scheme pairing charcoal grey accent walls with white ceilings, recessed LED panels, and glossy porcelain tiles." }
-      },
-      { id: "p17", cat: "painting", file: "17-painting-contemporary-grey-room-white-molding.jpeg", driveId: "154XXCAPvGROJsbMynBSbl_TfZF9nqg01",
-        title: { ar: "أعمال صبغ وتشطيب شقة حديثة باللون الرمادي العصري مع كرانيش بيضاء", en: "Contemporary Grey Room Painting in Progress with White Crown Molding" },
-        desc: { ar: "صورة ميدانية أثناء اللمسات النهائية لدهانات جوتن الرمادية مع تحديد الكرانيش والنعلات البيضاء بدقة وحماية أرضيات البورسلان.", en: "On-site finishing stage showing smooth matte grey walls, crisp white crown molding and skirting lines, and newly laid porcelain tiles." }
-      },
-      { id: "p18", cat: "wallpaper", file: "18-wallpaper-3d-colorful-geometric-kids-room.jpeg", driveId: "1Qe4vVvT6xZ25RL318LA6bSTxjxBm_-X2",
-        title: { ar: "تركيب ورق جدران ثلاثي الأبعاد ملون مع تشطيب الصبغ والبورسلان", en: "3D Colorful Geometric Brick Wallpaper Installation with Wall Paint & Tiling" },
-        desc: { ar: "تركيب ورق جدران 3D عالي الجودة لغرف الأطفال والمعيشة بدون فواصل ظاهرة، متناسق مع دهان الجدران الجانبية وبلاط البورسلان.", en: "Seamless installation of vibrant 3D brick-pattern wallpaper for kids' and play rooms alongside warm beige side walls and porcelain flooring." }
-      },
-      { id: "p19", cat: "wallpaper", file: "19-wallpaper-luxury-patterned-accent-wall-khobar.jpeg", driveId: "1FIwB-IPgeCUYxgLu0UonEqQaGQ7othx7",
-        title: { ar: "ورق جدران زخرفي فاخر لجدار الصالة الرئيسي مع صبغ كشمير وجبس بورد", en: "Luxury Patterned Accent Wallpaper with Soft Mauve Paint & Gypsum Ceiling" },
-        desc: { ar: "تنسيق جدار رئيسي (Feature Wall) بورق جدران هندسي فخم مع دهان الجدران المجاورة بلون كشمير دافئ وسقف جبس بورد وأرضية بورسلان.", en: "Elegant geometric accent wallpaper paired with warm mauve-beige wall paint, recessed gypsum tray ceiling, and polished marble-look porcelain tiles." }
-      },
-      { id: "p20", cat: "wallpaper", file: "20-wallpaper-classic-damask-textured-wall-qatif.jpeg", driveId: "11fP95_QqphP8EKpZS_zkTAyxKvN9R4aS",
-        title: { ar: "تركيب ورق جدران كلاسيكي فخم مع أسقف جبس بورد وبورسلان رخامي", en: "Classic Damask Textured Wallpaper Installation with Gypsum & Porcelain" },
-        desc: { ar: "تركيب ورق جدران كلاسيكي قابل للغسيل بغراء أصلي مقاوم للرطوبة مع دهانات أوف وايت وأسقف جبس بورد في القطيف والدمام.", en: "Washable classic damask textured wallpaper installed with moisture-resistant adhesive, paired with off-white walls and custom gypsum ceiling." }
-      },
-      { id: "p21", cat: "shades", file: "21-shades-side-walkway-arched-pvc-canopy-dammam.jpeg", driveId: "18OF7V6mH1fTCrwSpQ3o7zVjEUTz0cs1e",
-        title: { ar: "تركيب مظلة ممر جانبي قوسية بقماش PVC عازل للحرارة وهيكل حديدي", en: "Side-Passage Arched PVC Shade Canopy with Powder-Coated Steel Frame" },
-        desc: { ar: "تفصيل وتركيب مظلة ارتداد وممر جانبي قوسية بتثبيت جداري بدون أعمدة تعيق الحركة، باستخدام قماش PVC عازل للشمس والأمطار.", en: "Wall-mounted arched PVC shade canopy for a side villa passage, providing 100% UV and rain protection without obstructing walkway space." }
-      },
-      { id: "p22", cat: "shades", file: "22-shades-cantilever-car-parking-shade-beige-pvc.jpeg", driveId: "1s0A3j-ILwG7vjZizD96pU7jh1jYZZZkZ",
-        title: { ar: "تركيب مظلة سيارات كابولية حديثة بقماش PVC بيج وهيكل حديدي متين", en: "Modern Cantilever Car Parking Shade in Beige PVC Membrane" },
-        desc: { ar: "تنفيذ مظلة مواقف سيارات بقماش PVC كوري/ألماني بيج عاكس لأشعة الشمس مع جسور حديدية مدهونة بدهان ناري مقاوم للصدأ.", en: "Heavy-duty arched car parking shade with UV-reflective beige PVC membrane and rust-proof black steel frame in the Eastern Province." }
-      },
-      { id: "p23", cat: "shades", file: "23-sawater-laser-cut-wrought-iron-rooftop-fence.jpeg", driveId: "1boutyjMwLKugXaKOlU88D26Rqfj4tbei",
-        title: { ar: "تركيب ساتر حديد مشغول (قص ليزر مزخرف) على السطح للخصوصية والأمان", en: "Decorative Laser-Cut Wrought Iron Rooftop Privacy Fence & Railing" },
-        desc: { ar: "تصميم وتركيب ساتر حديد زخرفي حول قبة السطح يمنح خصوصية وأماناً عالياً مع مظهر معماري فخم ودهان فرن حراري مقاوم للرطوبة.", en: "Custom ornamental wrought-iron privacy screen installed around a rooftop skylight dome with weather-proof electrostatic black finish." }
-      },
-      { id: "p24", cat: "shades", file: "24-sawater-louvered-horizontal-steel-privacy-fence.jpeg", driveId: "1ULv4jfcTFC8FRe68rphY3w_-sjOSSBlk",
-        title: { ar: "تركيب ساتر حديد شرائح (لوفر أبجور) داكن لحجب الرؤية على السطح", en: "Louvered Horizontal Steel Slat Privacy Fence (Sawater) on Rooftop" },
-        desc: { ar: "تنفيذ ساتر حديد شرائح (أبجور) يحجب الرؤية بنسبة 100% مع السماح بمرور الهواء ومقاومة سرعة الرياح العالية في الشرقية.", en: "100% sight-blocking horizontal louvered steel privacy fence allowing airflow while resisting coastal winds and humidity." }
-      },
-      { id: "p25", cat: "shades", file: "25-shades-arched-entrance-walkway-pvc-canopy.jpeg", driveId: "1bdMf3xHXLZ1oOO1x3eWg5lEEALbkkaab",
-        title: { ar: "تركيب مظلة مدخل وممر خارجي قوسية بقماش PVC بيج عالي الكثافة", en: "Arched Entrance & Exterior Walkway Beige PVC Shade Structure" },
-        desc: { ar: "تركيب مظلة خارجية للمدخل والرصيف تحمي الأبواب والمداخل من حرارة الشمس المباشرة والأمطار بتصميم قوسي انسيابي.", en: "Sleek arched PVC entrance canopy protecting exterior doors and walkways from direct sun glare and seasonal rain." }
-      }
-    ];
+    const IS_CANVAS = false;
+    const FALLBACK_GALLERY = [{"id": 1, "cat": "renovation", "image": "images/01-renovation-villa-facade-artificial-grass-dammam.jpg", "city": {"ar": "الدمام", "en": "Dammam"}, "title": {"ar": "ترميم وتجديد واجهة فيلا حديثة مع تنسيق عشب جداري بالدمام", "en": "Modern Villa Facade Renovation & Artificial Wall Grass in Dammam"}, "desc": {"ar": "تنفيذ متكامل لترميم الواجهة الخارجية وتكسية الجدران بالعشب الصناعي المقاوم لأشعة الشمس مع إضاءة مخفية حديثة في حي الشاطئ بالدمام.", "en": "Full exterior villa facade renovation featuring UV-resistant artificial wall grass cladding and warm architectural LED lighting in Dammam."}}, {"id": 2, "cat": "renovation", "image": "images/02-renovation-villa-entrance-porcelain-walkway-khobar.jpg", "city": {"ar": "الخبر", "en": "Khobar"}, "title": {"ar": "تطوير مدخل فيلا خارجي وتبليط ممرات بورسلان بالخبر", "en": "Villa Entrance Remodeling & Porcelain Walkway Paving in Khobar"}, "desc": {"ar": "تركيب بلاط بورسلان خارجي مضاد للانزلاق بسماكة عالية مع تنسيق الأحواض الجانبية ومعالجة الواجهات بأحدث مواد العزل بالخبر.", "en": "Heavy-duty anti-slip outdoor porcelain walkway installation with side planter landscaping and weather-resistant facade finishing in Khobar."}}, {"id": 5, "cat": "chipboard", "image": "images/05-chipboard-fluted-wood-oval-led-mirror-entrance.jpg", "city": {"ar": "الدمام", "en": "Dammam"}, "title": {"ar": "ديكور مدخل شيبورد مع بديل الخشب ومرآة بيضاوية مضيئة", "en": "Fluted Wood & Chipboard Entryway with Backlit Oval LED Mirror"}, "desc": {"ar": "تصميم وتنفيذ مدخل استقبال عصري يجمع بين ألواح الشيبورد الفاخرة وشرائح بديل الخشب المضلع مع مرآة بيضاوية بإضاءة ليد دافئة.", "en": "Bespoke reception entryway combining textured chipboard panels, fluted WPC wood slats, and a warm backlit oval mirror."}}, {"id": 6, "cat": "chipboard", "image": "images/06-chipboard-modern-tv-media-wall-hidden-led.jpg", "city": {"ar": "الخبر", "en": "Khobar"}, "title": {"ar": "خلفية شاشة تلفزيون شيبورد مودرن مع إضاءة مخفية بالخبر", "en": "Modern Chipboard TV Media Wall with Hidden LED Lighting in Khobar"}, "desc": {"ar": "تفصيل جدارية تلفزيون متكاملة من ألواح الشيبورد الألماني وبديل الرخام مع مسارات إضاءة ليد مخفية وتمديد مخفي للأسلاك.", "en": "Custom-crafted TV media wall utilizing premium German-grade chipboard, marble-look UV panels, concealed wiring, and recessed LED strips."}}, {"id": 7, "cat": "chipboard", "image": "images/07-chipboard-wall-cladding-organic-led-mirror.jpg", "city": {"ar": "القطيف", "en": "Qatif"}, "title": {"ar": "تكسية جدران شيبورد وبديل خشب مع مرآة بالتصميم الحر", "en": "Chipboard Wall Cladding & Organic Freeform LED Mirror in Qatif"}, "desc": {"ar": "لمسة جمالية فريدة للمداخل والمجالس عبر دمج تكسية الشيبورد المقاوم للرطوبة مع مرآة عضوية مضيئة تضفي اتساعاً وفخامة للمكان.", "en": "Moisture-resistant chipboard wall cladding paired with an organic freeform backlit mirror that maximizes spatial depth and luxury."}}, {"id": 8, "cat": "chipboard", "image": "images/08-chipboard-partition-backlit-mirror-vanity.jpg", "city": {"ar": "الجبيل", "en": "Jubail"}, "title": {"ar": "قواطع شيبورد ديكورية ومغسلة رخامية بمرآة مضيئة بالجبيل", "en": "Decorative Chipboard Partition & Backlit Mirror Vanity in Jubail"}, "desc": {"ar": "تنفيذ قواطع داخلية أنيقة لفصل الصالات والمغاسل باستخدام الشيبورد وبديل الخشب المعالج ضد الرطوبة والمياه.", "en": "Interior decorative partition and vanity backdrop crafted from water-resistant WPC slats and high-density chipboard in Jubail."}}, {"id": 9, "cat": "chipboard", "image": "images/09-chipboard-luxury-entryway-wood-slats-oval-mirror.jpg", "city": {"ar": "الدمام", "en": "Dammam"}, "title": {"ar": "ديكور مدخل ملكي بشرائح بديل الخشب والشيبورد ومرآة ليد", "en": "Luxury Entryway with WPC Wood Slats, Chipboard & Oval Mirror"}, "desc": {"ar": "تشطيب متقن لمدخل فيلا رئيسي بتناسق لوني يجمع دفء الخشب مع فخامة الإضاءة المحيطية المخفية.", "en": "Precision-installed main villa entryway blending warm wood slat textures with ambient perimeter LED illumination."}}, {"id": 10, "cat": "painting", "image": "images/10-painting-velvet-grey-decorative-paint-doors.jpg", "city": {"ar": "الدمام", "en": "Dammam"}, "title": {"ar": "دهانات داخلية رمادي مخملي مع تجديد دهان الأبواب الخشبية", "en": "Velvet Grey Decorative Interior Paint & Door Refinishing"}, "desc": {"ar": "تطبيق دهانات جوتن والجزيرة بدرجات الرمادي المخملي القابل للغسيل مع دهان الأبواب بطبقة ناري أبيض ناصع.", "en": "Washable Jotun velvet-grey wall finishes paired with smooth spray-painted crisp white interior doors."}}, {"id": 11, "cat": "painting", "image": "images/11-painting-corridor-decorative-paint-white-doors.jpg", "city": {"ar": "الخبر", "en": "Khobar"}, "title": {"ar": "تشطيب دهانات الممرات الداخلية والأبواب البيضاء بالخبر", "en": "Corridor Decorative Painting & White Door Finishing in Khobar"}, "desc": {"ar": "معالجة الجدران بمعجون سافيتو ثلاثي الطبقات وصنفرة بالليزر لضمان نعومة فائقة وتوزيع متجانس للإضاءة في الممرات.", "en": "Three-coat Saveto putty leveling and laser-guided sanding delivering ultra-smooth corridor walls and luminous door frames."}}, {"id": 12, "cat": "painting", "image": "images/12-painting-rose-pink-bedroom-gypsum-porcelain.jpg", "city": {"ar": "القطيف", "en": "Qatif"}, "title": {"ar": "دهانات غرف نوم وردي هادئ مع أسقف جبس بورد وأرضيات بورسلان", "en": "Soft Rose Bedroom Painting with Gypsum Ceiling & Porcelain Floor"}, "desc": {"ar": "تنفيذ دهانات غرف نوم عصرية خالية من الروائح (Zero VOC) مع تشطيب أسقف جبس بورد وإضاءة سبوت لايت متناسقة.", "en": "Odor-free Zero-VOC pastel rose bedroom painting integrated with recessed gypsum board ceiling lighting and porcelain flooring."}}, {"id": 13, "cat": "painting", "image": "images/13-painting-light-grey-room-gypsum-porcelain-floor.jpg", "city": {"ar": "الأحساء", "en": "Al-Ahsa"}, "title": {"ar": "دهان رمادي فاتح للصاجات والغرف مع جبس بورد حديث بالأحساء", "en": "Light Grey Room Painting with Modern Gypsum & Porcelain Floor"}, "desc": {"ar": "تناغم مثالي بين دهانات الجدران الهادئة ولمعان أرضيات البورسلان مع تحديد احترافي للزوايا والكرانيش الجبسية.", "en": "Seamless harmony between light grey satin walls, glossy porcelain tiles, and crisp gypsum cornice detailing in Al-Ahsa."}}, {"id": 14, "cat": "painting", "image": "images/14-painting-off-white-apartment-gypsum-ceiling.jpg", "city": {"ar": "الدمام", "en": "Dammam"}, "title": {"ar": "تشطيب شقق سكنية بدهانات أوف وايت وأسقف جبسية بالدمام", "en": "Off-White Apartment Interior Painting & Gypsum Ceiling in Dammam"}, "desc": {"ar": "دهانات أوف وايت (ربع لمعة) تمنح الشقق السكنية إشراقاً واتساعاً مع سهولة تامة في التنظيف ومقاومة البقع.", "en": "Quarter-sheen off-white interior painting designed to maximize natural brightness and stain resistance across residential apartments."}}, {"id": 15, "cat": "painting", "image": "images/15-painting-crisp-white-interior-modern-gypsum.jpg", "city": {"ar": "الخبر", "en": "Khobar"}, "title": {"ar": "دهانات داخلية أبيض ناصع مع ديكورات جبس بورد مودرن بالخبر", "en": "Crisp White Interior Painting & Modern Gypsum Design in Khobar"}, "desc": {"ar": "تنفيذ دهانات داخلية فائقة النقاء مع أسقف جبس بورد هندسية بتوزيع إضاءة مدروس للمجالس والصالات الواسعة.", "en": "Pure architectural white interior coating paired with geometric gypsum board ceilings and balanced spotlighting."}}, {"id": 16, "cat": "painting", "image": "images/16-painting-two-tone-charcoal-grey-hall-paint.jpg", "city": {"ar": "الجبيل", "en": "Jubail"}, "title": {"ar": "دهان صالات بلونين رمادي فحمي وأبيض مع فواصل هندسية بالجبيل", "en": "Two-Tone Charcoal & Crisp White Hallway Painting in Jubail"}, "desc": {"ar": "تصميم عصري للصالات يجمع بين اللون الرمادي الفحمي الجريء والأبيض النقي لخلق تباين بصري فخم ومميز.", "en": "Contemporary two-tone charcoal and white wall scheme creating striking architectural contrast in large family halls."}}, {"id": 17, "cat": "painting", "image": "images/17-painting-contemporary-grey-room-white-molding.jpg", "city": {"ar": "الدمام", "en": "Dammam"}, "title": {"ar": "دهان غرف رمادي عصري مع براويز فوم وإطارات بيضاء بالدمام", "en": "Contemporary Grey Room Paint with White Foam Molding in Dammam"}, "desc": {"ar": "تركيب أوراك وبراويز فوم جدارية كلاسيكية مطلية بالأبيض فوق خلفية دهان رمادي هادئ عالي الجودة.", "en": "Neoclassical white polyurethane foam wall molding frames installed over a refined matte grey backdrop."}}, {"id": 18, "cat": "wallpaper", "image": "images/18-wallpaper-3d-colorful-geometric-kids-room.jpg", "city": {"ar": "الدمام", "en": "Dammam"}, "title": {"ar": "تركيب ورق جدران ثلاثي الأبعاد 3D ملون لغرف الأطفال والشباب", "en": "3D Colorful Geometric Wallpaper Installation for Kids & Youth Rooms"}, "desc": {"ar": "ورق جدران كوري وألماني ثلاثي الأبعاد قابل للغسيل، يتم تركيبه بدون فواصل ظاهرة وبغراء أصلي مقاوم للرطوبة.", "en": "Washable Korean and German 3D geometric wallpaper installed with invisible seams and moisture-proof adhesive."}}, {"id": 19, "cat": "wallpaper", "image": "images/19-wallpaper-luxury-patterned-accent-wall-khobar.jpg", "city": {"ar": "الخبر", "en": "Khobar"}, "title": {"ar": "ورق جدران فاخر بنقوش ملكية لجداريات المجالس بالخبر", "en": "Luxury Patterned Accent Wallpaper for Majlis Walls in Khobar"}, "desc": {"ar": "تشكيلة حصرية من ورق الجدران المخملي البارز المخصص لجدران التميز في المجالس الرجالية والنسائية بالخبر.", "en": "Embossed velvet-texture luxury accent wallpaper tailored for formal Majlis and reception feature walls in Khobar."}}, {"id": 20, "cat": "wallpaper", "image": "images/20-wallpaper-classic-damask-textured-wall-qatif.jpg", "city": {"ar": "القطيف", "en": "Qatif"}, "title": {"ar": "ورق جدران داماسك كلاسيكي بارز الملمس للمجالس بالقطيف", "en": "Classic Damask Textured Wallpaper Installation in Qatif"}, "desc": {"ar": "تنفيذ احترافي لورق الجدران الكلاسيكي بنقشة الداماسك الفاخرة مع مطابقة دقيقة للنقوش والزوايا.", "en": "Seamless pattern-matched installation of heavyweight classic Damask textured wallpaper in Qatif."}}, {"id": 21, "cat": "shades", "image": "images/21-shades-side-walkway-arched-pvc-canopy-dammam.jpg", "city": {"ar": "الدمام", "en": "Dammam"}, "title": {"ar": "تركيب مظلات ممرات جانبية قماش PVC مقوسة بالدمام", "en": "Arched PVC Side Walkway Shade Canopy Installation in Dammam"}, "desc": {"ar": "تفصيل وتركيب مظلات ممرات ومداخل جانبية للفلل من قماش PVC كوري ضغط 1100 جرام عازل للماء والحرارة بنسبة 100%.", "en": "Custom arched side walkway canopy fabricated from 1100gsm Korean PVC membrane providing 100% UV and rain protection."}}, {"id": 22, "cat": "shades", "image": "images/22-shades-cantilever-car-parking-shade-beige-pvc.jpg", "city": {"ar": "الخبر", "en": "Khobar"}, "title": {"ar": "مظلات سيارات معلقة (كابولي) قماش PVC بيج بالخبر", "en": "Cantilever Car Parking Shade in Beige PVC Fabric in Khobar"}, "desc": {"ar": "تركيب مظلات مواقف سيارات معلقة بدون أعمدة أمامية تعيق الحركة، بهياكل حديدية مدهونة حرارياً تقاوم الرطوبة والصدأ.", "en": "Column-free cantilever car parking shade featuring thermal epoxy-coated steel framing and heavy-duty beige PVC fabric."}}, {"id": 23, "cat": "shades", "image": "images/23-sawater-laser-cut-wrought-iron-rooftop-fence.jpg", "city": {"ar": "الدمام", "en": "Dammam"}, "title": {"ar": "سواتر حديد ليزر مزخرفة للأسطح والأحواش بالدمام", "en": "Laser-Cut Ornamental Wrought Iron Rooftop & Yard Fence"}, "desc": {"ar": "تصنيع وتركيب سواتر حديد قص ليزر بسماكات عالية وتصاميم هندسية فاخرة توفر الخصوصية التامة والأمان للأسطح والفلل.", "en": "CNC laser-cut heavy-gauge steel privacy screens and rooftop fencing coated with anti-rust metallic paint."}}, {"id": 24, "cat": "shades", "image": "images/24-sawater-louvered-horizontal-steel-privacy-fence.jpg", "city": {"ar": "القطيف", "en": "Qatif"}, "title": {"ar": "سواتر حديد شرائح (لوفر) أفقية لخصوصية الفلل بالقطيف", "en": "Horizontal Louvered Steel Privacy Fence (Sawater) in Qatif"}, "desc": {"ar": "سواتر حديد شرائح أفقية تحجب الرؤية بنسبة 100% وتسمح بمرور الهواء، مثالية لأسوار الفلل والاستراحات بالمنطقة الشرقية.", "en": "100% sight-blocking horizontal louvered steel privacy fence engineered for airflow and wind resistance across Eastern Province villas."}}, {"id": 25, "cat": "shades", "image": "images/25-shades-arched-entrance-walkway-pvc-canopy.jpg", "city": {"ar": "الأحساء", "en": "Al-Ahsa"}, "title": {"ar": "مظلة مدخل وممر مقوسة بتصميم عصري قماش PVC بالأحساء", "en": "Modern Arched Entrance & Walkway PVC Canopy in Al-Ahsa"}, "desc": {"ar": "مظلات مداخل فلل مقوسة بتشطيب هندسي متقن يحمي الأبواب والواجهات من حرارة الشمس المباشرة والأمطار.", "en": "Architecturally arched villa entrance canopy shielding doorways and pathways from intense solar heat and seasonal rain."}}];
+    const BLOG_ARTICLES = [{"id": "art-1", "slug": "dammam-khobar-interior-painting-guide-2026", "city": {"ar": "الدمام والخبر", "en": "Dammam & Khobar"}, "cat": {"ar": "الدهانات والتشطيبات", "en": "Painting & Finishes"}, "date": {"ar": "12 نوفمبر 2026", "en": "Nov 12, 2026"}, "readTime": {"ar": "6 دقائق قراءة", "en": "6 min read"}, "image": "images/10-painting-velvet-grey-decorative-paint-doors.jpg", "title": {"ar": "دليل اختيار أفضل معلم دهانات وديكورات في الدمام والخبر لعام 2026", "en": "Complete Guide to Choosing the Best Interior Painting & Decor Specialist in Dammam & Khobar (2026)"}, "excerpt": {"ar": "تعرف على أحدث تقنيات الدهانات المخملية وربع اللمعة المقاومة للرطوبة في المنطقة الشرقية، وخطوات تأسيس الجدران بمعجون سافيتو وجوتن لضمان تشطيب يدوم لسنوات.", "en": "Discover the latest moisture-resistant velvet and quarter-sheen paint technologies in the Eastern Province, plus three-stage Saveto and Jotun wall preparation."}, "content": {"ar": "<p>تتميز أجواء المنطقة الشرقية في مدن مثل <strong>الدمام والخبر</strong> بارتفاع معدلات الرطوبة الساحلية، وهو ما يجعل اختيار نوع الدهان وطريقة تأسيس الجدران عاملاً حاسماً في بقاء التشطيبات الداخلية والخارجية بنفس الرونق والفخامة لسنوات طويلة دون تقشر أو بهتان.</p>\n<h4>1. مراحل تأسيس الجدران الاحترافية قبل الدهان</h4>\n<p>يبدأ العمل المتقن من معالجة السطح الخرساني أو اللياسة عبر تنظيف الجدران بالفرش الحديدية وحجر الجلي، ثم تطبيق طبقة أساس مائي (سيلر مقاوم للقلوية والأملاح). بعد ذلك يتم سحب ثلاث سكاكين معجون متعامدة باستخدام معجون <strong>سافيتو (Saveto)</strong> أو معجون جوتن فينوماستيك، مع الصنفرة الكربونية المزودة بإضاءة كاشفة لضمان استواء الجدار بنسبة 100%.</p>\n<h4>2. أفضل الألوان الدارجة في فلل وشقق الشرقية</h4>\n<ul>\n<li><strong>الرمادي المخملي (Velvet Grey):</strong> يمنح الصالات والمجالس طابعاً عصرياً فخماً ويتناسق بامتياز مع الإضاءة الدافئة والجبس بورد.</li>\n<li><strong>الأوف وايت واللؤلؤي (Off-White & Pearl):</strong> خيار مثالي للشقق السكنية والممرات لزيادة الإحساس بالاتساع والانشراح.</li>\n<li><strong>دهان الأبواب الناري الأبيض:</strong> تجديد الأبواب الخشبية بدهان البولي يوريثان الأبيض الناصع يخلق تبايناً راقياً مع الجدران الرمادية.</li>\n</ul>\n<h4>3. لماذا تختار مقاول تشطيبات متخصص بالمنطقة الشرقية؟</h4>\n<p>نحن نلتزم بتغطية الأرضيات والأثاث بالكامل قبل البدء، واستخدام دهانات أصلية عديمة الرائحة (Zero VOC) آمنة تماماً على صحة العائلة، مع تسليم العمل في الموعد المحدد وبضمان فعلي على جودة التنفيذ في جميع أحياء الدمام والخبر (الشاطئ، الفاخرية، الراكة، الحزام الذهبي، والعزيزية).</p>", "en": "<p>Coastal cities in Saudi Arabia's Eastern Province—especially <strong>Dammam and Khobar</strong>—experience high seasonal humidity, making wall preparation and paint selection critical for long-lasting, crack-free interior and exterior finishes.</p>\n<h4>1. Three-Stage Architectural Wall Preparation</h4>\n<p>True luxury painting starts beneath the topcoat. Our technicians mechanically sand and clean the plaster surface, apply an alkali-resistant penetrating primer/sealer, and execute three perpendicular coats of <strong>Saveto</strong> or Jotun Fenomastic putty. Laser-assisted inspection lights ensure every wall is glass-smooth prior to topcoat application.</p>\n<h4>2. Trending Color Palettes for Eastern Province Villas</h4>\n<ul>\n<li><strong>Velvet & Contemporary Grey:</strong> Creates a refined, modern backdrop that pairs effortlessly with recessed LED gypsum ceilings and porcelain floors.</li>\n<li><strong>Warm Off-White & Crisp White:</strong> Reflects natural light to make apartments and corridors feel noticeably larger and brighter.</li>\n<li><strong>Spray-Finished Crisp White Doors:</strong> Refinishing interior wooden doors and neoclassical foam moldings in pure satin white elevates contrast across hallways.</li>\n</ul>\n<h4>3. Full Furniture Protection & Odor-Free Execution</h4>\n<p>Every project includes full nylon masking of floors and furniture, certified Zero-VOC washable Jotun and Al-Jazeera paints, and punctual handover across all Dammam and Khobar districts.</p>"}}, {"id": "art-2", "slug": "chipboard-fluted-wood-led-mirrors-khobar-dammam", "city": {"ar": "الخبر والدمام", "en": "Khobar & Dammam"}, "cat": {"ar": "ديكورات الشيبورد وبديل الخشب", "en": "Chipboard & WPC Decor"}, "date": {"ar": "10 نوفمبر 2026", "en": "Nov 10, 2026"}, "readTime": {"ar": "5 دقائق قراءة", "en": "5 min read"}, "image": "images/05-chipboard-fluted-wood-oval-led-mirror-entrance.jpg", "title": {"ar": "أحدث تصاميم ديكورات الشيبورد وبديل الخشب والمرايا المضيئة للمداخل والشاشات", "en": "Modern Chipboard, Fluted WPC Wood & LED Mirror Designs for Entryways and TV Walls"}, "excerpt": {"ar": "كيف تحول مدخل منزلك أو جدار التلفزيون إلى تحفة معمارية باستخدام ألواح الشيبورد الألماني وشرائح بديل الخشب المضلع مع المرايا البيضاوية والعضوية المضيئة.", "en": "Transform your villa entryway or TV media wall into an architectural centerpiece using German chipboard, fluted WPC slats, and backlit oval or organic mirrors."}, "content": {"ar": "<p>أصبحت <strong>ديكورات الشيبورد (Chipboard) وبديل الخشب المضلع</strong> الخيار الأول لأصحاب الفلل والشقق الباحثين عن الفخامة العصرية بتكلفة مدروسة وسرعة في التنفيذ النظيف دون تكسير.</p>\n<h4>1. ديكورات المداخل والمرايا المضيئة (LED Mirrors)</h4>\n<p>يمثل مدخل المنزل الانطباع الأول لضيوفك. من خلال دمج ألواح الشيبورد ذات الملمس الخشبي أو الحجري مع شرائح بديل الخشب (WPC) وتركيب <strong>مرآة بيضاوية أو مرآة بالتصميم الحر (Organic Mirror)</strong> مزودة بإضاءة ليد خلفية دافئة (3000K)، يتحول المدخل الضيق أو المتوسط إلى مساحة رحبة تشع بالأناقة.</p>\n<h4>2. خلفيات شاشات التلفزيون المخفية</h4>\n<p>نقوم بتفصيل جداريات التلفزيون بحيث تخفي تماماً كافة الأسلاك والتوصيلات الكهربائية خلف ألواح الشيبورد وبديل الرخام، مع إضافة أرفف سفلية معلقة ومسارات إضاءة مخفية تمنح غرفة المعيشة أجواء سينمائية مريحة للعين.</p>\n<h4>3. القواطع الديكورية وخلفيات المغاسل</h4>\n<p>تمتاز المواد التي نستخدمها بمقاومتها العالية للرطوبة والمياه والحشرات، مما يجعلها مثالية لتنفيذ قواطع الصالات (البارتشن) وتكسية جدران المغاسل الرخامية في الدمام والخبر والقطيف.</p>", "en": "<p><strong>Architectural Chipboard and Fluted WPC Wood Slats</strong> have revolutionized interior design across the Eastern Province, offering rapid, dust-free installation with a bespoke five-star hotel aesthetic.</p>\n<h4>1. Statement Entryways with Backlit LED Mirrors</h4>\n<p>Your entrance sets the tone for the entire residence. By pairing textured chipboard panels with vertical fluted wood slats and a <strong>backlit oval or organic freeform mirror</strong> (3000K warm LED), even compact foyers gain remarkable visual depth and warmth.</p>\n<h4>2. Concealed-Wire Modern TV Media Walls</h4>\n<p>We engineer custom TV walls with hidden cable raceways, floating consoles, and recessed perimeter LED strips—eliminating visual clutter while framing large screens in rich wood and marble textures.</p>\n<h4>3. Moisture-Resistant Vanity & Room Partitions</h4>\n<p>All WPC and high-density chipboard panels we install are moisture-resistant, termite-proof, and easy to wipe clean, making them ideal for guest washbasins and open-plan living partitions.</p>"}}, {"id": "art-3", "slug": "car-parking-shades-laser-sawater-dammam-qatif", "city": {"ar": "الدمام والقطيف", "en": "Dammam & Qatif"}, "cat": {"ar": "المظلات والسواتر", "en": "Shades & Sawater"}, "date": {"ar": "8 نوفمبر 2026", "en": "Nov 8, 2026"}, "readTime": {"ar": "7 دقائق قراءة", "en": "7 min read"}, "image": "images/22-shades-cantilever-car-parking-shade-beige-pvc.jpg", "title": {"ar": "تركيب مظلات سيارات PVC وسواتر حديد ليزر وشرائح في الدمام والقطيف بضمان 10 سنوات", "en": "PVC Car Parking Shades, Laser-Cut Iron & Louvered Privacy Fences in Dammam & Qatif"}, "excerpt": {"ar": "تعرف على مواصفات مظلات السيارات المعلقة ومظلات الممرات المقوسة من قماش PVC الكوري والألماني، وأنواع سواتر الحديد الشرائح والليزر لحماية وخصوصية الفلل.", "en": "Explore engineering specs for cantilever PVC car parking shades, arched walkway canopies, and laser-cut or louvered steel privacy fences built for Saudi climate."}, "content": {"ar": "<p>تتطلب درجات الحرارة المرتفعة وأشعة الشمس القوية في المنطقة الشرقية حلول تظليل هندسية متينة تحمي المركبات والمداخل وتوفر الخصوصية التامة لأهل المنزل دون التأثير على المظهر الجمالي للفيلا.</p>\n<h4>1. مظلات السيارات المعلقة (الكابولي) ومظلات الممرات المقوسة</h4>\n<p>نعتمد في تصنيع مظلات السيارات ومظلات الممرات الجانبية على <strong>قماش PVC كوري وألماني أصلي بوزن 1100 جرام</strong>، يتميز بعزل حراري ومائي بنسبة 100% ومقاومة للاشتعال والتشقق. يتم تثبيت الهيكل الحديدي عبر بليتات ومسامير مجلفنة بسماكات عالية بدون أعمدة أمامية تعيق ركن السيارة أو فتح الأبواب.</p>\n<h4>2. سواتر حديد شرائح (لوفر) وسواتر قص ليزر</h4>\n<ul>\n<li><strong>سواتر حديد شرائح (Louvered Steel):</strong> تحجب الرؤية الخارجية بنسبة 100% مع السماح بمرور الهواء الطبيعي، وتُطلى بدهانات فرن حرارية مقاومة للصدأ والرطوبة.</li>\n<li><strong>سواتر حديد قص ليزر (Laser-Cut Iron):</strong> تصاميم زخرفية وهندسية فاخرة تركب على أسوار الفلل وأسطح المنازل لمنح واجهة المنزل فخامة استثنائية وأماناً عالياً.</li>\n</ul>", "en": "<p>Intense summer solar radiation and coastal humidity in <strong>Dammam, Khobar, and Qatif</strong> demand heavy-duty shading and privacy structures engineered to last decades without rusting or sagging.</p>\n<h4>1. Cantilever Car Shades & Arched Walkway Canopies</h4>\n<p>We fabricate column-free cantilever car parking shades and arched side-walkway canopies using <strong>1100gsm Korean and German PVC membranes</strong>. Welded with high-frequency thermal seams and supported by epoxy-primed structural steel tubing, they block 100% of UV rays and rain.</p>\n<h4>2. Louvered Steel & CNC Laser-Cut Privacy Fences (Sawater)</h4>\n<ul>\n<li><strong>Horizontal Louvered Steel Fences:</strong> Provide 100% visual privacy for villa yards while allowing natural cross-ventilation and resisting high wind loads.</li>\n<li><strong>Ornamental Laser-Cut Rooftop & Boundary Screens:</strong> Heavy-gauge CNC-cut steel panels finished in metallic oven-baked paint that elevate exterior architecture.</li>\n</ul>"}}, {"id": "art-4", "slug": "villa-facade-renovation-porcelain-walkways-eastern-province", "city": {"ar": "الدمام والجبيل", "en": "Dammam & Jubail"}, "cat": {"ar": "ترميم وتطوير الفلل", "en": "Villa Renovation"}, "date": {"ar": "5 نوفمبر 2026", "en": "Nov 5, 2026"}, "readTime": {"ar": "6 دقائق قراءة", "en": "6 min read"}, "image": "images/01-renovation-villa-facade-artificial-grass-dammam.jpg", "title": {"ar": "ترميم واجهات الفلل وتبليط المداخل بالبورسلان والعشب الجداري في الدمام والجبيل", "en": "Exterior Villa Facade Renovation, Porcelain Walkways & Wall Landscaping in Dammam & Jubail"}, "excerpt": {"ar": "خطوات عملية لتجديد الفلل القديمة وتحويلها إلى فلل مودرن عبر معالجة التشققات، تركيب بلاط البورسلان الخارجي، وتنسيق الحدائق والعشب الجداري.", "en": "Step-by-step transformation of aging villas into modern architectural homes through structural crack repair, outdoor porcelain paving, and artificial wall grass."}, "content": {"ar": "<p>يمثل <strong>ترميم وتجديد واجهات الفلل والمداخل الخارجية</strong> استثماراً ذكياً يرفع من القيمة السوقية للعقار ويعيد للمنزل بهجته وحداثته دون الحاجة إلى تكاليف البناء من الصفر.</p>\n<h4>1. معالجة الشروخ وتجديد الواجهات</h4>\n<p>نبدأ بفحص الواجهة هندسياً، وفتح الشروخ والتشققات السطحية ومعالجتها بمواد إيبوكسية غير قابلة للانكماش، ثم تطبيق دهانات البروفايل أو كسر الرخام أو الدهانات الخارجية المقاومة للأمطار والغبار.</p>\n<h4>2. تبليط الممرات بالبورسلان وتنسيق العشب الجداري</h4>\n<p>نستبدل البلاط القديم بممرات <strong>بورسلان خارجي بسماكة 2 سم</strong> مقاوم للانزلاق والأحمال الثقيلة، مع تكسية الجدران الجانبية بالعشب الصناعي عالي الكثافة وشرائح التكسيات الخشبية وإضاءة الأبليكات الجدارية المقاومة للماء (IP65).</p>", "en": "<p><strong>Exterior villa facade and courtyard renovation</strong> is one of the highest-return upgrades for homeowners in Dammam, Khobar, and Jubail—modernizing curb appeal and protecting structural concrete.</p>\n<h4>1. Structural Crack Remediation & Weatherproof Coatings</h4>\n<p>Our renovation team inspects exterior plaster, routes and seals hairline or settlement cracks with non-shrink epoxy compounds, and applies breathable elastomeric exterior coatings that withstand coastal salt air.</p>\n<h4>2. Anti-Slip Porcelain Walkways & Vertical Landscaping</h4>\n<p>We upgrade villa entrances with 20mm heavy-duty anti-slip outdoor porcelain slabs, integrated drainage slopes, UV-stabilized vertical wall grass, and IP65 architectural wall sconces.</p>"}}, {"id": "art-5", "slug": "3d-wallpaper-classic-damask-installation-qatif-alahsa", "city": {"ar": "القطيف والأحساء", "en": "Qatif & Al-Ahsa"}, "cat": {"ar": "ورق الجدران 3D والكلاسيك", "en": "3D & Luxury Wallpaper"}, "date": {"ar": "2 نوفمبر 2026", "en": "Nov 2, 2026"}, "readTime": {"ar": "5 دقائق قراءة", "en": "5 min read"}, "image": "images/19-wallpaper-luxury-patterned-accent-wall-khobar.jpg", "title": {"ar": "فن تركيب ورق الجدران الثلاثي الأبعاد 3D والداماسك الفاخر للمجالس وغرف النوم", "en": "Precision Installation of 3D Geometric & Luxury Damask Wallpaper for Majlis and Bedrooms"}, "excerpt": {"ar": "أسرار تركيب ورق الجدران الكوري والألماني بدون فواصل ظاهرة، وكيف تختار النقشة المناسبة لجدار التميز في المجالس وغرف الأطفال بالقطيف والأحساء.", "en": "Secrets to seamless Korean and German wallpaper installation, plus choosing the right accent wall texture for formal Majlis halls and kids' rooms."}, "content": {"ar": "<p>يمنح <strong>ورق الجدران الفاخر وثلاثي الأبعاد (3D)</strong> عمقاً بصرياً وملمساً غنياً لا يمكن الوصول إليه بالدهانات التقليدية وحدها، بشرط أن يتم تركيبه على يد فني محترف يتقن مطابقة النقوش وإخفاء الفواصل.</p>\n<h4>1. ورق جدران الداماسك والمخملي للمجالس</h4>\n<p>في المجالس الرجالية والنسائية في القطيف والأحساء والخبر، يبرز ورق الجدران بنقشة <strong>الداماسك (Damask)</strong> البارزة والألوان الدافئة كخلفية ملكية تتماشى مع الأثاث الكلاسيكي والنيوكلاسيك.</p>\n<h4>2. ورق جدران 3D لغرف الأطفال والشباب</h4>\n<p>نوفر تشكيلة واسعة من ورق الجدران ثلاثي الأبعاد بالأشكال الهندسية الملونة القابلة للغسيل والتنظيف، مع استخدام غراء ألماني وإيطالي أصلي مخلوط بمواد مانعة للرطوبة لضمان عدم تفكك الأطراف نهائياً.</p>", "en": "<p><strong>Luxury textured and 3D architectural wallpapers</strong> bring tactile richness and depth to feature walls that paint alone cannot replicate—when installed with laser-aligned seams.</p>\n<h4>1. Embossed Damask & Velvet Feature Walls for Majlis</h4>\n<p>Heavyweight embossed Damask and metallic-thread wallpapers create a regal focal wall behind formal seating in Qatif, Al-Ahsa, and Khobar residences.</p>\n<h4>2. Washable 3D Geometric Wallpaper for Kids & Youth Rooms</h4>\n<p>We install breathable, washable vinyl-coated 3D wallpapers using commercial-grade anti-humidity adhesive so edges stay permanently bonded for years.</p>"}}, {"id": "art-6", "slug": "gypsum-board-ceilings-foam-molding-jubail-dammam", "city": {"ar": "الجبيل والدمام", "en": "Jubail & Dammam"}, "cat": {"ar": "الجبس بورد وبراويز الفوم", "en": "Gypsum & Foam Molding"}, "date": {"ar": "28 أكتوبر 2026", "en": "Oct 28, 2026"}, "readTime": {"ar": "5 دقائق قراءة", "en": "5 min read"}, "image": "images/15-painting-crisp-white-interior-modern-gypsum.jpg", "title": {"ar": "تشطيب أسقف الجبس بورد الحديثة وبراويز الفوم الجدارية في الجبيل والدمام", "en": "Modern Gypsum Board Ceilings & Polyurethane Foam Wall Molding in Jubail & Dammam"}, "excerpt": {"ar": "دليلك الشامل لتنسيق أسقف الجبس بورد مع الإضاءة المخفية والسبوت لايت، وتركيب إطارات الفوم النيوكلاسيك مع الدهانات العصرية.", "en": "Your complete guide to integrating recessed gypsum board ceilings with hidden LED coves and neoclassical polyurethane wall moldings."}, "content": {"ar": "<p>تتكامل <strong>أسقف الجبس بورد الحديثة وبراويز الفوم (الأوراك)</strong> مع الدهانات الداخلية لتشكل لوحة معمارية متناغمة ترفع من فخامة الغرف والصالات.</p>\n<h4>1. أسقف الجبس بورد المقاومة للرطوبة</h4>\n<p>نستخدم ألواح جبس بورد أصلية (سعودي وألماني) مثبتة على جسور حديدية مجلفنة بسماكة 0.6 مم، مع معالجة الفواصل بشريط الفايبر والمعجون الخاص لمنع ظهور أي تنميل أو شروخ مستقبلاً، وتوزيع مدروس لفتحات التكييف والسبوت لايت.</p>\n<h4>2. براويز الفوم والأوراك النيوكلاسيك</h4>\n<p>تركيب إطارات الفوم البيضاء بالليزر فوق جدران مطلية باللون الرمادي العصري أو الأوف وايت يمنح الغرف طابع الفنادق الفاخرة بتكلفة اقتصادية ومقاومة كاملة للرطوبة والصدمات.</p>", "en": "<p><strong>Modern recessed gypsum board ceilings and neoclassical foam moldings</strong> work hand-in-hand with interior paint to define room proportions and conceal HVAC and lighting infrastructure.</p>\n<h4>1. Crack-Free Galvanized Gypsum Board Ceilings</h4>\n<p>We suspend certified moisture-resistant gypsum boards on heavy 0.6mm galvanized steel channels, reinforcing all joints with fiberglass mesh tape and flexible joint compound to prevent hairline cracking.</p>\n<h4>2. Laser-Aligned Neoclassical Foam Wall Frames</h4>\n<p>High-density polyurethane wall frames painted in crisp white over contemporary grey walls deliver timeless neoclassical elegance across bedrooms and reception halls.</p>"}}];
 
-    // Loads from local `images/` folder or Original-Resolution (s2048) Google CDN
-    function getImgSrc(item) { return `https://lh3.googleusercontent.com/d/${item.driveId}=s2048`; }
-    function getImgFallback(item) { return `images/${item.file}`; }
+    let galleryItems = [...FALLBACK_GALLERY];
+    let filteredItems = [...FALLBACK_GALLERY];
+    let currentLang = 'ar';
+    let currentCategory = 'all';
+    let currentSearchQuery = '';
+    let currentHeroIndex = 0;
+    let currentLightboxIndex = 0;
+
+    // Lightbox Zoom & Pan State
+    let zoomLevel = 100;
+    let panX = 0;
+    let panY = 0;
+    let isDragging = false;
+    let startX = 0;
+    let startY = 0;
 
     const I18N = {
       ar: {
-        dir: "rtl",
-        topBanner: "📍 الدمام • الخبر • القطيف • الجبيل • الأحساء • صفوى • رأس تنورة • الفيصلية • سيهات • الظهران",
-        brandName: "أصباغ وديكورات وترميم الشرقية",
-        brandSub: "ترميم منازل • شيبورد • جبس بورد • مظلات وسواتر • عوازل",
+        topBadge: "نخدم جميع مدن المنطقة الشرقية:",
+        topCities: "الدمام • الخبر • القطيف • الجبيل • الأحساء",
+        topWhatsapp: "استشارة ومعاينة مجانية عبر واتساب",
+        brandTitle: "مقاولات وديكورات الشرقية",
+        brandSub: "الدمام • الخبر • القطيف • الجبيل",
+        navHome: "الرئيسية",
         navServices: "خدماتنا",
-        navPortfolio: "معرض الصور HD (23)",
-        navCalc: "حاسبة التكلفة",
-        navCities: "مدن التغطية (10)",
-        navSeoGuides: "دليل الـ SEO والخدمات",
-        navFaq: "الأسئلة الشائعة",
+        navGallery: "معرض الأعمال (23)",
+        navBlog: "المدونة والمقالات",
+        navSocials: "حساباتنا الرسمية",
         navContact: "اتصل بنا",
-        whatsappNow: "واتساب فوري",
-        heroBadge: "✨ أعمال حقيقية موثقة بالصور الأصلية في الشرقية - 0530320587",
-        heroTitle: "ترميم وتشطيب منازل وأصباغ وديكورات ومظلات الشرقية",
-        heroDesc: "ننفذ كافة أعمال الترميم وتوسعة الصالات، ديكورات الشيبورد وبديل الخشب والمرايا المضيئة، دهانات جوتن والجزيرة، الجبس بورد، ورق الجدران، بلاط البورسلان، المظلات والسواتر والجلسات الشتوية، وبناء الملاحق والعوازل في الدمام والخبر والقطيف وكافة مدن الشرقية.",
-        heroCtaPrimary: "تواصل مباشرة عبر واتساب",
-        heroCtaSecondary: "تصفح 23 صورة أصلية عالية الدقة",
-        stat1Val: "+580", stat1Lbl: "مشروع منفذ بالشرقية",
-        stat2Val: "23", stat2Lbl: "صورة أصلية Full HD",
-        stat3Val: "10", stat3Lbl: "مدن مغطاة بالكامل",
-        stat4Val: "100%", stat4Lbl: "ضمان جودة المواد والتنفيذ",
-        showcaseTag: "✨ نماذج مختارة بالدقة الأصلية",
-        showcaseZoomHint: "🔍 اضغط على الصورة لفتح الزووم الفائق (حتى 350%)",
-        servicesTag: "الأقسام الهندسية المتكاملة",
-        servicesTitle: "خدماتنا المصنفة حسب تخصصات المؤسسة الفعلية",
-        servicesDesc: "تم تصنيف خدماتنا وصور مشاريعنا بدقة لتشمل كافة أعمال الترميم، الشيبورد والمرايا، الأصباغ والجبس، ورق الجدران، والمظلات والسواتر.",
-        orderServiceBtn: "اطلب تسعيرة عبر واتساب",
-        viewCatPhotosBtn: "عرض صور القسم",
-        portfolioTag: "صور أصلية 100% مع تحميل ذكي سريع (Lazy Loading)",
-        portfolioTitle: "معرض صور مشاريعنا المصنفة (23 صورة عالية الدقة HD)",
-        portfolioDesc: "تصفح صور مشاريعنا الفعلية المنفذة في الدمام والخبر والقطيف. اضغط على أي صورة لفتح عارض الزووم الفائق (100% إلى 350%) وفحص دقة التشطيب.",
-        filterAll: "الكل (23)",
-        filterRenovation: "ترميم وواجهات وملاحق (2)",
-        filterChipboard: "شيبورد ومرايا مضيئة وشاشات (5)",
-        filterPainting: "أصباغ وجبس بورد وبورسلان (8)",
-        filterWallpaper: "ورق جدران 3D وكلاسيك (3)",
-        filterShades: "مظلات وسواتر حديد (5)",
-        photoBadge: "📸 دقة أصلية HD",
-        zoomHint: "🔍 اضغط للتكبير الفائق HD",
-        calcTag: "أداة تفاعلية ذكية",
-        calcTitle: "حاسبة التكلفة التقديرية للترميم والأصباغ والديكور",
-        calcDesc: "اختر نوع الخدمة، المدينة، ومستوى التشطيب والمساحة بالمتر المربع للحصول على تقدير فوري وإرساله عبر واتساب.",
-        calcLblService: "1. اختر القسم / الخدمة المطلوبة",
-        calcLblCity: "2. اختر المدينة في المنطقة الشرقية",
-        calcLblArea: "3. المساحة التقريبية (متر مربع m²)",
-        calcLblFinish: "4. مستوى المواد والتشطيب",
-        calcFinEcon: "اقتصادي عملي (مصنعية / مواد قياسية)",
-        calcFinStd: "قياسي ممتاز (مواد جوتن / شيبورد درجة أولى)",
-        calcFinLux: "فاخر VIP (تشطيب فندقي متكامل تسليم مفتاح)",
-        calcResTitle: "التكلفة التقديرية المتوقعة",
-        calcResNote: "* الأسعار تقديرية بالريال السعودي وتحدد بدقة بعد المعاينة المجانية للموقع.",
-        calcWaBtn: "إرسال تفاصيل التسعيرة عبر واتساب",
-        citiesTag: "تغطية جغرافية شاملة (Local SEO)",
-        citiesTitle: "نخدم 10 مدن رئيسية في المنطقة الشرقية",
-        citiesDesc: "فرقنا الميدانية مجهزة للوصول إليك ومعاينة موقعك مجاناً في كافة أحياء الدمام، الخبر، القطيف، الجبيل، الأحساء، صفوى، رأس تنورة، الفيصلية، سيهات، والظهران.",
-        cityNeighborhoodsLbl: "الأحياء المخدومة:",
-        cityRequestBtn: "اطلب معاينة مجانية في",
-        seoSectionTag: "الدليل الهندسي الشامل ومحتوى الـ SEO المحلي",
-        seoSectionTitle: "دليل خدمات الترميم والتشطيب والأصباغ والشيبورد والمظلات بالشرقية",
-        seoSectionDesc: "محتوى تخصصي شامل مصمم لتصدر نتائج البحث في الدمام والخبر والقطيف وتقديم كافة المواصفات الفنية التي يبحث عنها العميل.",
-        socialTag: "حساباتنا الرسمية الموثقة",
-        socialTitle: "تابع أعمالنا اليومية وتواصل معنا عبر منصات التواصل",
-        reviewsTitle: "ماذا يقول عملاؤنا في الدمام والخبر والقطيف؟",
-        faqTag: "إجابات واضحة ومباشرة",
-        faqTitle: "الأسئلة الشائعة حول خدمات الترميم والديكور بالشرقية",
-        contactTag: "تواصل مباشر 24/7",
-        contactTitle: "اطلب معاينة مجانية وعرض سعر مفصل اليوم",
-        contactDesc: "تواصل معنا مباشرة عبر الاتصال أو الواتساب أو املأ النموذج ليتم تجهيز رسالتك فوراً.",
-        formNameLbl: "الاسم الكريم", formNamePh: "مثال: أبو محمد العتيبي",
-        formPhoneLbl: "رقم الجوال", formPhonePh: "05XXXXXXXX",
-        formCityLbl: "المدينة والحي", formServiceLbl: "الخدمة المطلوبة",
-        formNotesLbl: "تفاصيل المشروع أو المساحة", formNotesPh: "اكتب تفاصيل العمل المطلوب...",
-        formSubmitBtn: "إرسال الطلب فوراً عبر واتساب",
-        footerAbout: "مؤسسة متخصصة في ترميم وتشطيب المنازل، الأصباغ والديكورات، الشيبورد والمرايا المضيئة، الجبس بورد، ورق الجدران، البورسلان، المظلات والسواتر، الجلسات الشتوية، وبناء الملاحق والعوازل بالمنطقة الشرقية.",
-        footerCitiesTitle: "مدن التغطية بالشرقية",
-        footerContactTitle: "بيانات التواصل والحسابات",
-        footerRights: "جميع الحقوق محفوظة © أصباغ وديكورات وترميم الشرقية - 0530320587",
-        modalClose: "إغلاق",
-        modalWaInquire: "اطلب تنفيذ هذا التصميم عبر واتساب",
-        zoomHelpText: "💡 اضغط مرتين على الصورة أو استخدم أزرار (+) و (-) للتكبير حتى 350% مع السحب للتحريك"
+        headerWhatsapp: "واتساب مباشر",
+        heroBadge: "المقاول المعتمد للتشطيبات والديكورات الحديثة بالشرقية",
+        heroTitle: 'نُحول منزلك إلى تحفة معمارية فاخرة في <span class="text-[#D97706]">الدمام والخبر والقطيف والجبيل</span>',
+        heroDesc: "نقدم خدمات متكاملة في تنفيذ الدهانات الداخلية والخارجية، ديكورات الشيبورد وبديل الخشب والمرايا المضيئة، ورق الجدران الثلاثي الأبعاد، المظلات والسواتر، وترميم واجهات الفلل بأعلى معايير الجودة الهندسية وبإشراف مباشر.",
+        statProjects: "مشروع موثق بالصور",
+        statMaterials: "خامات أصلية مضمونة",
+        statCities: "مدن رئيسية بالشرقية",
+        heroBtnWhatsapp: "اطلب تسعيرة عبر واتساب",
+        heroBtnCall: "اتصال مباشر: 0530320587",
+        heroBtnGallery: "تصفح معرض الصور",
+        clickToZoom: "اضغط للتكبير 350%",
+        prevSlide: "السابق",
+        nextSlide: "التالي",
+        servicesEyebrow: "تخصصاتنا الهندسية والجمالية",
+        servicesHeading: "خدمات المقاولات والديكور المتكاملة بالشرقية",
+        servicesSub: "اختر القسم المطلوب لاستعراض صور المشاريع المنفذة على أرض الواقع بدقة عالية",
+        galleryEyebrow: "توثيق واقعي من مواقع العمل (بدون صور تعبيرية)",
+        galleryHeading: "معرض أعمالنا المنفذة بالدمام والخبر والقطيف (23 مشروعاً)",
+        gallerySearchPlaceholder: "ابحث في المشاريع (مثال: شيبورد، مظلات)...",
+        catAll: "الكل (23)",
+        catRenovation: "ترميم وتطوير الفلل (2)",
+        catChipboard: "شيبورد وبديل الخشب ومرايا (5)",
+        catPainting: "الدهانات والجبس بورد (8)",
+        catWallpaper: "ورق جدران 3D وكلاسيك (3)",
+        catShades: "المظلات والسواتر (5)",
+        galleryZoomHint: "💡 اضغط على أي صورة لفتح المكبر التفاعلي (تكبير حتى 350%)",
+        blogEyebrow: "المدونة الهندسية ودليل الأسعار والنصائح",
+        blogHeading: "مقالات متخصصة في المقاولات والديكور بالمنطقة الشرقية",
+        blogViewAllBtn: "تصفح جميع المقالات (6 مقالات كاملة)",
+        socialsEyebrow: "تابع أحدث يومياتنا ومشاريعنا بالفيديو والصور",
+        socialsHeading: "الحسابات الرسمية لمؤسسة مقاولات وديكورات الشرقية",
+        socialsSub: "تواصل معنا مباشرة أو شاهد تغطيات العمل اليومية في الدمام والخبر والقطيف عبر منصاتنا الرسمية الموثقة",
+        socWhatsappSub: "محادثة فورية",
+        socSnapSub: "تغطيات يومية",
+        socPinSub: "كتالوج التصاميم",
+        socYtSub: "قناة أمين غانم",
+        contactEyebrow: "تواصل مباشر على مدار الساعة",
+        contactHeading: "احجز موعد معاينة ورفع مقاسات مجاني",
+        contactDesc: "فريقنا الهندسي والفني جاهز للوصول إليك في جميع أحياء الدمام، الخبر، الظهران، القطيف، سيهات، الجبيل، والأحساء لمعاينة الموقع وتقديم عرض سعر تفصيلي.",
+        lblDirectPhone: "رقم الجوال المباشر",
+        lblWhatsappLink: "الواتساب الرسمي",
+        lblWhatsappAction: "اضغط لبدء المحادثة الفورية",
+        formTitle: "أرسل تفاصيل مشروعك مباشرة عبر واتساب",
+        formSub: "اختر نوع الخدمة والمدينة ليتم تجهيز رسالتك وتحويلك مباشرة إلى واتساب المؤسسة",
+        lblName: "الاسم الكريم",
+        lblCity: "المدينة / الحي",
+        lblService: "الخدمة المطلوبة",
+        lblNotes: "تفاصيل إضافية أو المساحة التقريبية (اختياري)",
+        btnSendWhatsapp: "إرسال الطلب عبر واتساب الآن",
+        footerBrand: "مؤسسة مقاولات وديكورات المنطقة الشرقية - أمين غانم",
+        footerCopy: "© 2026 جميع الحقوق محفوظة | الدمام • الخبر • القطيف • الجبيل • الأحساء | جوال: 0530320587",
+        mobileBarCall: "اتصال: 0530320587",
+        mobileBarWhatsapp: "واتساب فوري",
+        lightboxAskSimilar: "اطلب تنفيذ تصميم مماثل",
+        readerCtaPrompt: "هل ترغب في تنفيذ هذا العمل في منزلك؟",
+        readFullArticle: "اقرأ المقال كاملاً",
+        zoomBtnLabel: "تكبير الصورة"
       },
       en: {
-        dir: "ltr",
-        topBanner: "📍 Serving Eastern Province: Dammam • Khobar • Qatif • Jubail • Al-Ahsa • Safwa • Ras Tanura • Faisaliyah • Saihat • Dhahran",
-        brandName: "Sharqia Paints, Decor & Renovation",
-        brandSub: "Home Renovation • Chipboard • Gypsum • Shades & Sawater • Waterproofing",
+        topBadge: "Serving All Eastern Province Cities:",
+        topCities: "Dammam • Khobar • Qatif • Jubail • Al-Ahsa",
+        topWhatsapp: "Free Site Inspection & Quote via WhatsApp",
+        brandTitle: "Sharqia Contracting & Decor",
+        brandSub: "Dammam • Khobar • Qatif • Jubail",
+        navHome: "Home",
         navServices: "Services",
-        navPortfolio: "HD Photos (23)",
-        navCalc: "Cost Calculator",
-        navCities: "10 Cities",
-        navSeoGuides: "SEO & Service Guides",
-        navFaq: "FAQ",
+        navGallery: "Portfolio (23)",
+        navBlog: "SEO Blog & Guides",
+        navSocials: "Official Socials",
         navContact: "Contact Us",
-        whatsappNow: "WhatsApp",
-        heroBadge: "✨ Verified Original-Resolution Projects in Eastern Province - 0530320587",
-        heroTitle: "Home Renovation, Painting, Chipboard Decor & Shades in Eastern Province",
-        heroDesc: "Complete villa & apartment remodeling, modern chipboard TV walls, fluted wood slats & backlit LED mirrors, Jotun & Al-Jazeera painting, gypsum board ceilings, 3D wallpaper, porcelain tiling, car shades, privacy fences (sawater), winter pergolas, annexes & roof waterproofing in Dammam, Khobar & Qatif.",
-        heroCtaPrimary: "Chat Directly on WhatsApp",
-        heroCtaSecondary: "Browse 23 Original-Quality Photos",
-        stat1Val: "+580", stat1Lbl: "Completed Projects in Sharqia",
-        stat2Val: "23", stat2Lbl: "Original Full-HD Photos",
-        stat3Val: "10", stat3Lbl: "Eastern Province Cities Covered",
-        stat4Val: "100%", stat4Lbl: "Material & Workmanship Warranty",
-        showcaseTag: "✨ Featured Original-Quality Showcase",
-        showcaseZoomHint: "🔍 Click image to open Interactive HD Zoom Lightbox (up to 350%)",
-        servicesTag: "Comprehensive Contracting Divisions",
-        servicesTitle: "Our Core Services Categorized by Specialty",
-        servicesDesc: "Every service and high-resolution project photo is accurately organized across renovation, chipboard & LED mirrors, painting & gypsum, wallpaper, and shades/sawater.",
-        orderServiceBtn: "Request Quote on WhatsApp",
-        viewCatPhotosBtn: "View Category Photos",
-        portfolioTag: "Original 100% High-Resolution Photos with Fast Lazy Loading",
-        portfolioTitle: "Categorized High-Quality Client Photo Gallery (23 HD Photos)",
-        portfolioDesc: "Explore our actual completed projects in Dammam, Khobar, and Qatif. Click any photo to open the interactive HD Zoom Lightbox (100% to 350% zoom & pan).",
-        filterAll: "All Photos (23)",
-        filterRenovation: "Renovation & Villa Facades (2)",
-        filterChipboard: "Chipboard, LED Mirrors & TV Walls (5)",
-        filterPainting: "Painting, Gypsum & Porcelain (8)",
-        filterWallpaper: "3D & Classic Wallpaper (3)",
-        filterShades: "Car Shades & Sawater Fences (5)",
-        photoBadge: "📸 Original HD",
-        zoomHint: "🔍 Click for HD Zoom",
-        calcTag: "Interactive Smart Estimator",
-        calcTitle: "Instant Cost Estimator for Renovation, Paint & Decor",
-        calcDesc: "Select your required service, city, finishing grade, and area in square meters to get an instant SAR estimate and send it via WhatsApp.",
-        calcLblService: "1. Select Service / Division",
-        calcLblCity: "2. Select City in Eastern Province",
-        calcLblArea: "3. Approximate Area (Square Meters m²)",
-        calcLblFinish: "4. Material & Finishing Grade",
-        calcFinEcon: "Economy / Standard Labor Grade",
-        calcFinStd: "Premium Standard (First-Grade Jotun / Chipboard)",
-        calcFinLux: "VIP Luxury Turnkey Hotel-Grade Finish",
-        calcResTitle: "Estimated Project Cost Range",
-        calcResNote: "* Estimates are in Saudi Riyals (SAR). Exact pricing is confirmed after a free on-site inspection.",
-        calcWaBtn: "Send Estimate Details via WhatsApp",
-        citiesTag: "Local SEO & Regional Coverage",
-        citiesTitle: "Serving 10 Major Cities in the Eastern Province",
-        citiesDesc: "Our mobile engineering teams provide free site visits across all neighborhoods in Dammam, Khobar, Qatif, Jubail, Al-Ahsa, Safwa, Ras Tanura, Al-Faisaliyah, Saihat, and Dhahran.",
-        cityNeighborhoodsLbl: "Covered Neighborhoods:",
-        cityRequestBtn: "Book Free Inspection in",
-        seoSectionTag: "Comprehensive Technical Guides & Local SEO Content",
-        seoSectionTitle: "Complete Guide to Renovation, Painting, Chipboard & Shades in Eastern Province",
-        seoSectionDesc: "In-depth technical specifications and local keyword guides engineered for search engine authority across Dammam, Khobar, Qatif, Jubail, and Al-Ahsa.",
-        socialTag: "Official Verified Channels",
-        socialTitle: "Follow Our Daily Projects Across Social Media",
-        reviewsTitle: "What Homeowners in Dammam, Khobar & Qatif Say",
-        faqTag: "Clear & Direct Answers",
-        faqTitle: "Frequently Asked Questions About Our Services",
-        contactTag: "Direct 24/7 Support",
-        contactTitle: "Book a Free Site Visit & Detailed Quote Today",
-        contactDesc: "Call us directly, message us on WhatsApp, or fill out the form below to send your project specifications.",
-        formNameLbl: "Full Name", formNamePh: "e.g., Mohammed Al-Otaibi",
-        formPhoneLbl: "Mobile Number", formPhonePh: "05XXXXXXXX",
-        formCityLbl: "City & Neighborhood", formServiceLbl: "Required Service",
-        formNotesLbl: "Project Details or Area", formNotesPh: "Describe your project...",
-        formSubmitBtn: "Send Request Instantly via WhatsApp",
-        footerAbout: "Specialized contracting company in the Eastern Province for home renovation, interior/exterior painting, chipboard & backlit LED mirrors, gypsum board, wallpaper, porcelain tiling, car shades, sawater fences, winter pergolas, annexes, and waterproofing.",
-        footerCitiesTitle: "Eastern Province Cities",
-        footerContactTitle: "Contact & Social Accounts",
-        footerRights: "All Rights Reserved © Sharqia Paints, Decor & Renovation - 0530320587",
-        modalClose: "Close",
-        modalWaInquire: "Request This Exact Design on WhatsApp",
-        zoomHelpText: "💡 Double-click image or use (+) / (-) buttons to zoom up to 350% and drag to pan"
+        headerWhatsapp: "WhatsApp Chat",
+        heroBadge: "Certified Contracting & Luxury Interior Finishes in Eastern Province",
+        heroTitle: 'Transforming Villas & Homes Across <span class="text-[#D97706]">Dammam, Khobar, Qatif & Jubail</span>',
+        heroDesc: "Full-service architectural contracting specializing in Jotun interior/exterior painting, custom chipboard & WPC wood walls with LED mirrors, 3D wallpaper, PVC car shades, laser-cut fences, and complete villa renovations.",
+        statProjects: "Verified Site Photos",
+        statMaterials: "Genuine Materials",
+        statCities: "Eastern Province Cities",
+        heroBtnWhatsapp: "Get Instant WhatsApp Quote",
+        heroBtnCall: "Direct Call: 0530320587",
+        heroBtnGallery: "Explore 23-Photo Gallery",
+        clickToZoom: "Click to Zoom 350%",
+        prevSlide: "Prev",
+        nextSlide: "Next",
+        servicesEyebrow: "Architectural & Interior Specialties",
+        servicesHeading: "Complete Contracting & Decor Services",
+        servicesSub: "Select any specialty below to filter our verified real-world project gallery",
+        galleryEyebrow: "100% Real Completed Client Projects",
+        galleryHeading: "Eastern Province Project Portfolio (23 High-Res Photos)",
+        gallerySearchPlaceholder: "Search projects (e.g., chipboard, shade, paint)...",
+        catAll: "All Projects (23)",
+        catRenovation: "Villa Renovation (2)",
+        catChipboard: "Chipboard & LED Mirrors (5)",
+        catPainting: "Painting & Gypsum (8)",
+        catWallpaper: "3D & Luxury Wallpaper (3)",
+        catShades: "Shades & Sawater (5)",
+        galleryZoomHint: "💡 Click any photo to open the Interactive 350% Zoom & Pan Lightbox",
+        blogEyebrow: "Engineering Blog & Local Cost Guides",
+        blogHeading: "Eastern Province Contracting & Decor Articles",
+        blogViewAllBtn: "View All 6 Complete SEO Articles",
+        socialsEyebrow: "Follow Our Daily Site Videos & Project Updates",
+        socialsHeading: "Official Social Media Channels",
+        socialsSub: "Connect with us directly or watch daily project reels across Dammam, Khobar, and Qatif",
+        socWhatsappSub: "Instant Chat",
+        socSnapSub: "Daily Stories",
+        socPinSub: "Design Catalog",
+        socYtSub: "Ameen Ghanem Channel",
+        contactEyebrow: "24/7 Direct Client Support",
+        contactHeading: "Book a Free Site Visit & Measurement",
+        contactDesc: "Our field supervisors cover all neighborhoods in Dammam, Khobar, Dhahran, Qatif, Jubail, and Al-Ahsa for on-site consultation and itemized quotations.",
+        lblDirectPhone: "Direct Mobile Number",
+        lblWhatsappLink: "Official WhatsApp",
+        lblWhatsappAction: "Click to Start Instant Chat",
+        formTitle: "Send Project Details Directly to WhatsApp",
+        formSub: "Choose your required service and city to pre-fill your instant WhatsApp consultation request",
+        lblName: "Your Name",
+        lblCity: "City / District",
+        lblService: "Required Service",
+        lblNotes: "Additional Project Details or Approx. Area (Optional)",
+        btnSendWhatsapp: "Send Request via WhatsApp Now",
+        footerBrand: "Sharqia Contracting & Decor - Ameen Ghanem",
+        footerCopy: "© 2026 All Rights Reserved | Dammam • Khobar • Qatif • Jubail • Al-Ahsa | Tel: 0530320587",
+        mobileBarCall: "Call: 0530320587",
+        mobileBarWhatsapp: "WhatsApp Now",
+        lightboxAskSimilar: "Request Similar Design",
+        readerCtaPrompt: "Want this executed in your home?",
+        readFullArticle: "Read Full Article",
+        zoomBtnLabel: "Zoom Photo"
       }
     };
 
-    const SERVICES_DATA = [
-      { id: "renovation", catFilter: "renovation", icon: "🏗️", rateMin: 180, rateMax: 320, coverIdx: 0,
-        title: { ar: "ترميم وتشطيب منازل وواجهات فلل وبلاط بورسلان", en: "Villa & Home Renovation, Facades & Porcelain Tiling" },
-        desc: { ar: "ترميم شامل للمنازل والفلل، معالجة التشققات، دهان البروفايل الخارجي، تنسيق الحدائق بالعشب الصناعي، وتركيب بلاط البورسلان والرخام بالليزر.", en: "Complete villa & apartment remodeling, crack remediation, exterior profile coating, artificial turf landscaping, and laser-leveled porcelain tiling." }
+    const CATEGORY_META = {
+      renovation: {
+        ar: "ترميم وتطوير الفلل",
+        en: "Villa Renovation",
+        descAr: "تجديد الواجهات، تبليط البورسلان الخارجي، وتنسيق العشب الجداري.",
+        descEn: "Facade remodeling, anti-slip porcelain walkways & vertical wall grass.",
+        count: 2,
+        coverIdx: 0
       },
-      { id: "chipboard", catFilter: "chipboard", icon: "🪞", rateMin: 220, rateMax: 390, coverIdx: 2,
-        title: { ar: "ديكورات شيبورد وبديل خشب ومرايا مضيئة وشاشات", en: "Chipboard TV Walls, Wood Slats & Backlit LED Mirrors" },
-        desc: { ar: "تفصيل تكسيات الشيبورد العصري وشرائح بديل الخشب (WPC) وبديل الرخام لخلفيات الشاشات، مع مداخل فندقية بمرايا بيضاوية وحرة مضيئة وكونسول معلق.", en: "Custom modern chipboard wall cladding, fluted WPC wood slats, marble alternatives for TV media walls, floating consoles, and backlit LED mirrors." }
+      chipboard: {
+        ar: "شيبورد وبديل الخشب",
+        en: "Chipboard & WPC Decor",
+        descAr: "خلفيات شاشات التلفزيون، ديكورات المداخل، والمرايا البيضاوية المضيئة.",
+        descEn: "Modern TV media walls, fluted WPC wood slats & backlit LED mirrors.",
+        count: 5,
+        coverIdx: 2
       },
-      { id: "painting", catFilter: "painting", icon: "🎨", rateMin: 35, rateMax: 75, coverIdx: 13,
-        title: { ar: "أصباغ ودهانات جوتن وجبس بورد وتجديد أبواب", en: "Interior/Exterior Painting, Gypsum Board & Door Lacquer" },
-        desc: { ar: "تنفيذ دهانات جوتن والجزيرة السادة والديكورية (شمواه، تعتيق، أوف وايت، رمادي أنثراسايت، كشمير)، تجديد الأبواب الخشبية، وأسقف جبس بورد معلقة.", en: "Expert Jotun & Al-Jazeera washable paints, suede/velvet decorative textures, wood door refinishing, and moisture-resistant gypsum board ceilings." }
+      painting: {
+        ar: "الدهانات والجبس بورد",
+        en: "Painting & Gypsum",
+        descAr: "دهانات جوتن والجزيرة، أسقف جبس بورد، وبراويز الفوم النيوكلاسيك.",
+        descEn: "Washable Jotun paints, modern gypsum ceilings & neoclassical molding.",
+        count: 8,
+        coverIdx: 7
       },
-      { id: "wallpaper", catFilter: "wallpaper", icon: "🖼️", rateMin: 45, rateMax: 95, coverIdx: 16,
-        title: { ar: "تركيب ورق جدران ثلاثي الأبعاد (3D) وكلاسيكي ومودرن", en: "3D Geometric, Classic Damask & Modern Wallpaper" },
-        desc: { ar: "توريد وتركيب ورق جدران كوري وألماني قابل للغسيل، مناظر ثلاثية الأبعاد لغرف الأطفال والمعيشة، وورق جدران زخرفي وكلاسيكي لجدران الصالات.", en: "Seamless installation of washable Korean and German wallpapers, vibrant 3D patterns for kids' rooms, and luxury damask accent walls." }
+      wallpaper: {
+        ar: "ورق الجدران 3D",
+        en: "3D & Luxury Wallpaper",
+        descAr: "تركيب ورق جدران ثلاثي الأبعاد وداماسك ملكي للمجالس والغرف.",
+        descEn: "Seamless 3D geometric and embossed Damask luxury wallpaper.",
+        count: 3,
+        coverIdx: 15
       },
-      { id: "shades", catFilter: "shades", icon: "⛺", rateMin: 130, rateMax: 260, coverIdx: 19,
-        title: { ar: "مظلات سيارات وسواتر حديد شرائح وقص ليزر وبرجولات", en: "Car Shades, Privacy Sawater Fences & Winter Pergolas" },
-        desc: { ar: "تفصيل مظلات سيارات كابولية ومظلات ممرات ومداخل بقماش PVC كوري/ألماني، سواتر حديد شرائح (لوفر) وقص ليزر للأسطح، وجلسات شتوية WPC.", en: "Heavy-duty cantilever PVC car shades, arched walkway canopies, rooftop laser-cut and louvered steel privacy fences (sawater), and WPC pergolas." }
-      },
-      { id: "annex", catFilter: "renovation", icon: "🏠", rateMin: 450, rateMax: 850, coverIdx: 1,
-        title: { ar: "بناء ملاحق خارجية وعوازل أسطح مائية وحرارية", en: "Turnkey Annex Construction & Roof Waterproofing" },
-        desc: { ar: "بناء ملاحق خارجية أرضية وعلوية ومجالس تسليم مفتاح، غرف ساندوتش بانل، وتطبيق أنظمة العزل المائي والحراري والفوم للأسطح والخزانات بالشرقية.", en: "Turnkey construction of outdoor majlis annexes and rooftop rooms, insulated sandwich panel structures, and foam & elastomeric roof waterproofing." }
+      shades: {
+        ar: "المظلات والسواتر",
+        en: "Shades & Sawater",
+        descAr: "مظلات سيارات PVC وممرات مقوسة وسواتر حديد ليزر وشرائح.",
+        descEn: "Cantilever PVC car shades, arched canopies & laser-cut steel fences.",
+        count: 5,
+        coverIdx: 19
       }
-    ];
+    };
 
-    const CITIES_DATA = [
-      { id: "dammam", name: { ar: "الدمام", en: "Dammam" }, badge: { ar: "المركز الرئيسي", en: "Main Hub" }, hoods: { ar: "الشاطئ، الفيصلية، الفاخرية، طيبة، ضاحية الملك فهد، المنار، الجامعيين، الريان", en: "Al-Shati, Al-Faisaliyah, Al-Fakhriyah, Taibah, King Fahd Suburb, Al-Manar, Al-Rayyan" } },
-      { id: "khobar", name: { ar: "الخبر", en: "Khobar" }, badge: { ar: "تشطيبات فندقية", en: "Luxury Finishing" }, hoods: { ar: "العقربية، الراكة، العليا، الحزام الذهبي، العزيزية، الخزامى، الكورنيش، الثقبة", en: "Al-Aqrabiyah, Al-Rakah, Al-Olaya, Golden Belt, Al-Aziziyah, Al-Khuzama, Corniche" } },
-      { id: "qatif", name: { ar: "القطيف", en: "Qatif" }, badge: { ar: "فرق متخصصة", en: "Dedicated Teams" }, hoods: { ar: "المجيدية، الناصرة، المشاري، الخامسة، الشاطئ، تاروت، التركية، المزروع", en: "Al-Majeediyah, Al-Nasirah, Al-Mashari, Al-Khamisah, Al-Shati, Tarout, Al-Turkiyah" } },
-      { id: "jubail", name: { ar: "الجبيل", en: "Jubail" }, badge: { ar: "البلد والصناعية", en: "Industrial & Balad" }, hoods: { ar: "الفناتير، جلمودة، الدفي، الحويلات، الجبيل البلد، الحمراء، دارين", en: "Al-Fanateer, Jalmudah, Al-Deffi, Al-Huwaylat, Jubail Al-Balad, Al-Hamra" } },
-      { id: "ahsa", name: { ar: "الأحساء", en: "Al-Ahsa" }, badge: { ar: "الهفوف والمبرز", en: "Hofuf & Mubarraz" }, hoods: { ar: "الهفوف، المبرز، الخالدية، السلمانية، المحمدية، العزيزية، محاسن", en: "Hofuf, Al-Mubarraz, Al-Khalidiyah, Al-Salmaniyah, Al-Muhammadiyah, Mahasin" } },
-      { id: "safwa", name: { ar: "صفوى", en: "Safwa" }, badge: { ar: "استجابة سريعة", en: "Fast Dispatch" }, hoods: { ar: "الحزم، البدرية، الصفا، العروبة، الزهور، المرهون", en: "Al-Hazm, Al-Badriyah, Al-Safa, Al-Urubah, Al-Zuhur" } },
-      { id: "rastanura", name: { ar: "رأس تنورة", en: "Ras Tanura" }, badge: { ar: "مقاوم للرطوبة", en: "Coastal Grade" }, hoods: { ar: "الدانة، المنتزه، الفيحاء، قرطبة، الروضة، الزهور", en: "Al-Danah, Al-Muntazah, Al-Fayha, Qurtubah, Al-Rawdah" } },
-      { id: "faisaliyah", name: { ar: "الفيصلية", en: "Al-Faisaliyah" }, badge: { ar: "تغطية خاصة", en: "Priority Zone" }, hoods: { ar: "الفيصلية، المنار، الندى، طيبة، الفاخرية، بدر", en: "Al-Faisaliyah, Al-Manar, Al-Nada, Taibah, Al-Fakhriyah, Badr" } },
-      { id: "saihat", name: { ar: "سيهات", en: "Saihat" }, badge: { ar: "تشطيب متكامل", en: "Turnkey Decor" }, hoods: { ar: "الغدير، الفردوس، الكوثر، السلام، النور، الخليج، المنتزه", en: "Al-Ghadeer, Al-Firdaws, Al-Kawthar, Al-Salam, Al-Noor, Al-Khaleej" } },
-      { id: "dhahran", name: { ar: "الظهران", en: "Dhahran" }, badge: { ar: "مواصفات هندسية", en: "VIP Standards" }, hoods: { ar: "الدوحة، الدانة، القصور، تلال الظهران، أجيال، الجامعة", en: "Al-Doha, Al-Danah, Al-Qusoor, Dhahran Hills, Ajyal" } }
-    ];
-
-    const SEO_PILLARS = [
-      { icon: "🏗️", title: { ar: "مقاول ترميم وتشطيب منازل وفلل في الدمام والخبر والقطيف", en: "Villa & Home Renovation Contractor in Dammam, Khobar & Qatif" },
-        text: { ar: "نقدم حلول الترميم المتكامل للفلل والشقق السكنية في الدمام والخبر والقطيف والجبيل والأحساء، شاملة معالجة الشروخ والتصدعات، تجديد الواجهات الخارجية بالبروفايل، تنسيق الأحواش بالعشب الصناعي، وتركيب بلاط البورسلان والرخام بالليزر والكلبسات.", en: "Complete residential villa and apartment remodeling across Dammam, Khobar, Qatif, Jubail, and Al-Ahsa, covering structural crack repair, exterior profile coatings, artificial grass landscaping, and laser-leveled porcelain tiling." }
-      },
-      { icon: "🪞", title: { ar: "تفصيل ديكورات شيبورد وبديل الخشب ومرايا مضيئة LED بالشرقية", en: "Custom Chipboard TV Walls, WPC Wood Slats & Backlit LED Mirrors" },
-        text: { ar: "ننفذ أحدث ديكورات الشيبورد الألماني والكوري وشرائح بديل الخشب (WPC) المقاوم للرطوبة لخلفيات شاشات التلفزيون مع الإضاءة المخفية (Linear LED)، بالإضافة إلى مداخل الشقق والفلل الفندقية المزودة بالمرايا البيضاوية والحرة وطاولات الكونسول المعلقة.", en: "Transform your reception halls and entryways with moisture-resistant chipboard cladding, vertical WPC fluted wood slats, recessed linear LED TV media walls, floating drawer consoles, and custom halo-lit oval and organic mirrors." }
-      },
-      { icon: "🎨", title: { ar: "معلم أصباغ ودهانات جوتن وجبس بورد وورق جدران 3D وكلاسيك", en: "Master Painter (Jotun/Al-Jazeera), Gypsum Ceilings & 3D Wallpaper" },
-        text: { ar: "نعتمد دهانات جوتن والجزيرة الأصلية القابلة للغسيل وعديمة الرائحة مع تأسيس الجدران بـ 3 أوجه معجون وصنفرة بالليزر، وتنفيذ الألوان العصرية (أوف وايت، رمادي أنثراسايت، كشمير)، وتجديد الأبواب الخشبية، وتركيب ورق الجدران وأسقف الجبس بورد.", en: "Our painting specialists apply 3 coats of laser-sanded putty followed by genuine washable Jotun or Al-Jazeera paints in modern palettes, alongside seamless 3D/Damask wallpaper installation and multi-level gypsum board ceilings." }
-      },
-      { icon: "⛺", title: { ar: "تركيب مظلات سيارات وسواتر حديد وجلسات شتوية وبرجولات وملاحق", en: "Car Parking Shades, Sawater Privacy Fences, Winter Pergolas & Annexes" },
-        text: { ar: "تفصيل وتركيب مظلات سيارات كابولية ومظلات ممرات قوسية بقماش PVC كوري وألماني عازل للحرارة، وسواتر أسطح وأحواش حديد شرائح (لوفر) وقص ليزر يحجب الرؤية 100%، وجلسات شتوية وبرجولات خشب بلاستيكي WPC، وبناء الملاحق وعزل الأسطح.", en: "Engineered for the Eastern Province climate: cantilever PVC car shades, arched side-passage canopies, 100% sight-blocking louvered steel and ornamental laser-cut rooftop privacy screens (sawater), WPC winter pergolas, and roof waterproofing." }
-      }
-    ];
-
-    const REVIEWS_DATA = [
-      { name: { ar: "أبو فهد الدوسري - الدمام", en: "Abu Fahd Al-Dosari - Dammam" }, service: { ar: "ترميم وتشطيب + صبغ وبورسلان", en: "Renovation, Painting & Porcelain" }, text: { ar: "شغلهم في التشطيب وتركيب البورسلان وصبغ الصالة بلون رمادي مودرن كان نظيف جداً ودقيق وفي الموعد.", en: "Flawless porcelain tiling and modern grey Jotun paint completed on schedule with exceptional cleanliness." } },
-      { name: { ar: "أم راكان الغامدي - الخبر", en: "Umm Rakan Al-Ghamdi - Khobar" }, service: { ar: "ديكور مدخل شيبورد ومرآة مضيئة + شاشة", en: "Chipboard Entryway, LED Mirror & TV Wall" }, text: { ar: "نفذوا لنا مدخل بديل الخشب مع المرآة البيضاوية المضيئة وخلفية شاشة التلفزيون بالشيبورد. النتيجة فخمة جداً.", en: "They built our fluted wood entryway with the backlit oval mirror and chipboard TV wall. Looks like a 5-star hotel!" } },
-      { name: { ar: "م. علي القطيفي - القطيف", en: "Eng. Ali Al-Qatifi - Qatif" }, service: { ar: "مظلة سيارة كابولية + ساتر سطح لوفر", en: "Cantilever Car Shade & Louver Fence" }, text: { ar: "ركبت عندهم مظلة سيارة PVC بيج وساتر حديد شرائح على السطح. الحديد ثقيل والدهان ممتاز ويتحمل الرطوبة.", en: "Installed a beige PVC cantilever car shade and horizontal louvered rooftop privacy fence. Heavy-gauge steel and weather-proof finish." } }
-    ];
-
-    const FAQ_DATA = [
-      { q: { ar: "هل جميع الصور الـ 23 في الموقع من أعمالكم الفعلية في الشرقية؟", en: "Are all 23 high-resolution photos on the website from your actual projects?" }, a: { ar: "نعم 100%، جميع الصور في المعرض هي صور حقيقية بالدقة الأصلية لمشاريع نفذناها في الدمام والخبر والقطيف، ويمكنك الضغط على أي صورة لتكبيرها حتى 350%.", en: "Yes, 100%. All 23 photos in our gallery are authentic original-resolution photos of projects completed by our teams across Dammam, Khobar, and Qatif." } },
-      { q: { ar: "هل المعاينة ورفع المقاسات مجانية في جميع مدن الشرقية؟", en: "Is the site inspection and measurement free across the Eastern Province?" }, a: { ar: "نعم، المعاينة الميدانية ورفع المقاسات بالليزر وتقديم عرض السعر مجانية في جميع المدن الـ 10 بالشرقية (0530320587).", en: "Yes, free on-site inspection, laser measurement, and itemized price quotes across all 10 Eastern Province cities (0530320587)." } }
-    ];
-
-    let currentLang = "ar";
-    let activePortfolioCat = "all";
-    let currentLightboxIdx = 0;
-    let currentHeroShowcaseIdx = 2;
-    let zoomLevel = 1, panX = 0, panY = 0, isDragging = false, dragStartX = 0, dragStartY = 0;
-
-    function toggleMobileNav() {
-      const m = document.getElementById("mobileNavMenu");
-      if (m) m.classList.toggle("hidden");
+    const ORIG_PATHS = ["images/01-renovation-villa-facade-artificial-grass-dammam.jpg","images/02-renovation-villa-entrance-porcelain-walkway-khobar.jpg","images/05-chipboard-fluted-wood-oval-led-mirror-entrance.jpg","images/06-chipboard-modern-tv-media-wall-hidden-led.jpg","images/07-chipboard-wall-cladding-organic-led-mirror.jpg","images/08-chipboard-partition-backlit-mirror-vanity.jpg","images/09-chipboard-luxury-entryway-wood-slats-oval-mirror.jpg","images/10-painting-velvet-grey-decorative-paint-doors.jpg","images/11-painting-corridor-decorative-paint-white-doors.jpg","images/12-painting-rose-pink-bedroom-gypsum-porcelain.jpg","images/13-painting-light-grey-room-gypsum-porcelain-floor.jpg","images/14-painting-off-white-apartment-gypsum-ceiling.jpg","images/15-painting-crisp-white-interior-modern-gypsum.jpg","images/16-painting-two-tone-charcoal-grey-hall-paint.jpg","images/17-painting-contemporary-grey-room-white-molding.jpg","images/18-wallpaper-3d-colorful-geometric-kids-room.jpg","images/19-wallpaper-luxury-patterned-accent-wall-khobar.jpg","images/20-wallpaper-classic-damask-textured-wall-qatif.jpg","images/21-shades-side-walkway-arched-pvc-canopy-dammam.jpg","images/22-shades-cantilever-car-parking-shade-beige-pvc.jpg","images/23-sawater-laser-cut-wrought-iron-rooftop-fence.jpg","images/24-sawater-louvered-horizontal-steel-privacy-fence.jpg","images/25-shades-arched-entrance-walkway-pvc-canopy.jpg"];
+    function resolveImg(path) {
+      const idx = ORIG_PATHS.indexOf(path);
+      return (idx !== -1 && galleryItems[idx]) ? galleryItems[idx].image : path;
+    }
+    function getCatLabel(catKey) {
+      return CATEGORY_META[catKey] ? CATEGORY_META[catKey][currentLang] : catKey;
     }
 
-    function getCatLabel(catCode) {
-      const map = {
-        renovation: { ar: "ترميم وواجهات", en: "Renovation & Facades" },
-        chipboard: { ar: "شيبورد ومرايا مضيئة", en: "Chipboard & LED Mirrors" },
-        painting: { ar: "أصباغ وجبس وبورسلان", en: "Painting, Gypsum & Tiles" },
-        wallpaper: { ar: "ورق جدران 3D وكلاسيك", en: "3D & Classic Wallpaper" },
-        shades: { ar: "مظلات وسواتر حديد", en: "Shades & Sawater Fences" }
-      };
-      return (map[catCode] && map[catCode][currentLang]) || catCode;
-    }
-
-    function setLanguage(lang) {
-      currentLang = (lang === "en") ? "en" : "ar";
-      const dict = I18N[currentLang];
-      document.documentElement.lang = currentLang;
-      document.documentElement.dir = dict.dir;
-
-      document.querySelectorAll(".lang-btn").forEach(btn => {
-        btn.classList.toggle("active-lang", btn.getAttribute("data-lang") === currentLang);
-      });
-
-      document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (dict[key]) el.textContent = dict[key];
-      });
-
-      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
-        const key = el.getAttribute("data-i18n-placeholder");
-        if (dict[key]) el.setAttribute("placeholder", dict[key]);
-      });
-
+    // Fetch gallery.json as required, falling back cleanly on file:// or Canvas
+    async function loadGalleryData() {
+      try {
+        const res = await fetch('gallery.json');
+        if (res.ok) {
+          const data = await res.json();
+          if (Array.isArray(data) && data.length > 0) {
+            galleryItems = data;
+          }
+        }
+      } catch (e) {}
+      filteredItems = [...galleryItems];
       renderHeroShowcase();
-      renderServices();
-      renderPortfolioFilters();
-      renderPortfolioGrid();
-      renderCalculatorOptions();
-      updateCalculation();
-      renderCities();
-      renderSeoPillars();
-      renderReviews();
-      renderFaq();
+      renderServicesCards();
+      renderGalleryGrid();
+      renderBlogCards();
     }
 
     function renderHeroShowcase() {
-      const featuredIndices = [2, 3, 0, 19];
-      const activeItem = PHOTOS_DATA[currentHeroShowcaseIdx] || PHOTOS_DATA[2];
-      const mainImg = document.getElementById("heroShowcaseImg");
-      if (mainImg) {
-        mainImg.onerror = function() { this.onerror = null; this.src = getImgFallback(activeItem); };
-        mainImg.src = getImgSrc(activeItem);
-        mainImg.alt = activeItem.title[currentLang];
-        mainImg.onclick = () => openLightbox(currentHeroShowcaseIdx);
+      if (!galleryItems.length) return;
+      const item = galleryItems[currentHeroIndex % galleryItems.length];
+      const imgEl = document.getElementById('heroShowcaseImg');
+      const catEl = document.getElementById('heroShowcaseCat');
+      const titleEl = document.getElementById('heroShowcaseTitle');
+      const descEl = document.getElementById('heroShowcaseDesc');
+      if (imgEl) {
+        imgEl.src = item.image;
+        imgEl.alt = item.title[currentLang];
       }
-      document.getElementById("heroShowcaseTitle").textContent = activeItem.title[currentLang];
-      document.getElementById("heroShowcaseCat").textContent = getCatLabel(activeItem.cat);
+      if (catEl) catEl.textContent = getCatLabel(item.cat) + ' • ' + item.city[currentLang];
+      if (titleEl) titleEl.textContent = item.title[currentLang];
+      if (descEl) descEl.textContent = item.desc[currentLang];
 
-      document.getElementById("heroShowcaseThumbs").innerHTML = featuredIndices.map(idx => {
-        const it = PHOTOS_DATA[idx];
-        const isSel = idx === currentHeroShowcaseIdx;
-        return `
-          <button type="button" onclick="currentHeroShowcaseIdx=${idx}; renderHeroShowcase();"
-                  class="rounded-xl overflow-hidden h-14 sm:h-16 border-2 transition ${isSel ? 'border-amber-600 scale-105 shadow-md' : 'border-slate-200 opacity-75 hover:opacity-100'}">
-            <img src="${getImgSrc(it)}" onerror="this.onerror=null;this.src='${getImgFallback(it)}';" alt="${it.title[currentLang]}" class="w-full h-full object-cover" loading="lazy" decoding="async" />
-          </button>
-        `;
-      }).join("");
+      const dotsContainer = document.getElementById('heroDots');
+      if (dotsContainer) {
+        const featuredIndexes = [0, 2, 3, 7, 15, 19];
+        dotsContainer.innerHTML = featuredIndexes.map(idx => {
+          const active = (currentHeroIndex === idx);
+          return `<button type="button" onclick="setHeroShowcase(${idx})" class="h-2 rounded-full transition-all ${active ? 'w-6 bg-[#D97706]' : 'w-2 bg-slate-300 hover:bg-amber-400'}" aria-label="Slide ${idx + 1}"></button>`;
+        }).join('');
+      }
     }
 
-    function renderServices() {
-      const dict = I18N[currentLang];
-      document.getElementById("servicesGrid").innerHTML = SERVICES_DATA.map(srv => {
-        const cover = PHOTOS_DATA[srv.coverIdx] || PHOTOS_DATA[0];
+    function setHeroShowcase(idx) {
+      currentHeroIndex = idx;
+      renderHeroShowcase();
+    }
+
+    function stepHeroShowcase(delta) {
+      currentHeroIndex = (currentHeroIndex + delta + galleryItems.length) % galleryItems.length;
+      renderHeroShowcase();
+    }
+
+    function renderServicesCards() {
+      const grid = document.getElementById('servicesGrid');
+      if (!grid) return;
+      const keys = ['renovation', 'chipboard', 'painting', 'wallpaper', 'shades'];
+      grid.innerHTML = keys.map(k => {
+        const meta = CATEGORY_META[k];
+        const coverItem = galleryItems[meta.coverIdx] || galleryItems[0];
+        const title = meta[currentLang];
+        const desc = currentLang === 'ar' ? meta.descAr : meta.descEn;
+        const countTxt = currentLang === 'ar' ? `${meta.count} مشاريع` : `${meta.count} Projects`;
         return `
-          <article class="luxury-card rounded-2xl overflow-hidden flex flex-col justify-between">
+          <div onclick="selectServiceCategory('${k}')" class="luxury-card rounded-2xl overflow-hidden cursor-pointer group flex flex-col justify-between">
             <div>
-              <div onclick="openLightbox(${srv.coverIdx})" class="img-hover-wrap h-56 relative cursor-pointer">
-                <img src="${getImgSrc(cover)}" onerror="this.onerror=null;this.src='${getImgFallback(cover)}';" alt="${srv.title[currentLang]}" class="w-full h-full object-cover" loading="lazy" decoding="async" />
-                <span class="absolute top-3 inset-inline-start-3 bg-white/95 text-slate-900 border border-slate-200 px-3 py-1 rounded-full text-xs font-bold shadow">
-                  ${srv.icon} ${getCatLabel(srv.catFilter)}
-                </span>
-                <span class="absolute bottom-2 inset-inline-end-2 bg-slate-900/85 text-amber-300 text-[11px] font-bold px-2.5 py-1 rounded-lg">
-                  ${dict.zoomHint}
-                </span>
+              <div class="relative h-40 overflow-hidden bg-slate-100">
+                <img src="${coverItem.image}" alt="${title}" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                <span class="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-full bg-[#0F172A]/85 text-amber-300 text-[11px] font-bold">${countTxt}</span>
               </div>
-              <div class="p-5">
-                <h3 class="text-lg sm:text-xl font-extrabold text-slate-900 mb-2 leading-snug">${srv.title[currentLang]}</h3>
-                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">${srv.desc[currentLang]}</p>
+              <div class="p-4">
+                <h3 class="font-extrabold text-base text-[#0F172A] group-hover:text-[#D97706] transition font-heading">${title}</h3>
+                <p class="text-xs text-slate-600 mt-1 leading-relaxed">${desc}</p>
               </div>
             </div>
-            <div class="px-5 pb-5 pt-2 flex flex-wrap gap-2 border-t border-slate-100">
-              <a href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener"
-                 class="btn-shimmer flex-1 text-center bg-gradient-to-r from-amber-600 to-amber-500 text-white font-bold text-xs py-2.5 px-3 rounded-xl">
-                💬 ${dict.orderServiceBtn}
-              </a>
-              <button type="button" onclick="activePortfolioCat='${srv.catFilter}'; renderPortfolioFilters(); renderPortfolioGrid(); document.getElementById('portfolio').scrollIntoView({behavior:'smooth'});"
-                      class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs py-2.5 px-3 rounded-xl transition">
-                📸 ${dict.viewCatPhotosBtn}
+            <div class="px-4 pb-3.5 pt-1 flex items-center justify-between text-xs font-bold text-[#0D9488]">
+              <span>${currentLang === 'ar' ? 'استعراض الصور' : 'Filter Gallery'}</span>
+              <span>←</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function selectServiceCategory(cat) {
+      filterGallery(cat);
+      const gal = document.getElementById('gallery');
+      if (gal) gal.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function applyFilters() {
+      const q = currentSearchQuery.trim().toLowerCase();
+      filteredItems = galleryItems.filter(item => {
+        const matchCat = (currentCategory === 'all') || (item.cat === currentCategory);
+        if (!matchCat) return false;
+        if (!q) return true;
+        const hay = (item.title.ar + ' ' + item.title.en + ' ' + item.desc.ar + ' ' + item.desc.en + ' ' + item.city.ar + ' ' + item.city.en).toLowerCase();
+        return hay.includes(q);
+      });
+      renderGalleryGrid();
+    }
+
+    function filterGallery(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('#galleryFilterTabs .filter-pill').forEach(btn => {
+        if (btn.getAttribute('data-cat') === cat) {
+          btn.className = 'filter-pill px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition gold-gradient-btn shadow-sm';
+        } else {
+          btn.className = 'filter-pill px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition bg-white border border-slate-200 text-[#0F172A] hover:border-[#D97706]';
+        }
+      });
+      applyFilters();
+    }
+
+    function handleGallerySearch(val) {
+      currentSearchQuery = val || '';
+      applyFilters();
+    }
+
+    function renderGalleryGrid() {
+      const grid = document.getElementById('galleryGrid');
+      const statusEl = document.getElementById('galleryCountStatus');
+      if (!grid) return;
+
+      if (statusEl) {
+        statusEl.textContent = currentLang === 'ar'
+          ? `عرض ${filteredItems.length} من أصل ${galleryItems.length} مشروع موثق`
+          : `Showing ${filteredItems.length} of ${galleryItems.length} verified projects`;
+      }
+
+      grid.innerHTML = filteredItems.map((item, idx) => {
+        const catLabel = getCatLabel(item.cat);
+        const cityLabel = item.city[currentLang];
+        const title = item.title[currentLang];
+        const desc = item.desc[currentLang];
+        const zoomTxt = I18N[currentLang].zoomBtnLabel;
+        return `
+          <article class="luxury-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div onclick="openLightbox(${idx})" class="relative aspect-[4/3] bg-slate-100 overflow-hidden cursor-pointer">
+                <img src="${item.image}" alt="${title}" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                <div class="absolute top-2.5 right-2.5 left-2.5 flex items-center justify-between gap-1 pointer-events-none">
+                  <span class="px-2.5 py-1 rounded-full bg-[#0F172A]/85 text-white text-[11px] font-bold">${catLabel}</span>
+                  <span class="px-2.5 py-1 rounded-full bg-white/95 text-[#D97706] text-[11px] font-extrabold shadow">📍 ${cityLabel}</span>
+                </div>
+                <div class="absolute inset-0 bg-[#0F172A]/35 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                  <span class="px-3.5 py-2 rounded-xl bg-white text-[#0F172A] font-extrabold text-xs shadow-lg">🔍 ${zoomTxt} 350%</span>
+                </div>
+              </div>
+              <div class="p-4">
+                <h3 onclick="openLightbox(${idx})" class="font-extrabold text-sm sm:text-base text-[#0F172A] group-hover:text-[#D97706] transition cursor-pointer leading-snug font-heading">${title}</h3>
+                <p class="text-xs text-slate-600 mt-1.5 line-clamp-2 leading-relaxed">${desc}</p>
+              </div>
+            </div>
+            <div class="px-4 pb-4 pt-1 flex items-center justify-between gap-2 border-t border-slate-100 mt-2">
+              <button type="button" onclick="openLightbox(${idx})" class="text-xs font-extrabold text-[#D97706] hover:underline flex items-center gap-1">
+                <span>🔍</span>
+                <span>${zoomTxt}</span>
               </button>
+              <a href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-teal-50 hover:bg-teal-100 text-[#0D9488] font-bold text-xs transition">
+                💬 ${currentLang === 'ar' ? 'استفسار' : 'Inquire'}
+              </a>
             </div>
           </article>
         `;
-      }).join("");
+      }).join('');
     }
 
-    function renderPortfolioFilters() {
-      const dict = I18N[currentLang];
-      const filters = [
-        { code: "all", label: dict.filterAll },
-        { code: "renovation", label: dict.filterRenovation },
-        { code: "chipboard", label: dict.filterChipboard },
-        { code: "painting", label: dict.filterPainting },
-        { code: "wallpaper", label: dict.filterWallpaper },
-        { code: "shades", label: dict.filterShades }
-      ];
-      document.getElementById("portfolioFilters").innerHTML = filters.map(f => `
-        <button type="button" onclick="activePortfolioCat='${f.code}'; renderPortfolioFilters(); renderPortfolioGrid();"
-                class="filter-pill px-3.5 py-2 rounded-full text-xs sm:text-sm font-bold border border-slate-300 bg-white text-slate-700 ${activePortfolioCat === f.code ? 'active-pill' : ''}">
-          ${f.label}
-        </button>
-      `).join("");
-    }
-
-    function renderPortfolioGrid() {
-      const dict = I18N[currentLang];
-      const filtered = activePortfolioCat === "all" ? PHOTOS_DATA : PHOTOS_DATA.filter(x => x.cat === activePortfolioCat);
-      document.getElementById("portfolioGrid").innerHTML = filtered.map(item => {
-        const gIdx = PHOTOS_DATA.findIndex(x => x.id === item.id);
+    function renderBlogCards() {
+      const grid = document.getElementById('blogPreviewGrid');
+      if (!grid) return;
+      grid.innerHTML = BLOG_ARTICLES.map((art, idx) => {
+        const title = art.title[currentLang];
+        const excerpt = art.excerpt[currentLang];
+        const city = art.city[currentLang];
+        const cat = art.cat[currentLang];
+        const readBtn = I18N[currentLang].readFullArticle;
         return `
-          <div onclick="openLightbox(${gIdx})" class="luxury-card cursor-pointer rounded-2xl overflow-hidden flex flex-col justify-between">
-            <div class="img-hover-wrap h-60 sm:h-64 relative">
-              <img src="${getImgSrc(item)}" onerror="this.onerror=null;this.src='${getImgFallback(item)}';" alt="${item.title[currentLang]}" class="w-full h-full object-cover" loading="lazy" decoding="async" />
-              <span class="absolute top-3 inset-inline-start-3 bg-amber-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
-                ${getCatLabel(item.cat)}
-              </span>
-              <span class="absolute top-3 inset-inline-end-3 bg-slate-900/80 text-white text-[11px] font-bold px-2.5 py-1 rounded-full">
-                ${dict.photoBadge}
-              </span>
+          <article class="luxury-card rounded-2xl overflow-hidden flex flex-col justify-between group">
+            <div>
+              <div onclick="openArticleModal(${idx})" class="relative h-48 bg-slate-100 overflow-hidden cursor-pointer">
+                <img src="${resolveImg(art.image)}" alt="${title}" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                <div class="absolute top-3 right-3 flex items-center gap-1.5">
+                  <span class="px-2.5 py-1 rounded-full bg-[#D97706] text-white text-[11px] font-bold">${city}</span>
+                  <span class="px-2.5 py-1 rounded-full bg-[#0F172A]/85 text-white text-[11px] font-semibold">${cat}</span>
+                </div>
+              </div>
+              <div class="p-5">
+                <div class="text-[11px] text-slate-500 font-semibold mb-1.5">${art.date[currentLang]} • ${art.readTime[currentLang]}</div>
+                <h3 onclick="openArticleModal(${idx})" class="font-extrabold text-base text-[#0F172A] group-hover:text-[#D97706] transition cursor-pointer leading-snug font-heading">${title}</h3>
+                <p class="text-xs sm:text-sm text-slate-600 mt-2 line-clamp-3 leading-relaxed">${excerpt}</p>
+              </div>
             </div>
-            <div class="p-4">
-              <h3 class="text-slate-900 font-bold text-sm sm:text-base leading-snug mb-1">${item.title[currentLang]}</h3>
-              <p class="text-slate-600 text-xs line-clamp-2 mb-2">${item.desc[currentLang]}</p>
-              <span class="text-amber-700 text-xs font-bold">${dict.zoomHint}</span>
+            <div class="px-5 pb-4 pt-2 border-t border-slate-100 flex items-center justify-between">
+              <button type="button" onclick="openArticleModal(${idx})" class="text-xs sm:text-sm font-extrabold text-[#0D9488] hover:underline flex items-center gap-1">
+                <span>📖</span>
+                <span>${readBtn}</span>
+              </button>
+              <a href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-[#D97706] hover:underline">💬 WhatsApp</a>
             </div>
-          </div>
+          </article>
         `;
-      }).join("");
+      }).join('');
     }
 
-    function applyZoomTransform() {
-      const img = document.getElementById("lbImg");
-      const stage = document.getElementById("lbStage");
-      if (!img || !stage) return;
-      img.style.transform = `translate3d(${panX}px, ${panY}px, 0) scale(${zoomLevel})`;
-      document.getElementById("lbZoomBadge").textContent = Math.round(zoomLevel * 100) + "%";
-      stage.classList.toggle("is-zoomed", zoomLevel > 1);
+    function openArticleModal(idx) {
+      const art = BLOG_ARTICLES[idx];
+      if (!art) return;
+      document.getElementById('readerModalCity').textContent = art.city[currentLang] + ' • ' + art.cat[currentLang];
+      document.getElementById('readerModalImg').src = resolveImg(art.image);
+      document.getElementById('readerModalImg').alt = art.title[currentLang];
+      document.getElementById('readerModalDate').textContent = art.date[currentLang];
+      document.getElementById('readerModalReadTime').textContent = art.readTime[currentLang];
+      document.getElementById('readerModalTitle').textContent = art.title[currentLang];
+      document.getElementById('readerModalBody').innerHTML = art.content[currentLang];
+      document.getElementById('articleReaderModal').classList.remove('hidden');
     }
 
-    function changeZoom(delta) {
-      zoomLevel = Math.min(3.5, Math.max(1, +(zoomLevel + delta).toFixed(2)));
-      if (zoomLevel === 1) { panX = 0; panY = 0; }
-      applyZoomTransform();
+    function closeArticleModal() {
+      document.getElementById('articleReaderModal').classList.add('hidden');
     }
 
-    function resetZoom() {
-      zoomLevel = 1; panX = 0; panY = 0;
-      applyZoomTransform();
+    function handleBlogNav(e) {
+      if (IS_CANVAS) {
+        e.preventDefault();
+        const blogSec = document.getElementById('blog');
+        if (blogSec) blogSec.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Lightbox Functions (100% to 350% Zoom & Pan)
+    function openLightboxByIndex(globalIdx) {
+      filteredItems = [...galleryItems];
+      openLightbox(globalIdx);
     }
 
     function openLightbox(idx) {
-      currentLightboxIdx = idx;
-      const item = PHOTOS_DATA[idx];
-      if (!item) return;
-      const dict = I18N[currentLang];
-      resetZoom();
-      const lbImg = document.getElementById("lbImg");
-      lbImg.onerror = function() { this.onerror = null; this.src = getImgFallback(item); };
-      lbImg.src = getImgSrc(item);
-      lbImg.alt = item.title[currentLang];
-      document.getElementById("lbCat").textContent = getCatLabel(item.cat) + " • " + dict.photoBadge;
-      document.getElementById("lbTitle").textContent = item.title[currentLang];
-      document.getElementById("lbDesc").textContent = item.desc[currentLang];
-      document.getElementById("lbWaLink").textContent = "💬 " + dict.modalWaInquire;
-      const modal = document.getElementById("lightboxModal");
-      modal.classList.remove("hidden");
-      modal.classList.add("flex");
-    }
-
-    function stepLightbox(delta) {
-      currentLightboxIdx = (currentLightboxIdx + delta + PHOTOS_DATA.length) % PHOTOS_DATA.length;
-      openLightbox(currentLightboxIdx);
+      if (!filteredItems.length) return;
+      currentLightboxIndex = (idx + filteredItems.length) % filteredItems.length;
+      const item = filteredItems[currentLightboxIndex];
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      img.src = item.image;
+      img.alt = item.title[currentLang];
+      document.getElementById('lightboxCatBadge').textContent = getCatLabel(item.cat) + ' • ' + item.city[currentLang];
+      document.getElementById('lightboxCounter').textContent = `${currentLightboxIndex + 1} / ${filteredItems.length}`;
+      document.getElementById('lightboxTitle').textContent = item.title[currentLang];
+      document.getElementById('lightboxDesc').textContent = item.desc[currentLang];
+      resetLightboxZoom();
+      modal.classList.remove('hidden');
     }
 
     function closeLightbox() {
-      const modal = document.getElementById("lightboxModal");
-      modal.classList.add("hidden");
-      modal.classList.remove("flex");
-      resetZoom();
+      document.getElementById('lightboxModal').classList.add('hidden');
     }
 
-    function renderCalculatorOptions() {
-      const dict = I18N[currentLang];
-      document.getElementById("calcService").innerHTML = SERVICES_DATA.map(s => `<option value="${s.id}">${s.icon} ${s.title[currentLang]}</option>`).join("");
-      document.getElementById("calcCity").innerHTML = CITIES_DATA.map(c => `<option value="${c.id}">📍 ${c.name[currentLang]}</option>`).join("");
-      document.getElementById("calcFinish").innerHTML = `
-        <option value="0.85">${dict.calcFinEcon}</option>
-        <option value="1.0" selected>${dict.calcFinStd}</option>
-        <option value="1.35">${dict.calcFinLux}</option>
-      `;
-      document.getElementById("formCity").innerHTML = CITIES_DATA.map(c => `<option value="${c.name[currentLang]}">${c.name[currentLang]}</option>`).join("");
-      document.getElementById("formService").innerHTML = SERVICES_DATA.map(s => `<option value="${s.title[currentLang]}">${s.title[currentLang]}</option>`).join("");
+    function stepLightbox(delta) {
+      if (!filteredItems.length) return;
+      openLightbox(currentLightboxIndex + delta);
     }
 
-    function updateCalculation() {
-      const srvId = document.getElementById("calcService").value || "renovation";
-      const area = parseFloat(document.getElementById("calcArea").value || "45");
-      const mult = parseFloat(document.getElementById("calcFinish").value || "1.0");
-      const srv = SERVICES_DATA.find(s => s.id === srvId) || SERVICES_DATA[0];
-      const minCost = Math.round(area * srv.rateMin * mult);
-      const maxCost = Math.round(area * srv.rateMax * mult);
-      document.getElementById("calcAreaVal").textContent = area + " m²";
-      document.getElementById("calcPriceRange").textContent = `${minCost.toLocaleString()} - ${maxCost.toLocaleString()} SAR`;
+    function applyLightboxTransform() {
+      const img = document.getElementById('lightboxImg');
+      const slider = document.getElementById('lightboxZoomSlider');
+      const readout = document.getElementById('lightboxZoomReadout');
+      const scale = zoomLevel / 100;
+      if (img) {
+        img.style.transform = `translate(${panX}px, ${panY}px) scale(${scale})`;
+      }
+      if (slider) slider.value = zoomLevel;
+      if (readout) readout.textContent = `${zoomLevel}%`;
     }
 
-    function renderCities() {
-      const dict = I18N[currentLang];
-      document.getElementById("citiesGrid").innerHTML = CITIES_DATA.map(c => `
-        <div class="luxury-card rounded-2xl p-4 sm:p-5 flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between gap-2 mb-2">
-              <h3 class="text-base sm:text-lg font-extrabold text-slate-900">📍 ${c.name[currentLang]}</h3>
-              <span class="bg-amber-100 text-amber-800 text-[11px] font-bold px-2.5 py-0.5 rounded-full">${c.badge[currentLang]}</span>
-            </div>
-            <div class="bg-slate-50 border border-slate-200 rounded-xl p-2.5 mb-3">
-              <span class="block text-[11px] font-bold text-teal-700 mb-0.5">${dict.cityNeighborhoodsLbl}</span>
-              <p class="text-[11px] text-slate-600 leading-relaxed">${c.hoods[currentLang]}</p>
-            </div>
-          </div>
-          <a href="https://wa.me/message/J6VX6II24NQUO1" target="_blank" rel="noopener"
-             class="block text-center bg-slate-900 hover:bg-amber-600 text-white font-bold text-xs py-2.5 px-3 rounded-xl transition">
-            💬 ${dict.cityRequestBtn} ${c.name[currentLang]}
-          </a>
-        </div>
-      `).join("");
+    function setLightboxZoom(val) {
+      zoomLevel = Math.max(100, Math.min(350, parseInt(val, 10) || 100));
+      if (zoomLevel === 100) {
+        panX = 0;
+        panY = 0;
+      }
+      applyLightboxTransform();
     }
 
-    function renderSeoPillars() {
-      document.getElementById("seoPillarsGrid").innerHTML = SEO_PILLARS.map(p => `
-        <article class="luxury-card rounded-2xl p-5 sm:p-6">
-          <div class="flex items-center gap-3 mb-2.5">
-            <span class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center text-xl shrink-0">${p.icon}</span>
-            <h3 class="text-base sm:text-lg font-extrabold text-slate-900 leading-snug">${p.title[currentLang]}</h3>
-          </div>
-          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">${p.text[currentLang]}</p>
-        </article>
-      `).join("");
+    function adjustLightboxZoom(delta) {
+      setLightboxZoom(zoomLevel + delta);
     }
 
-    function renderReviews() {
-      document.getElementById("reviewsGrid").innerHTML = REVIEWS_DATA.map(r => `
-        <div class="luxury-card rounded-2xl p-5 flex flex-col justify-between">
-          <div>
-            <div class="text-amber-500 text-sm mb-2">★★★★★</div>
-            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed mb-4">"${r.text[currentLang]}"</p>
-          </div>
-          <div class="border-t border-slate-100 pt-3">
-            <div class="font-bold text-slate-900 text-xs sm:text-sm">${r.name[currentLang]}</div>
-            <div class="text-teal-700 text-xs font-bold">${r.service[currentLang]}</div>
-          </div>
-        </div>
-      `).join("");
+    function resetLightboxZoom() {
+      zoomLevel = 100;
+      panX = 0;
+      panY = 0;
+      applyLightboxTransform();
     }
 
-    function renderFaq() {
-      document.getElementById("faqList").innerHTML = FAQ_DATA.map((f, idx) => `
-        <details class="luxury-card group rounded-2xl p-4 sm:p-5 cursor-pointer" ${idx === 0 ? 'open' : ''}>
-          <summary class="font-bold text-slate-900 text-sm sm:text-base flex items-center justify-between gap-3 list-none">
-            <span>${f.q[currentLang]}</span>
-            <span class="text-amber-600 text-xl font-bold">+</span>
-          </summary>
-          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mt-3 pt-3 border-t border-slate-100">${f.a[currentLang]}</p>
-        </details>
-      `).join("");
+    // Mouse & Touch Drag-to-Pan in Lightbox Stage
+    function initLightboxPan() {
+      const stage = document.getElementById('lightboxStage');
+      if (!stage) return;
+
+      stage.addEventListener('pointerdown', (e) => {
+        if (e.target.tagName === 'BUTTON') return;
+        if (zoomLevel <= 100) return;
+        isDragging = true;
+        startX = e.clientX - panX;
+        startY = e.clientY - panY;
+        stage.setPointerCapture(e.pointerId);
+      });
+
+      stage.addEventListener('pointermove', (e) => {
+        if (!isDragging) return;
+        panX = e.clientX - startX;
+        panY = e.clientY - startY;
+        applyLightboxTransform();
+      });
+
+      stage.addEventListener('pointerup', () => {
+        isDragging = false;
+      });
+
+      stage.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        const delta = e.deltaY < 0 ? 25 : -25;
+        adjustLightboxZoom(delta);
+      }, { passive: false });
     }
 
-    function handleContactSubmit(e) {
+    // Language Converter (100% Arabic RTL <-> English LTR)
+    function toggleLanguage() {
+      currentLang = (currentLang === 'ar') ? 'en' : 'ar';
+      const htmlEl = document.documentElement;
+      htmlEl.lang = currentLang;
+      htmlEl.dir = (currentLang === 'ar') ? 'rtl' : 'ltr';
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (I18N[currentLang][key]) {
+          if (key === 'heroTitle') {
+            el.innerHTML = I18N[currentLang][key];
+          } else {
+            el.textContent = I18N[currentLang][key];
+          }
+        }
+      });
+
+      const searchInput = document.getElementById('gallerySearchInput');
+      if (searchInput) {
+        searchInput.placeholder = I18N[currentLang].gallerySearchPlaceholder;
+      }
+
+      renderHeroShowcase();
+      renderServicesCards();
+      renderGalleryGrid();
+      renderBlogCards();
+    }
+
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileMenuDrawer');
+      const openIc = document.getElementById('menuIconOpen');
+      const closeIc = document.getElementById('menuIconClose');
+      if (!drawer) return;
+      const isHidden = drawer.classList.contains('hidden');
+      if (isHidden) {
+        drawer.classList.remove('hidden');
+        openIc.classList.add('hidden');
+        closeIc.classList.remove('hidden');
+      } else {
+        closeMobileMenu();
+      }
+    }
+
+    function closeMobileMenu() {
+      const drawer = document.getElementById('mobileMenuDrawer');
+      const openIc = document.getElementById('menuIconOpen');
+      const closeIc = document.getElementById('menuIconClose');
+      if (drawer) drawer.classList.add('hidden');
+      if (openIc) openIc.classList.remove('hidden');
+      if (closeIc) closeIc.classList.add('hidden');
+    }
+
+    function submitWhatsAppQuote(e) {
       e.preventDefault();
-      window.open("https://wa.me/message/J6VX6II24NQUO1", "_blank");
+      window.open('https://wa.me/message/J6VX6II24NQUO1', '_blank', 'noopener,noreferrer');
     }
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const stage = document.getElementById("lbStage");
-      stage.addEventListener("dblclick", e => { e.preventDefault(); zoomLevel = zoomLevel < 2.5 ? zoomLevel + 1 : 1; if (zoomLevel === 1) { panX = 0; panY = 0; } applyZoomTransform(); });
-      stage.addEventListener("wheel", e => { e.preventDefault(); changeZoom(e.deltaY < 0 ? 0.35 : -0.35); }, { passive: false });
-      stage.addEventListener("pointerdown", e => { if (zoomLevel <= 1) return; isDragging = true; dragStartX = e.clientX - panX; dragStartY = e.clientY - panY; stage.classList.add("is-dragging"); });
-      window.addEventListener("pointermove", e => { if (!isDragging) return; panX = e.clientX - dragStartX; panY = e.clientY - dragStartY; applyZoomTransform(); });
-      window.addEventListener("pointerup", () => { isDragging = false; stage.classList.remove("is-dragging"); });
-      setLanguage("ar");
+    window.addEventListener('keydown', (e) => {
+      const lb = document.getElementById('lightboxModal');
+      if (lb && !lb.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') stepLightbox(1);
+        if (e.key === 'ArrowRight') stepLightbox(-1);
+      }
+      const rm = document.getElementById('articleReaderModal');
+      if (rm && !rm.classList.contains('hidden') && e.key === 'Escape') {
+        closeArticleModal();
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initLightboxPan();
+      loadGalleryData();
     });
   </script>
 </body>

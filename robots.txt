@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://sharqia-contracting.github.io/sitemap.xml

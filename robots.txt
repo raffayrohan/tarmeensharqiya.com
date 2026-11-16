@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://tarmemsharqiya.com/sitemap.xml
+Sitemap: https://tarmeemsharqiya.com/sitemap.xml

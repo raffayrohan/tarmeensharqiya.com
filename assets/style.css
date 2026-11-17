@@ -176,3 +176,63 @@ footer li{margin-bottom:8px;font-size:.92rem}
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
   .reveal{opacity:1;transform:none}
 }
+/* ===== polish + mobile header fix (2026-11-17) ===== */
+::selection{background:rgba(217,119,6,.3)}
+a,button{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+/* scroll progress bar */
+#scrollbar-progress{position:fixed;top:0;inset-inline-start:0;height:3px;width:100%;background:linear-gradient(90deg,var(--gold),#fbbf24,var(--teal));transform:scaleX(0);transform-origin:0 50%;z-index:300;pointer-events:none}
+[dir="rtl"] #scrollbar-progress{transform-origin:100% 50%}
+/* header shrinks on scroll */
+header.site{transition:background .3s,box-shadow .3s}
+.nav{transition:padding .3s}
+header.site.scrolled{background:rgba(10,15,28,.94);box-shadow:0 14px 38px -12px rgba(2,6,17,.65)}
+header.site.scrolled .nav{padding-block:7px}
+.brand span{line-height:1.3}
+.brand small{letter-spacing:.02em}
+/* hero motion: slow zoom + shining highlight */
+.hero-img img{animation:kenburns 22s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.09)}}
+.hero h1 .hl{background:linear-gradient(100deg,#fbbf24 20%,#fde68a 40%,#fbbf24 60%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:shine 5.5s linear infinite}
+@keyframes shine{to{background-position:-220% 0}}
+/* button shine sweep */
+.btn{position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;top:0;bottom:0;width:55%;inset-inline-start:-80%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-18deg);transition:inset-inline-start .6s ease;pointer-events:none}
+.btn:hover::after{inset-inline-start:130%}
+/* card image zoom */
+.card-img img{transition:transform .6s ease}
+.card-img:hover img{transform:scale(1.05)}
+/* section heading gold underline */
+.sec-head h2{position:relative;padding-bottom:14px}
+.sec-head h2::after{content:"";position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:64px;height:3px;border-radius:99px;background:linear-gradient(90deg,var(--gold),#fbbf24)}
+/* services marquee (injected by app.js under the hero) */
+.marquee{background:linear-gradient(90deg,var(--gold2),var(--gold));color:#fff;overflow:hidden;padding:10px 0;direction:ltr;box-shadow:inset 0 1px 0 rgba(255,255,255,.25)}
+.marquee-track{display:flex;width:max-content;animation:mq 32s linear infinite}
+.mq-group{display:flex}
+.marquee span{padding:0 18px;font-weight:700;font-family:var(--font-h);font-size:.95rem;white-space:nowrap}
+@keyframes mq{to{transform:translateX(-50%)}}
+.marquee:hover .marquee-track{animation-play-state:paused}
+/* back to top */
+#toTop{position:fixed;bottom:24px;inset-inline-end:20px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(251,191,36,.5);background:rgba(13,20,36,.85);color:#fbbf24;font-size:1.15rem;cursor:pointer;z-index:140;opacity:0;visibility:hidden;transform:translateY(12px);transition:.35s;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 12px 26px -10px rgba(2,6,17,.5)}
+#toTop.show{opacity:1;visibility:visible;transform:none}
+#toTop:hover{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff}
+/* sticky mobile bar: glass + safe area */
+.mobilebar{background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding-bottom:calc(10px + env(safe-area-inset-bottom))}
+/* mobile header: one slim row */
+@media(max-width:720px){
+  html{scroll-padding-top:82px}
+  .topbar{font-size:.74rem;padding:5px 0}
+  .topbar .wrap{justify-content:center;flex-wrap:nowrap}
+  .topbar .wrap span:last-child{display:none}
+  .nav{gap:10px;padding-block:9px}
+  header.site.scrolled .nav{padding-block:6px}
+  .brand{flex:1 1 auto;min-width:0;font-size:.9rem;gap:8px}
+  .brand img{width:38px;height:38px;border-radius:9px}
+  .brand small{font-size:.6rem}
+  .btn-call{font-size:0;padding:10px 12px;border-radius:12px}
+  .btn-call::before{content:"📞";font-size:1.05rem}
+  #toTop{bottom:88px}
+}
+@media(max-width:380px){
+  .brand{font-size:.82rem}
+}

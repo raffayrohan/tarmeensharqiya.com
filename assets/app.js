@@ -23,7 +23,12 @@
         if (e.isIntersecting) { e.target.classList.add("vis"); io.unobserve(e.target); }
       });
     }, { threshold: 0.08 });
-    els.forEach(function (el) { io.observe(el); });
+    els.forEach(function (el) {
+      var sibs = el.parentElement ? Array.prototype.filter.call(el.parentElement.children, function (c) { return c.classList && c.classList.contains("reveal"); }) : [];
+      var i = sibs.indexOf(el);
+      el.style.transitionDelay = Math.min(Math.max(i, 0), 5) * 70 + "ms";
+      io.observe(el);
+    });
   } else {
     els.forEach(function (el) { el.classList.add("vis"); });
   }
@@ -55,6 +60,45 @@
       var url = "https://wa.me/966530320587?text=" + encodeURIComponent(lines.join("\n"));
       window.open(url, "_blank", "noopener");
     });
+  }
+  // Scroll progress bar + shrinking header + back-to-top
+  var prog = document.createElement("div");
+  prog.id = "scrollbar-progress";
+  document.body.appendChild(prog);
+  var toTop = document.createElement("button");
+  toTop.id = "toTop";
+  toTop.type = "button";
+  toTop.textContent = "↑";
+  toTop.setAttribute("aria-label", "Back to top");
+  document.body.appendChild(toTop);
+  toTop.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+  var hdr = document.querySelector("header.site");
+  var ticking = false;
+  function onScroll() {
+    var st = window.scrollY || document.documentElement.scrollTop;
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    prog.style.transform = "scaleX(" + (h > 0 ? st / h : 0) + ")";
+    if (hdr) hdr.classList.toggle("scrolled", st > 10);
+    toTop.classList.toggle("show", st > 600);
+    ticking = false;
+  }
+  window.addEventListener("scroll", function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+  }, { passive: true });
+  onScroll();
+  // Services marquee under the homepage hero
+  var hero = document.querySelector(".hero");
+  if (hero) {
+    var isEnPage = document.documentElement.lang === "en";
+    var items = isEnPage
+      ? ["Interior & Exterior Painting", "Chipboard & Wood Alternatives", "Villa Renovation & Finishing", "Gypsum Board & Wallpaper", "Shades, Fences & Qarmid Tiles", "Dammam · Khobar · Dhahran · Qatif · Jubail · Al-Ahsa", "Free Inspection & Written Quote", "Written Guarantee up to 10 Years"]
+      : ["دهانات داخلية وخارجية", "شيبورد وبديل خشب ورخام", "ترميم وتشطيب فلل", "جبس بورد وورق جدران", "مظلات وسواتر وقرميد", "الدمام · الخبر · الظهران · القطيف · الجبيل · الأحساء", "معاينة مجانية وعرض سعر مكتوب", "ضمان مكتوب حتى 10 سنوات"];
+    var group = items.map(function (t) { return "<span>" + t + " ✦</span>"; }).join("");
+    var mq = document.createElement("div");
+    mq.className = "marquee";
+    mq.setAttribute("aria-hidden", "true");
+    mq.innerHTML = '<div class="marquee-track"><div class="mq-group">' + group + '</div><div class="mq-group">' + group + "</div></div>";
+    hero.parentNode.insertBefore(mq, hero.nextSibling);
   }
   // Footer year
   var y = document.getElementById("yr");

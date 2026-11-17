@@ -331,3 +331,11 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;back
 /* CTA band: slow living gradient */
 .band{background:linear-gradient(135deg,var(--navy),var(--navy2),#3a2a10,var(--navy));background-size:220% 220%;animation:bandshift 11s ease-in-out infinite alternate}
 @keyframes bandshift{from{background-position:0% 50%}to{background-position:100% 50%}}
+/* ===== no topbar + breadcrumbs inside hero (2026-11-17) ===== */
+html{scroll-padding-top:84px}
+.hero-crumbs{grid-column:1/-1;font-size:.85rem;color:#94a3b8;padding-bottom:4px}
+.hero-crumbs a{color:#fbbf24;font-weight:700}
+.hero-crumbs a:hover{color:#fde68a}
+@media(max-width:720px){
+  html{scroll-padding-top:74px}
+}

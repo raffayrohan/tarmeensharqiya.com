@@ -343,3 +343,9 @@ html{scroll-padding-top:84px}
 .mapbox{border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-lg);background:#e8e4da;line-height:0}
 .mapbox iframe{width:100%;height:400px;border:0;display:block}
 @media(max-width:720px){.mapbox iframe{height:320px}}
+/* ===== google reviews (2026-11-23) ===== */
+.stars{color:#d97706;letter-spacing:2px;font-size:1.02rem;line-height:1}
+.rev-meta{color:var(--muted);font-size:.85rem;margin-top:12px}
+.rev-meta b{color:var(--navy)}
+.rate-badge{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 20px;box-shadow:var(--shadow);font-weight:800;color:var(--navy);margin-top:14px}
+.rate-badge .stars{margin-inline-end:6px}
